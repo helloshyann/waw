@@ -1,0 +1,296 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <div class="char-img-wrap">
+      <img
+        class="profile-img"
+        src="{{actor.img}}"
+        data-edit="img"
+        title="{{actor.name}}"
+        height="100"
+        width="100"
+      />
+    </div>
+    <div class="header-fields">
+      <div class="header-id">
+        <h1 class="charname">
+          <input
+            name="name"
+            type="text"
+            value="{{actor.name}}"
+            placeholder="Name"
+          />
+        </h1>
+        <div class="resource">
+          <label for="system.attributes.year.value" class="resource-label"
+            >Year</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.attributes.year.value"
+              value="{{system.attributes.year.value}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <div class="resource">
+          <label for="system.attributes.level.value" class="resource-label"
+            >Level</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.attributes.level.value"
+              value="{{system.attributes.level.value}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="charmeta">
+        <div class="flex-col">
+          <label for="hogwarts-house">Hogwarts House</label>
+          <select
+            id="hogwarts-house"
+            name="system.attributes.hogwartsHouse.value"
+          >
+            {{selectOptions hogwartsHouseOptions selected=hogwartsHouse}}
+          </select>
+        </div>
+        <div class="flex-col">
+          <label for="caster-type">Caster Type</label>
+          <select id="caster-type" name="system.attributes.casterType.value">
+            {{selectOptions casterTypeOptions selected=casterType}}
+          </select>
+        </div>
+        <div class="flex-col">
+          <label for="school-of-magic">School of Magic</label>
+          <select
+            id="school-of-magic"
+            name="system.attributes.schoolOfMagic.value"
+          >
+            {{selectOptions schoolOfMagicOptions selected=schoolOfMagic}}
+          </select>
+        </div>
+      </div>
+      {{!-- The grid classes are defined in scss/global/_grid.scss. To use, use
+      both the "grid" and "grid-Ncol" class where "N" can be any number from 1
+      to 12 and will create that number of columns. --}}
+      <div class="resources flexrow">
+        {{!-- "flex-group-center" is also defined in the _grid.scss file and it
+        will add a small amount of padding, a border, and will center all of its
+        child elements content and text. --}}
+        <div class="resource flex-group-center">
+          <label for="system.health.value" class="resource-label">Health</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.health.value"
+              value="{{system.health.value}}"
+              data-dtype="Number"
+            />
+            <span> / </span>
+            <input
+              type="text"
+              name="system.health.max"
+              value="{{system.health.max}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.health.temp" class="resource-label">Temp HP</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.health.temp"
+              value="{{system.health.temp}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.ac.flat" class="resource-label">Armor Class</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.ac.flat"
+              value="{{system.ac.flat}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.movement.walk" class="resource-label">Speed</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.movement.walk"
+              value="{{system.movement.walk}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="features">Metrics & Features</a>
+    <a class="item" data-tab="description">Identity</a>
+    <a class="item" data-tab="">Reputation</a>
+    <a class="item" data-tab="items">School Trunk</a>
+    <a class="item" data-tab="spells">Spellbook</a>
+    <a class="item" data-tab="effects">Report Card</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    {{!-- Owned Features Tab --}}
+    <div class="tab features" data-group="primary" data-tab="features">
+      <section class="abilities-wrap">
+        <div class="abilities flexrow">
+          {{#each system.abilities as |ability key|}}
+          <div class="ability flexcol flex-group-center">
+            <span
+              class="ability-mod rollable"
+              data-roll="d20+@abilities.{{key}}.mod"
+              data-label="{{ability.label}}"
+              >{{numberFormat ability.mod decimals=0 sign=true}}</span
+            >
+            <input
+              type="text"
+              name="system.abilities.{{key}}.value"
+              value="{{ability.value}}"
+              data-dtype="Number"
+            />
+            <label
+              for="system.abilities.{{key}}.value"
+              class="resource-label rollable align-left"
+              data-roll="d20+@abilities.{{key}}.mod"
+              data-label="{{ability.label}}"
+              >{{ability.label}}</label
+            >
+          </div>
+          {{/each}}
+        </div>
+      </section>
+      <section class="additional-abil-wrap">
+        <div class="resource flex-group-center">
+          <label for="system.profBonus.value" class="resource-label"
+            >Prof Bonus</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.attributes.profBonus.value"
+              value="{{system.attributes.profBonus.value}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <div class="resource flex-group-center">
+          <label for="system.health.value" class="resource-label"
+            >Sorcery Points</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.attributes.sorceryPoints.value"
+              value="{{system.attributes.sorceryPoints.value}}"
+              data-dtype="Number"
+            />
+            <span> / </span>
+            <input
+              type="text"
+              name="system.attributes.sorceryPoints.max"
+              value="{{system.attributes.sorceryPoints.max}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <div class="resource flex-group-center">
+          <label for="system.init.value" class="resource-label"
+            >Initiative</label
+          >
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.init.value"
+              value="{{system.init.value}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="grid grid-3col">
+        <aside class="sidebar">
+          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+          use both the "grid" and "grid-Ncol" class where "N" can be any number
+          from 1 to 12 and will create that number of columns. --}}
+          <div class="">
+            {{#each skills as |skill|}}
+
+            <div class="skill">
+              <input
+                type="checkbox"
+                id="prof-{{skill.key}}"
+                name="system.skills.{{skill.key}}.prof"
+                {{skill.checked}}
+              />
+              <label
+                class="rollable"
+                data-roll-type="skill"
+                data-skill-key="{{skill.key}}"
+                for="system.skills.{{skill.key}}.value"
+                >{{skill.name}} <span>{{skill.ability}}</span></label
+              >
+              <input
+                type="text"
+                name="system.skills.{{skill.key}}.value"
+                value="{{skill.value}}"
+              />
+            </div>
+            {{/each}}
+          </div>
+        </aside>
+
+        {{!-- For the main features list, span the right two columns --}}
+        <section class="main grid-span-2">
+          {{!-- This is a Handlebars partial. They're stored in the `/parts`
+          folder next to this sheet, and defined in module/helpers/templates.mjs
+          --}} {{> "systems/waw/templates/actor/parts/actor-features.html"}}
+        </section>
+      </section>
+    </div>
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered,
+      you need to pass the actor's roll data to the rollData property. --}}
+      {{editor system.biography target="system.biography" rollData=rollData
+      button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+      {{> "systems/waw/templates/actor/parts/actor-items.html"}}
+    </div>
+
+    {{!-- Owned Spells Tab --}}
+    <div class="tab spells" data-group="primary" data-tab="spells">
+      {{> "systems/waw/templates/actor/parts/actor-spells.html"}}
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/waw/templates/actor/parts/actor-effects.html"}}
+    </div>
+  </section>
+</form>

@@ -1,0 +1,282 @@
+{
+  "Actor": {
+    "types": ["character", "monster", "npc"],
+    "templates": {
+      "base": {
+        "ac": {
+          "flat": null,
+          "calc": "default",
+          "formula": ""
+        },
+        "hp": {
+          "value": 10,
+          "max": null,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "init": {
+          "ability": "",
+          "bonus": ""
+        },
+        "movement": {
+          "burrow": 0,
+          "climb": 0,
+          "fly": 0,
+          "swim": 0,
+          "walk": 30,
+          "units": "ft",
+          "hover": false
+        },
+        "abilities": {
+          "str": {
+            "value": 10
+          },
+          "dex": {
+            "value": 10
+          },
+          "con": {
+            "value": 10
+          },
+          "int": {
+            "value": 10
+          },
+          "wis": {
+            "value": 10
+          },
+          "cha": {
+            "value": 10
+          }
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        },
+        "year": {
+          "value": 1
+        },
+        "hogwartsHouse": {
+          "value": ""
+        },
+        "casterType": {
+          "value": ""
+        },
+        "schoolOfMagic": {
+          "value": ""
+        },
+        "profBonus": {
+          "value": 2
+        },
+        "sorceryPoints": {
+          "value": 0,
+          "max": 2
+        },
+        "reputation": {
+          "entries": [
+            {
+              "characterName": "",
+              "value": 0
+            }
+          ]
+        }
+      },
+      "skills": {
+        "ath": {
+          "name": "Athletics",
+          "value": 0,
+          "ability": "str",
+          "prof": false
+        },
+        "acr": {
+          "name": "Acrobatics",
+          "value": 0,
+          "ability": "dex",
+          "prof": false
+        },
+        "soh": {
+          "name": "Sleight of Hand",
+          "value": 0,
+          "ability": "dex",
+          "prof": false
+        },
+        "stl": {
+          "name": "Stealth",
+          "value": 0,
+          "ability": "dex",
+          "prof": false
+        },
+        "hrb": {
+          "name": "Herbology",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
+        "his": {
+          "name": "History of Magic",
+          "value": 0,
+          "ability": "int",
+          "prof": false
+        },
+        "ins": {
+          "name": "Insight",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
+        "mac": {
+          "name": "Magical Creatures",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
+        "mat": {
+          "name": "Magical Theory",
+          "value": 0,
+          "ability": "int",
+          "prof": false
+        },
+        "med": {
+          "name": "Medicine",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
+        "per": {
+          "name": "Perception",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
+        "pot": {
+          "name": "Potion Making",
+          "value": 0,
+          "ability": "int",
+          "prof": false
+        },
+        "sur": {
+          "name": "Survival",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
+        "dec": {
+          "name": "Deception",
+          "value": 0,
+          "ability": "cha",
+          "prof": false
+        },
+        "intim": {
+          "name": "Intimidation",
+          "value": 0,
+          "ability": "cha",
+          "prof": false
+        },
+        "prf": {
+          "name": "Performance",
+          "value": 0,
+          "ability": "cha",
+          "prof": false
+        },
+        "pur": {
+          "name": "Persuassion",
+          "value": 0,
+          "ability": "cha",
+          "prof": false
+        }
+      },
+      "spellSlots": {
+        "1": [2, 0, 0, 0, 0, 0, 0, 0, 0],
+        "2": [3, 0, 0, 0, 0, 0, 0, 0, 0],
+        "3": [4, 2, 0, 0, 0, 0, 0, 0, 0],
+        "4": [4, 3, 0, 0, 0, 0, 0, 0, 0],
+        "5": [4, 3, 2, 0, 0, 0, 0, 0, 0],
+        "6": [4, 3, 3, 0, 0, 0, 0, 0, 0],
+        "7": [4, 3, 3, 1, 0, 0, 0, 0, 0],
+        "8": [4, 3, 3, 2, 0, 0, 0, 0, 0],
+        "9": [4, 3, 3, 3, 1, 0, 0, 0, 0],
+        "10": [4, 3, 3, 3, 2, 0, 0, 0, 0],
+        "11": [4, 3, 3, 3, 2, 1, 0, 0, 0],
+        "12": [4, 3, 3, 3, 2, 1, 0, 0, 0],
+        "13": [4, 3, 3, 3, 2, 1, 1, 0, 0],
+        "14": [4, 3, 3, 3, 2, 1, 1, 0, 0],
+        "15": [4, 3, 3, 3, 2, 1, 1, 1, 0],
+        "16": [4, 3, 3, 3, 2, 1, 1, 1, 0],
+        "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
+        "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
+        "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
+        "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+      }
+    },
+    "monster": {
+      "templates": ["base"],
+      "cr": 0
+    },
+    "npc": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        },
+        "npcType": {
+          "value": ""
+        },
+        "reputation": {
+          "entries": [
+            {
+              "characterName": "Character Name",
+              "value": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "itemType": {
+        "value": ""
+      },
+      "rarity": {
+        "value": "Rarity Level"
+      },
+      "quantity": 1,
+      "cost": 0,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "feature": {
+      "templates": ["base"],
+      "parent": {
+        "value": ""
+      },
+      "level": 1
+    },
+    "spell": {
+      "level": 1,
+      "school": "",
+      "components": {
+        "castingTime": "",
+        "range": "",
+        "duration": "",
+        "ritual": false,
+        "concentration": false,
+        "dedication": false
+      },
+      "description": "",
+      "scaling": {
+        "mode": "none",
+        "formula": null
+      }
+    }
+  }
+}

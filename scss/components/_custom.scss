@@ -1,0 +1,660 @@
+// ==============================
+// ******************************
+// *
+// * Font Styles Installation
+// *
+// ******************************
+// ==============================
+
+@font-face {
+  font-family: "Lumos";
+  src: url("../assets/fonts/LUMOS.otf");
+}
+
+@font-face {
+  font-family: "Strange Dreams";
+  src: url("../assets/fonts/StrangeDreams.otf");
+}
+
+@font-face {
+  font-family: "Cream";
+  src: url("../assets/fonts/cream-DEMO.otf");
+}
+
+@font-face {
+  font-family: "Unsung Heroes";
+  src: url("../assets/fonts/UNSUNGHEROES.OTF");
+}
+
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("../assets/fonts/LEMONMILK-Regular.otf");
+}
+
+// ==============================
+// ******************************
+// *
+// * Actor Sheet Styles
+// *
+// ******************************
+// ==============================
+
+// ==============================
+// Shared Actor Sheet Styles
+// ==============================
+
+.character,
+.npc,
+.monster {
+  // Shared Actor Sheet Styles
+  // ==============================
+  * {
+    color: white;
+    font-family: "Cream";
+    font-weight: 300;
+    label {
+      font-weight: 400;
+    }
+  }
+  i {
+    font-family: "Font Awesome 6 Pro";
+  }
+  input,
+  select {
+    border-radius: 3px !important;
+    border: 1px solid transparent;
+    option {
+      background: black;
+    }
+  }
+  input[data-dtype="Number"] {
+    font-family: "Unsung Heroes";
+  }
+  input:focus,
+  select:focus,
+  .rollable:focus {
+    box-shadow: 0 0 5px silver;
+  }
+  a:hover {
+    text-shadow: none !important;
+  }
+
+  .sheet-header,
+  .sheet-body {
+    padding: 8px;
+    border-radius: 4px;
+    .rollable {
+      transition: all 0.25s;
+      &:hover {
+        text-shadow: 0 0 5px rgba(0 0 0 / 33%);
+        transition: all 0.25s;
+      }
+    }
+  }
+
+  // Actor - Header Styles
+  // ==============================
+  .sheet-header {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.15);
+    }
+    .char-img-wrap {
+      position: relative;
+      flex: none !important;
+      img {
+        border: none !important;
+        margin-right: 0 !important;
+
+        flex: 0 0 100px;
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        max-width: auto;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 4rem;
+        height: 4rem;
+        background-size: 100%;
+        filter: drop-shadow(0 0 5px white);
+      }
+    }
+    .header-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .header-id,
+      .charmeta,
+      .resources {
+        background: rgba(0, 0, 0, 0.33);
+        border-radius: 5px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.1px);
+        -webkit-backdrop-filter: blur(3.1px);
+        padding: 5px;
+      }
+      .header-id {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-end;
+        h1 {
+          text-align: center;
+          input {
+            font-family: "Strange Dreams";
+          }
+        }
+        > .resource {
+          flex: 0.1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+      .charmeta {
+        display: flex;
+        .flex-col {
+          display: flex;
+          flex-direction: column;
+          //align-items: center;
+          //justify-content: center;
+          label {
+            font-size: 0.7rem;
+            //text-align: center;
+          }
+        }
+      }
+      .resources {
+      }
+    }
+  }
+
+  // Actor - Nav Styles
+  // ==============================
+  .sheet-tabs {
+    a {
+      font-family: "Cream";
+      font-weight: 700;
+
+      ///
+
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      -webkit-transition-property: color;
+      transition-property: color;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        //background: #2098d1;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        //color: white;
+        &:before {
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+          -webkit-transition-timing-function: cubic-bezier(
+            0.52,
+            1.64,
+            0.37,
+            0.66
+          );
+          transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+      }
+    }
+  }
+
+  // Actor - Body Styles
+  // ==============================
+  aside {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    padding: 5px;
+  }
+}
+
+.npc,
+.monster {
+  .sheet-tabs {
+    border-top: 2px solid #2e1116;
+    border-bottom: 2px solid #2e1116;
+    a {
+      color: #2e1116;
+      &:before {
+        background: #2e1116;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: #dcb36b;
+      }
+    }
+  }
+  .sheet-body {
+    .ability {
+      max-width: 7rem;
+      margin: auto;
+    }
+    .description {
+      .npc-sheet-grid {
+        display: grid;
+        grid-template-columns: 8rem 2fr;
+        gap: 5px;
+      }
+    }
+    .tab > .editor {
+      background: rgba(46, 17, 22, 0.5);
+      border: 1px solid #a9874c;
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(54, 35, 41, 0.2);
+      padding: 5px;
+    }
+  }
+}
+
+.reputation-table {
+  flex: none !important;
+  .reputation-entry {
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    padding: 5px;
+  }
+}
+
+.reputation-scale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  > label {
+    margin-bottom: -4px;
+  }
+  > input {
+    margin: 0 !important;
+    order: 1;
+  }
+}
+
+// ==============================
+// Character Styles
+// ==============================
+
+// Gryffindor House Theme
+.gryffindor {
+  .sheet-header {
+    background: url("../assets/img/GryffHeader1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/gryffbadge.png");
+      }
+    }
+  }
+  .sheet-tabs {
+    border-top: 2px solid #952333;
+    border-bottom: 2px solid #952333;
+    a {
+      color: #952333;
+      &:before {
+        background: #952333;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: #dcb36b;
+      }
+    }
+  }
+  .sheet-body {
+    background: url("../assets/img/GryffindorBG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    .rollable {
+      &:hover {
+        color: #dcb36b;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+// Hufflepuff House Theme
+.hufflepuff {
+  .sheet-header {
+    background: url("../assets/img/HuffHeader1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/huffbadge.png");
+      }
+    }
+  }
+  .sheet-tabs {
+    border-top: 2px solid #292521;
+    border-bottom: 2px solid #292521;
+    a {
+      color: #292521;
+      &:before {
+        background: #292521;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: #d6b551;
+      }
+    }
+  }
+  .sheet-body {
+    background: url("../assets/img/HufflepuffBG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    .rollable {
+      &:hover {
+        color: #292521;
+        transition: all 0.25s;
+        text-shadow: none !important;
+      }
+    }
+  }
+}
+
+// Ravenclaw House Theme
+.ravenclaw {
+  .sheet-header {
+    background: url("../assets/img/RavHeader1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/ravbadge.png");
+      }
+    }
+  }
+  .sheet-tabs {
+    border-top: 2px solid #064d6e;
+    border-bottom: 2px solid #064d6e;
+    a {
+      color: #064d6e;
+      &:before {
+        background: #064d6e;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: #c2c2c2;
+      }
+    }
+  }
+  .sheet-body {
+    background: url("../assets/img/RavenclawBG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    .rollable {
+      &:hover {
+        color: #c2c2c2;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+// Slytherin House Theme
+.slytherin {
+  .sheet-header {
+    background: url("../assets/img/SlythHeader1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/slythbadge.png");
+      }
+    }
+  }
+  .sheet-tabs {
+    border-top: 2px solid #205e45;
+    border-bottom: 2px solid #205e45;
+    a {
+      color: #205e45;
+      &:before {
+        background: #205e45;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: #c2c2c2;
+      }
+    }
+  }
+  .sheet-body {
+    background: url("../assets/img/SlytherinBG.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    .rollable {
+      &:hover {
+        color: #c2c2c2;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+// ==============================
+// NPC Styles
+// ==============================
+
+.npc {
+  .sheet-header {
+    background-image: url("../assets/img/hog-header.jpg");
+    background-size: 100%;
+    background-position: 100%;
+  }
+
+  .sheet-body {
+    background-image: url("../assets/img/npcbg1.jpg");
+    background-size: 100%;
+    background-position: center;
+  }
+}
+
+// ==============================
+// Monster Styles
+// ==============================
+
+.monster {
+  .sheet-header {
+    background-image: url("../assets/img/hog-header.jpg");
+    background-size: 100%;
+    background-position: 100%;
+  }
+
+  .sheet-body {
+    background-image: url("../assets/img/hog-monster.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
+
+// ==============================
+// ******************************
+// *
+// * Item Sheet Styles
+// *
+// ******************************
+// ==============================
+
+// ==============================
+// Shared Item Sheet Styles
+// ==============================
+
+// ==============================
+// Item - Feature Styles
+// ==============================
+
+// ==============================
+// Item - Spell Styles
+// ==============================
+
+// ==============================
+// Item - Item Styles
+// ==============================
+
+nav.sheet-tabs.tabs {
+  justify-content: space-between;
+  gap: 0.25rem;
+  > a {
+    padding: 0.25rem;
+    &.active {
+      text-shadow: none;
+      transition: all 0.5s;
+      &:hover {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.abilities {
+  gap: 0.75rem;
+  padding-bottom: 5px;
+}
+
+.ability {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+
+  span {
+    font-family: "Unsung Heroes";
+    font-size: 1.5rem;
+  }
+  input {
+    margin-top: -0.5rem;
+  }
+  label {
+    padding-top: 5px;
+    font-family: "Strange Dreams";
+  }
+}
+
+.system-waw {
+  .window-app {
+    .window-content {
+      padding: 0 !important;
+    }
+  }
+}
+
+.additional-abil-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  //margin-bottom: -5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  label {
+    flex: 1;
+  }
+  .resource {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .resource-content {
+      margin-top: 0.25rem;
+      input {
+        width: 2.5rem;
+      }
+    }
+  }
+}
+
+.skills {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  label {
+    flex: 1;
+  }
+  input[type="text"] {
+    flex: 0.01;
+  }
+  input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin-right: 0.25rem;
+  }
+}
+
+.features {
+  .grid {
+    margin: 0;
+    padding-top: 5px;
+    .main {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.1px);
+      -webkit-backdrop-filter: blur(3.1px);
+      padding: 5px;
+    }
+  }
+}

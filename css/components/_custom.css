@@ -1,0 +1,684 @@
+@font-face {
+  font-family: "Lumos";
+  src: url("../assets/fonts/LUMOS.otf");
+}
+@font-face {
+  font-family: "Strange Dreams";
+  src: url("../assets/fonts/StrangeDreams.otf");
+}
+@font-face {
+  font-family: "Cream";
+  src: url("../assets/fonts/cream-DEMO.otf");
+}
+@font-face {
+  font-family: "Unsung Heroes";
+  src: url("../assets/fonts/UNSUNGHEROES.OTF");
+}
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("../assets/fonts/LEMONMILK-Regular.otf");
+}
+.character *,
+.npc *,
+.monster * {
+  color: white;
+  font-family: "Cream";
+  font-weight: 300;
+}
+.character * label,
+.npc * label,
+.monster * label {
+  font-weight: 400;
+}
+.character i,
+.npc i,
+.monster i {
+  font-family: "Font Awesome 6 Pro";
+}
+.character input,
+.character select,
+.npc input,
+.npc select,
+.monster input,
+.monster select {
+  border-radius: 3px !important;
+  border: 1px solid transparent;
+}
+.character input option,
+.character select option,
+.npc input option,
+.npc select option,
+.monster input option,
+.monster select option {
+  background: black;
+}
+.character input[data-dtype=Number],
+.npc input[data-dtype=Number],
+.monster input[data-dtype=Number] {
+  font-family: "Unsung Heroes";
+}
+.character input:focus,
+.character select:focus,
+.character .rollable:focus,
+.npc input:focus,
+.npc select:focus,
+.npc .rollable:focus,
+.monster input:focus,
+.monster select:focus,
+.monster .rollable:focus {
+  -webkit-box-shadow: 0 0 5px silver;
+          box-shadow: 0 0 5px silver;
+}
+.character a:hover,
+.npc a:hover,
+.monster a:hover {
+  text-shadow: none !important;
+}
+.character .sheet-header,
+.character .sheet-body,
+.npc .sheet-header,
+.npc .sheet-body,
+.monster .sheet-header,
+.monster .sheet-body {
+  padding: 8px;
+  border-radius: 4px;
+}
+.character .sheet-header .rollable,
+.character .sheet-body .rollable,
+.npc .sheet-header .rollable,
+.npc .sheet-body .rollable,
+.monster .sheet-header .rollable,
+.monster .sheet-body .rollable {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.character .sheet-header .rollable:hover,
+.character .sheet-body .rollable:hover,
+.npc .sheet-header .rollable:hover,
+.npc .sheet-body .rollable:hover,
+.monster .sheet-header .rollable:hover,
+.monster .sheet-body .rollable:hover {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.33);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.character .sheet-header,
+.npc .sheet-header,
+.monster .sheet-header {
+  position: relative;
+}
+.character .sheet-header:before,
+.npc .sheet-header:before,
+.monster .sheet-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.15);
+}
+.character .sheet-header .char-img-wrap,
+.npc .sheet-header .char-img-wrap,
+.monster .sheet-header .char-img-wrap {
+  position: relative;
+  -webkit-box-flex: 0 !important;
+      -ms-flex: none !important;
+          flex: none !important;
+}
+.character .sheet-header .char-img-wrap img,
+.npc .sheet-header .char-img-wrap img,
+.monster .sheet-header .char-img-wrap img {
+  border: none !important;
+  margin-right: 0 !important;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: auto;
+}
+.character .sheet-header .char-img-wrap:after,
+.npc .sheet-header .char-img-wrap:after,
+.monster .sheet-header .char-img-wrap:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  background-size: 100%;
+  -webkit-filter: drop-shadow(0 0 5px white);
+          filter: drop-shadow(0 0 5px white);
+}
+.character .sheet-header .header-fields,
+.npc .sheet-header .header-fields,
+.monster .sheet-header .header-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.character .sheet-header .header-fields .header-id,
+.character .sheet-header .header-fields .charmeta,
+.character .sheet-header .header-fields .resources,
+.npc .sheet-header .header-fields .header-id,
+.npc .sheet-header .header-fields .charmeta,
+.npc .sheet-header .header-fields .resources,
+.monster .sheet-header .header-fields .header-id,
+.monster .sheet-header .header-fields .charmeta,
+.monster .sheet-header .header-fields .resources {
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.character .sheet-header .header-fields .header-id,
+.npc .sheet-header .header-fields .header-id,
+.monster .sheet-header .header-fields .header-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.75rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.character .sheet-header .header-fields .header-id h1,
+.npc .sheet-header .header-fields .header-id h1,
+.monster .sheet-header .header-fields .header-id h1 {
+  text-align: center;
+}
+.character .sheet-header .header-fields .header-id h1 input,
+.npc .sheet-header .header-fields .header-id h1 input,
+.monster .sheet-header .header-fields .header-id h1 input {
+  font-family: "Strange Dreams";
+}
+.character .sheet-header .header-fields .header-id > .resource,
+.npc .sheet-header .header-fields .header-id > .resource,
+.monster .sheet-header .header-fields .header-id > .resource {
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.character .sheet-header .header-fields .charmeta,
+.npc .sheet-header .header-fields .charmeta,
+.monster .sheet-header .header-fields .charmeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.character .sheet-header .header-fields .charmeta .flex-col,
+.npc .sheet-header .header-fields .charmeta .flex-col,
+.monster .sheet-header .header-fields .charmeta .flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.character .sheet-header .header-fields .charmeta .flex-col label,
+.npc .sheet-header .header-fields .charmeta .flex-col label,
+.monster .sheet-header .header-fields .charmeta .flex-col label {
+  font-size: 0.7rem;
+}
+.character .sheet-tabs a,
+.npc .sheet-tabs a,
+.monster .sheet-tabs a {
+  font-family: "Cream";
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.character .sheet-tabs a:before,
+.npc .sheet-tabs a:before,
+.monster .sheet-tabs a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.character .sheet-tabs a:hover:before, .character .sheet-tabs a:focus:before, .character .sheet-tabs a:active:before,
+.npc .sheet-tabs a:hover:before,
+.npc .sheet-tabs a:focus:before,
+.npc .sheet-tabs a:active:before,
+.monster .sheet-tabs a:hover:before,
+.monster .sheet-tabs a:focus:before,
+.monster .sheet-tabs a:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.character aside,
+.npc aside,
+.monster aside {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+
+.npc .sheet-tabs,
+.monster .sheet-tabs {
+  border-top: 2px solid #2e1116;
+  border-bottom: 2px solid #2e1116;
+}
+.npc .sheet-tabs a,
+.monster .sheet-tabs a {
+  color: #2e1116;
+}
+.npc .sheet-tabs a:before,
+.monster .sheet-tabs a:before {
+  background: #2e1116;
+}
+.npc .sheet-tabs a:hover, .npc .sheet-tabs a:active, .npc .sheet-tabs a:focus,
+.monster .sheet-tabs a:hover,
+.monster .sheet-tabs a:active,
+.monster .sheet-tabs a:focus {
+  color: #dcb36b;
+}
+.npc .sheet-body .ability,
+.monster .sheet-body .ability {
+  max-width: 7rem;
+  margin: auto;
+}
+.npc .sheet-body .description .npc-sheet-grid,
+.monster .sheet-body .description .npc-sheet-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 8rem 5px 2fr;
+  grid-template-columns: 8rem 2fr;
+  gap: 5px;
+}
+.npc .sheet-body .tab > .editor,
+.monster .sheet-body .tab > .editor {
+  background: rgba(46, 17, 22, 0.5);
+  border: 1px solid #a9874c;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(54, 35, 41, 0.2);
+          box-shadow: 0 4px 30px rgba(54, 35, 41, 0.2);
+  padding: 5px;
+}
+
+.reputation-table {
+  -webkit-box-flex: 0 !important;
+      -ms-flex: none !important;
+          flex: none !important;
+}
+.reputation-table .reputation-entry {
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+
+.reputation-scale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2px;
+}
+.reputation-scale > label {
+  margin-bottom: -4px;
+}
+.reputation-scale > input {
+  margin: 0 !important;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.gryffindor .sheet-header {
+  background: url("../assets/img/GryffHeader1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.gryffindor .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/gryffbadge.png");
+}
+.gryffindor .sheet-tabs {
+  border-top: 2px solid #952333;
+  border-bottom: 2px solid #952333;
+}
+.gryffindor .sheet-tabs a {
+  color: #952333;
+}
+.gryffindor .sheet-tabs a:before {
+  background: #952333;
+}
+.gryffindor .sheet-tabs a:hover, .gryffindor .sheet-tabs a:active, .gryffindor .sheet-tabs a:focus {
+  color: #dcb36b;
+}
+.gryffindor .sheet-body {
+  background: url("../assets/img/GryffindorBG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gryffindor .sheet-body .rollable:hover {
+  color: #dcb36b;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.hufflepuff .sheet-header {
+  background: url("../assets/img/HuffHeader1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.hufflepuff .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/huffbadge.png");
+}
+.hufflepuff .sheet-tabs {
+  border-top: 2px solid #292521;
+  border-bottom: 2px solid #292521;
+}
+.hufflepuff .sheet-tabs a {
+  color: #292521;
+}
+.hufflepuff .sheet-tabs a:before {
+  background: #292521;
+}
+.hufflepuff .sheet-tabs a:hover, .hufflepuff .sheet-tabs a:active, .hufflepuff .sheet-tabs a:focus {
+  color: #d6b551;
+}
+.hufflepuff .sheet-body {
+  background: url("../assets/img/HufflepuffBG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hufflepuff .sheet-body .rollable:hover {
+  color: #292521;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  text-shadow: none !important;
+}
+
+.ravenclaw .sheet-header {
+  background: url("../assets/img/RavHeader1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.ravenclaw .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/ravbadge.png");
+}
+.ravenclaw .sheet-tabs {
+  border-top: 2px solid #064d6e;
+  border-bottom: 2px solid #064d6e;
+}
+.ravenclaw .sheet-tabs a {
+  color: #064d6e;
+}
+.ravenclaw .sheet-tabs a:before {
+  background: #064d6e;
+}
+.ravenclaw .sheet-tabs a:hover, .ravenclaw .sheet-tabs a:active, .ravenclaw .sheet-tabs a:focus {
+  color: #c2c2c2;
+}
+.ravenclaw .sheet-body {
+  background: url("../assets/img/RavenclawBG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.ravenclaw .sheet-body .rollable:hover {
+  color: #c2c2c2;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.slytherin .sheet-header {
+  background: url("../assets/img/SlythHeader1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.slytherin .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/slythbadge.png");
+}
+.slytherin .sheet-tabs {
+  border-top: 2px solid #205e45;
+  border-bottom: 2px solid #205e45;
+}
+.slytherin .sheet-tabs a {
+  color: #205e45;
+}
+.slytherin .sheet-tabs a:before {
+  background: #205e45;
+}
+.slytherin .sheet-tabs a:hover, .slytherin .sheet-tabs a:active, .slytherin .sheet-tabs a:focus {
+  color: #c2c2c2;
+}
+.slytherin .sheet-body {
+  background: url("../assets/img/SlytherinBG.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slytherin .sheet-body .rollable:hover {
+  color: #c2c2c2;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.npc .sheet-header {
+  background-image: url("../assets/img/hog-header.jpg");
+  background-size: 100%;
+  background-position: 100%;
+}
+.npc .sheet-body {
+  background-image: url("../assets/img/npcbg1.jpg");
+  background-size: 100%;
+  background-position: center;
+}
+
+.monster .sheet-header {
+  background-image: url("../assets/img/hog-header.jpg");
+  background-size: 100%;
+  background-position: 100%;
+}
+.monster .sheet-body {
+  background-image: url("../assets/img/hog-monster.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+nav.sheet-tabs.tabs {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 0.25rem;
+}
+nav.sheet-tabs.tabs > a {
+  padding: 0.25rem;
+}
+nav.sheet-tabs.tabs > a.active {
+  text-shadow: none;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+nav.sheet-tabs.tabs > a.active:hover {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.abilities {
+  gap: 0.75rem;
+  padding-bottom: 5px;
+}
+
+.ability {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.ability span {
+  font-family: "Unsung Heroes";
+  font-size: 1.5rem;
+}
+.ability input {
+  margin-top: -0.5rem;
+}
+.ability label {
+  padding-top: 5px;
+  font-family: "Strange Dreams";
+}
+
+.system-waw .window-app .window-content {
+  padding: 0 !important;
+}
+
+.additional-abil-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.additional-abil-wrap label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.additional-abil-wrap .resource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.additional-abil-wrap .resource .resource-content {
+  margin-top: 0.25rem;
+}
+.additional-abil-wrap .resource .resource-content input {
+  width: 2.5rem;
+}
+
+.skills {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+
+.skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.skill label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.skill input[type=text] {
+  -webkit-box-flex: 0.01;
+      -ms-flex: 0.01;
+          flex: 0.01;
+}
+.skill input[type=checkbox] {
+  width: auto;
+  height: auto;
+  margin-right: 0.25rem;
+}
+
+.features .grid {
+  margin: 0;
+  padding-top: 5px;
+}
+.features .grid .main {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}

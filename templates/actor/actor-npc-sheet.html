@@ -1,0 +1,157 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <div class="char-img-wrap">
+      <img
+        class="profile-img"
+        src="{{actor.img}}"
+        data-edit="img"
+        title="{{actor.name}}"
+        height="100"
+        width="100"
+      />
+    </div>
+    <div class="header-fields">
+      <h1 class="charname">
+        <input
+          name="name"
+          type="text"
+          value="{{actor.name}}"
+          placeholder="Name"
+        />
+      </h1>
+      <!--NPC Type-->
+      <div class="flex-col">
+        <label for="npc-type">NPC Type</label>
+        <select id="npc-type" name="system.attributes.npcType.value">
+          {{selectOptions npcTypeOptions selected=npcType}}
+        </select>
+      </div>
+      <!--NPC Type-->
+      <div class="resources flexrow">
+        {{!-- "flex-group-center" is also defined in the _grid.scss file and it
+        will add a small amount of padding, a border, and will center all of its
+        child elements content and text. --}}
+        <div class="resource flex-group-center">
+          <label for="system.health.value" class="resource-label">Health</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.health.value"
+              value="{{system.health.value}}"
+              data-dtype="Number"
+            />
+            <span> / </span>
+            <input
+              type="text"
+              name="system.health.max"
+              value="{{system.health.max}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.health.temp" class="resource-label">Temp HP</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.health.temp"
+              value="{{system.health.temp}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.ac.flat" class="resource-label">Armor Class</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.ac.flat"
+              value="{{system.ac.flat}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+
+        <div class="resource flex-group-center">
+          <label for="system.movement.walk" class="resource-label">Speed</label>
+          <div class="resource-content flexrow flex-center flex-between">
+            <input
+              type="text"
+              name="system.movement.walk"
+              value="{{system.movement.walk}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="items">Items</a>
+    <a class="item" data-tab="effects">Reputation</a>
+    <a class="item" data-tab="spells">Spellbook</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    {{!-- Biography Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="npc-sheet-grid">
+        <div class="abilities-column">
+          <div class="abilities flexcol">
+            {{#each system.abilities as |ability key|}}
+            <div class="ability flexcol flex-group-center">
+              <span
+                class="ability-mod rollable"
+                data-roll="d20+@abilities.{{key}}.mod"
+                data-label="{{ability.label}}"
+                >{{numberFormat ability.mod decimals=0 sign=true}}</span
+              >
+              <input
+                type="text"
+                name="system.abilities.{{key}}.value"
+                value="{{ability.value}}"
+                data-dtype="Number"
+              />
+              <label
+                for="system.abilities.{{key}}.value"
+                class="resource-label rollable align-left"
+                data-roll="d20+@abilities.{{key}}.mod"
+                data-label="{{ability.label}}"
+                >{{ability.label}}</label
+              >
+            </div>
+            {{/each}}
+          </div>
+        </div>
+
+        <div class="biography-column">
+          {{editor system.biography target="system.biography" rollData=rollData
+          button=true owner=owner editable=editable}}
+        </div>
+      </div>
+    </div>
+
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+      {{> "systems/waw/templates/actor/parts/actor-items.html"}}
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/waw/templates/actor/parts/actor-effects.html"}}
+    </div>
+
+    {{!-- Owned Spells Tab --}}
+    <div class="tab spells" data-group="primary" data-tab="spells">
+      {{> "systems/waw/templates/actor/parts/actor-spells.html"}}
+    </div>
+  </section>
+</form>

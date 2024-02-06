@@ -1,0 +1,39 @@
+<table class="reputation-table">
+  <thead>
+    <tr>
+      <th>Character Name</th>
+      <th>Relationship Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each system.attributes.reputation.entries as |entry index|}}
+    <tr class="reputation-entry">
+      <td>
+        <input
+          type="text"
+          name="system.reputation.entries.{{index}}.characterName"
+          value="{{entry.characterName}}"
+          class="reputation-name-input"
+        />
+      </td>
+      <td class="flexrow">
+        {{#each ../reputationValueOptions as |value key|}} {{log
+        system.attributes.reputation.entries}}
+        <div class="reputation-scale">
+          <input type="radio" id="rep-{{index}}-{{key}}"
+          class="reputation-value-radio"
+          name="system.reputation.entries.{{index}}.value" value="{{key}}" {{#if
+          (eq entry.value key)}}checked{{/if}} />
+          <label for="rep-{{index}}-{{key}}">{{value}}</label>
+        </div>
+        {{/each}}
+      </td>
+    </tr>
+    {{/each}}
+    <tr>
+      <td colspan="2">
+        <button type="button" class="add-reputation">Add Reputation</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

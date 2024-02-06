@@ -1,0 +1,22 @@
+{
+  "WAW.AbilityStr": "STR",
+  "WAW.AbilityCon": "CON",
+  "WAW.AbilityDex": "DEX",
+  "WAW.AbilityInt": "INT",
+  "WAW.AbilityWis": "WIS",
+  "WAW.AbilityCha": "CHA",
+
+  "WAW.AbilityStrAbbr": "str",
+  "WAW.AbilityConAbbr": "con",
+  "WAW.AbilityDexAbbr": "dex",
+  "WAW.AbilityIntAbbr": "int",
+  "WAW.AbilityWisAbbr": "wis",
+  "WAW.AbilityChaAbbr": "cha",
+
+  "WAW.EffectCreate": "Create Effect",
+  "WAW.EffectToggle": "Toggle Effect",
+  "WAW.EffectEdit": "Edit Effect",
+  "WAW.EffectDelete": "Delete Effect",
+
+  "WAW.Add": "Add"
+}
