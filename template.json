@@ -70,6 +70,15 @@
         "profBonus": {
           "value": 2
         },
+        "spellcastingAbility": {
+          "value": ""
+        },
+        "spellAtkMod": {
+          "value": 0
+        },
+        "spellSaveDC": {
+          "value": 0
+        },
         "sorceryPoints": {
           "value": 0,
           "max": 2
@@ -188,26 +197,42 @@
         }
       },
       "spellSlots": {
-        "1": [2, 0, 0, 0, 0, 0, 0, 0, 0],
-        "2": [3, 0, 0, 0, 0, 0, 0, 0, 0],
-        "3": [4, 2, 0, 0, 0, 0, 0, 0, 0],
-        "4": [4, 3, 0, 0, 0, 0, 0, 0, 0],
-        "5": [4, 3, 2, 0, 0, 0, 0, 0, 0],
-        "6": [4, 3, 3, 0, 0, 0, 0, 0, 0],
-        "7": [4, 3, 3, 1, 0, 0, 0, 0, 0],
-        "8": [4, 3, 3, 2, 0, 0, 0, 0, 0],
-        "9": [4, 3, 3, 3, 1, 0, 0, 0, 0],
-        "10": [4, 3, 3, 3, 2, 0, 0, 0, 0],
-        "11": [4, 3, 3, 3, 2, 1, 0, 0, 0],
-        "12": [4, 3, 3, 3, 2, 1, 0, 0, 0],
-        "13": [4, 3, 3, 3, 2, 1, 1, 0, 0],
-        "14": [4, 3, 3, 3, 2, 1, 1, 0, 0],
-        "15": [4, 3, 3, 3, 2, 1, 1, 1, 0],
-        "16": [4, 3, 3, 3, 2, 1, 1, 1, 0],
-        "17": [4, 3, 3, 3, 2, 1, 1, 1, 1],
-        "18": [4, 3, 3, 3, 3, 1, 1, 1, 1],
-        "19": [4, 3, 3, 3, 3, 2, 1, 1, 1],
-        "20": [4, 3, 3, 3, 3, 2, 2, 1, 1]
+        "spellLevelOne": {
+          "current": 0,
+          "max": 2
+        },
+        "spellLevelTwo": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelThree": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevel4": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevel5": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevel6": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelSeven": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelEight": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelNine": {
+          "current": 0,
+          "max": 0
+        }
       }
     },
     "monster": {
@@ -230,6 +255,44 @@
               "value": 0
             }
           ]
+        }
+      },
+      "spellSlots": {
+        "spellLevelOne": {
+          "current": 0,
+          "max": 2
+        },
+        "spellLevelTwo": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelThree": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevel4": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevel5": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevel6": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelSeven": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelEight": {
+          "current": 0,
+          "max": 0
+        },
+        "spellLevelNine": {
+          "current": 0,
+          "max": 0
         }
       }
     }

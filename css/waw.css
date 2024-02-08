@@ -420,7 +420,6 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0 2px;
-  border-bottom: 1px solid #c9c7b8;
 }
 .waw .items-list .item:last-child {
   border-bottom: none;
@@ -448,7 +447,7 @@
       -ms-flex-align: center;
           align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
+  border-bottom: 1px solid #c9c7b8 !important;
   font-weight: bold;
 }
 .waw .items-list .items-header > * {
@@ -790,6 +789,12 @@
   -webkit-backdrop-filter: blur(3.1px);
   padding: 5px;
 }
+.waw .spellbook-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+}
 .waw .npc .sheet-tabs,
 .waw .monster .sheet-tabs {
   border-top: 2px solid #2e1116;
@@ -901,6 +906,16 @@
   color: #dcb36b;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+}
+.waw .gryffindor .sheet-body .items-list .items-header {
+  background: #952333 !important;
+}
+.waw .gryffindor .sheet-body .items-list .item {
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
 }
 .waw .hufflepuff .sheet-header {
   background: url("../assets/img/HuffHeader1.png");

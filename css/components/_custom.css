@@ -313,6 +313,13 @@
   padding: 5px;
 }
 
+.spellbook-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+}
+
 .npc .sheet-tabs,
 .monster .sheet-tabs {
   border-top: 2px solid #2e1116;
@@ -427,6 +434,16 @@
   color: #dcb36b;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+}
+.gryffindor .sheet-body .items-list .items-header {
+  background: #952333 !important;
+}
+.gryffindor .sheet-body .items-list .item {
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
 }
 
 .hufflepuff .sheet-header {
