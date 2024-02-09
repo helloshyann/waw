@@ -792,8 +792,9 @@
 .waw .spellbook-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
+  -ms-grid-columns: 1fr 5px 2fr;
   grid-template-columns: 1fr 2fr;
+  gap: 5px;
 }
 .waw .npc .sheet-tabs,
 .waw .monster .sheet-tabs {
@@ -841,7 +842,16 @@
       -ms-flex: none !important;
           flex: none !important;
 }
-.waw .reputation-table .reputation-entry {
+.waw .reputation-table th:nth-child(1) {
+  width: 5%; /* Equivalent to .25fr if total is 40% (10% + 10% + 20%) */
+}
+.waw .reputation-table th:nth-child(2) {
+  width: 35%; /* Equivalent to 1fr */
+}
+.waw .reputation-table th:nth-child(3) {
+  width: 60%; /* Equivalent to 3fr */
+}
+.waw .reputation-table tr {
   background: rgba(0, 0, 0, 0.33);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -849,6 +859,33 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
   padding: 5px;
+}
+.waw .reputation-table .reputation-entry td input {
+  text-align: center;
+}
+.waw .reputation-table .reputation-entry td.flexrow {
+  padding: 0.5rem 0 0.75rem;
+}
+.waw .reputation-table .reputation-entry td.flexrow .reputation-scale {
+  border-right: 1px solid #c0aa71;
+}
+.waw .reputation-table .reputation-entry td.flexrow .reputation-scale:last-child {
+  border-right: none;
+}
+.waw .reputation-table .reputation-entry td .delete-reputation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.25rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .waw .reputation-scale {
   display: -webkit-box;
@@ -868,12 +905,62 @@
 }
 .waw .reputation-scale > label {
   margin-bottom: -4px;
+  line-height: 1.25;
 }
 .waw .reputation-scale > input {
-  margin: 0 !important;
+  margin: 0 0 3px !important;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+  border-color: black;
+}
+.waw .reputation-scale.checked-class {
+  background-color: #c0aa71;
+}
+.waw .reputation-scale.checked-class label {
+  color: black;
+}
+.waw .jobs-and-clubs-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.waw .jobs-and-clubs-container .club-title-wrap,
+.waw .jobs-and-clubs-container .job-title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: rgba(0, 0, 0, 0.33);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.waw .jobs-and-clubs-container .club-title-wrap h3,
+.waw .jobs-and-clubs-container .job-title-wrap h3 {
+  margin-bottom: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.waw .jobs-and-clubs-container .club-title-wrap > button,
+.waw .jobs-and-clubs-container .job-title-wrap > button {
+  font-size: 1.5rem;
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
+  width: 2rem;
+  height: 2rem;
 }
 .waw .gryffindor .sheet-header {
   background: url("../assets/img/GryffHeader1.png");

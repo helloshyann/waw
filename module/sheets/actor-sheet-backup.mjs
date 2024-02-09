@@ -116,17 +116,17 @@ export class WaWActorSheet extends ActorSheet {
     // Character Reputation Tracker
     console.log("Initial reputation entries:", actorData.system.attributes.reputation.entries);
       context.reputationValueOptions = {
-      a: "-5",
-      b: "-4",
-      c: "-3",
-      d: "-2",
-      e: "-1",
-      f: "0",
-      g: "1",
-      h: "2",
-      i: "3",
-      j: "4",
-      k: "5"
+      0: -5,
+      1: -4,
+      2: -3,
+      3: -2,
+      4: -1,
+      5: 0,
+      6: 1,
+      7: 2,
+      8: 3,
+      9: 4,
+      10: 5
       };
 
       context.reputationEntries = actorData.system.attributes.reputation.entries || [];
@@ -276,6 +276,16 @@ export class WaWActorSheet extends ActorSheet {
   // Listener for reputation value radio button changes
   html.find('.reputation-value-radio').change(event => this._onReputationValueChange(event));
 
+  // Listener for delete reputation button
+  html.find('.delete-reputation').click(event => this._onDeleteReputation(event));
+
+  // Add listener for radio button changes and initial class updates
+    this._updateReputationScaleClasses(html);
+    html.find('.reputation-value-radio').change(event => {
+      this._onReputationValueChange(event);
+      this._updateReputationScaleClasses(html);
+    });
+
 
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(ev => {
@@ -371,21 +381,25 @@ async _onReputationNameChange(event) {
   const entryIndex = inputElement.data('entry-index'); // assuming each row has a data attribute like data-entry-index
   const newName = inputElement.val();
 
-  let updateData = {};
-  updateData[`system.attributes.reputation.entries.${entryIndex}.characterName`] = newName;
+  const updatedEntries = this.actor.system.attributes.reputation.entries; //First get our list of reputation entries
+  updatedEntries[entryIndex].characterName = newName; // The change 'name' property on the correect entry
 
-  await this.actor.update(updateData);
+  await this.actor.update({
+    "system.attributes.reputation.entries": updatedEntries, // Finally, save the changes to the database
+  })
 }
 
 async _onReputationValueChange(event) {
   const radioButton = $(event.currentTarget);
   const entryIndex = radioButton.data('entry-index');
-  const newValue = radioButton.val();
+  const newValue = Number.parseInt(radioButton.val(), 10);
 
-  let updateData = {};
-  updateData[`system.attributes.reputation.entries.${entryIndex}.value`] = newValue;
+  const updatedEntries = this.actor.system.attributes.reputation.entries; //First get our list of reputation entries
+  updatedEntries[entryIndex].value = newValue; // The change 'name' property on the correect entry
 
-  await this.actor.update(updateData);
+  await this.actor.update({
+    "system.attributes.reputation.entries": updatedEntries, // Finally, save the changes to the database
+  })
 }
 
 async _onAddReputationRow(event) {
@@ -399,7 +413,7 @@ async _onAddReputationRow(event) {
   }
 
   // Add a new entry
-  let newEntry = { characterName: 'New Character', value: 5 };
+  let newEntry = { characterName: 'New Character', value: 0 };
   currentEntries.push(newEntry);
 
   // Update the actor
@@ -411,6 +425,41 @@ async _onAddReputationRow(event) {
   }
 }
 
+async _onDeleteReputation(event) {
+  event.preventDefault();
+  const button = $(event.currentTarget);
+  const entryIndex = button.data('entry-index');
+
+  // Retrieve current entries
+  let currentEntries = this.actor.system.attributes.reputation.entries;
+  if (!Array.isArray(currentEntries)) {
+    console.error("Error: currentEntries is not an array.");
+    return;
+  }
+
+  // Remove the entry at the specified index
+  currentEntries.splice(entryIndex, 1);
+
+  // Update the actor
+  try {
+    await this.actor.update({ 'system.attributes.reputation.entries': currentEntries });
+    this.render(false);
+  } catch (e) {
+    console.error("Error updating actor:", e);
+  }
+}
+
+// Define a new function to update the reputation scale classes
+  _updateReputationScaleClasses(html) {
+    html.find('.reputation-value-radio').each(function() {
+      const isChecked = $(this).is(':checked');
+      if (isChecked) {
+        $(this).closest('.reputation-scale').addClass('checked-class'); // Add your custom class
+      } else {
+        $(this).closest('.reputation-scale').removeClass('checked-class');
+      }
+    });
+  }
 
   /**
    * Handle clickable rolls.

@@ -267,14 +267,34 @@ export class WaWActorSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
-    // Bind the add reputation row function
+    // Listeners for reputation
     html.find('.add-reputation').click(this._onAddReputationRow.bind(this));
+    html.find('.reputation-name-input').change(event => this._onReputationNameChange(event));
+    html.find('.reputation-value-radio').change(event => this._onReputationValueChange(event));
+    html.find('.delete-reputation').click(event => this._onDeleteReputation(event));
+    // Add listener for radio button changes and initial class updates
+      this._updateReputationScaleClasses(html);
+      html.find('.reputation-value-radio').change(event => {
+        this._onReputationValueChange(event);
+        this._updateReputationScaleClasses(html);
+      });
 
-    // Listener for reputation name input changes
-  html.find('.reputation-name-input').change(event => this._onReputationNameChange(event));
+    // Listeners for clubs
+      html.find('.add-club').click(this._onAddClub.bind(this));
+      html.find('.delete-club').click(this._onDeleteClub.bind(this));
+      html.find('.club-name-input').change(this._onClubNameChange.bind(this));
+      html.find('.club-skills-input').change(this._onClubSkillsChange.bind(this));
+      html.find('.club-rank-input').change(this._onClubRankChange.bind(this));
+      html.find('.club-xp-input').change(this._onClubXPChange.bind(this));
 
-  // Listener for reputation value radio button changes
-  html.find('.reputation-value-radio').change(event => this._onReputationValueChange(event));
+    // Listeners for part-time jobs
+      html.find('.add-job').click(this._onAddJob.bind(this));
+      html.find('.delete-job').click(this._onDeleteJob.bind(this));
+      html.find('.job-workplace-input').change(this._onJobWorkplaceChange.bind(this));
+      html.find('.job-title-input').change(this._onJobTitleChange.bind(this));
+      html.find('.job-galleon-pay-input').change(this._onJobGalleonPayChange.bind(this));
+      html.find('.job-sickle-pay-input').change(this._onJobSicklePayChange.bind(this));
+      html.find('.job-knut-pay-input').change(this._onJobKnutPayChange.bind(this));
 
 
     // Render the item sheet for viewing/editing prior to the editable check.
@@ -371,21 +391,25 @@ async _onReputationNameChange(event) {
   const entryIndex = inputElement.data('entry-index'); // assuming each row has a data attribute like data-entry-index
   const newName = inputElement.val();
 
-  let updateData = {};
-  updateData[`system.attributes.reputation.entries.${entryIndex}.characterName`] = newName;
+  const updatedEntries = this.actor.system.attributes.reputation.entries; //First get our list of reputation entries
+  updatedEntries[entryIndex].characterName = newName; // The change 'name' property on the correect entry
 
-  await this.actor.update(updateData);
+  await this.actor.update({
+    "system.attributes.reputation.entries": updatedEntries, // Finally, save the changes to the database
+  })
 }
 
 async _onReputationValueChange(event) {
   const radioButton = $(event.currentTarget);
   const entryIndex = radioButton.data('entry-index');
-  const newValue = radioButton.val();
+  const newValue = Number.parseInt(radioButton.val(), 10);
 
-  let updateData = {};
-  updateData[`system.attributes.reputation.entries.${entryIndex}.value`] = newValue;
+  const updatedEntries = this.actor.system.attributes.reputation.entries; //First get our list of reputation entries
+  updatedEntries[entryIndex].value = newValue; // The change 'name' property on the correect entry
 
-  await this.actor.update(updateData);
+  await this.actor.update({
+    "system.attributes.reputation.entries": updatedEntries, // Finally, save the changes to the database
+  })
 }
 
 async _onAddReputationRow(event) {
@@ -399,7 +423,7 @@ async _onAddReputationRow(event) {
   }
 
   // Add a new entry
-  let newEntry = { characterName: 'New Character', value: 5 };
+  let newEntry = { characterName: 'New Character', value: 0 };
   currentEntries.push(newEntry);
 
   // Update the actor
@@ -410,6 +434,230 @@ async _onAddReputationRow(event) {
     console.error("Error updating actor:", e);
   }
 }
+
+async _onDeleteReputation(event) {
+  event.preventDefault();
+  const button = $(event.currentTarget);
+  const entryIndex = button.data('entry-index');
+
+  // Retrieve current entries
+  let currentEntries = this.actor.system.attributes.reputation.entries;
+  if (!Array.isArray(currentEntries)) {
+    console.error("Error: currentEntries is not an array.");
+    return;
+  }
+
+  // Remove the entry at the specified index
+  currentEntries.splice(entryIndex, 1);
+
+  // Update the actor
+  try {
+    await this.actor.update({ 'system.attributes.reputation.entries': currentEntries });
+    this.render(false);
+  } catch (e) {
+    console.error("Error updating actor:", e);
+  }
+}
+
+// Define a new function to update the reputation scale classes
+  _updateReputationScaleClasses(html) {
+    html.find('.reputation-value-radio').each(function() {
+      const isChecked = $(this).is(':checked');
+      if (isChecked) {
+        $(this).closest('.reputation-scale').addClass('checked-class'); // Add your custom class
+      } else {
+        $(this).closest('.reputation-scale').removeClass('checked-class');
+      }
+    });
+  }
+
+async _onAddClub(event) {
+  event.preventDefault();
+
+  // Retrieve current entries and check if it's an array
+  let clubEntries = this.actor.system.attributes.clubs.clubMemberships;
+  if (!Array.isArray(clubEntries)) {
+    console.warn("clubEntries is not an array. Initializing as an empty array.");
+    clubEntries = [];
+  }
+
+  // Add a new entry
+  let newEntry = { clubName: '', clubSkills: '', clubRank: '', clubXP: 0 };
+  clubEntries.push(newEntry);
+
+  // Update the actor
+  try {
+    await this.actor.update({ 'system.attributes.clubs.clubMemberships': clubEntries });
+    this.render(false);
+  } catch (e) {
+    console.error("Error updating actor:", e);
+  }
+  
+}
+
+
+async _onDeleteClub(event) {
+  event.preventDefault();
+  const button = $(event.currentTarget);
+  const entryIndex = button.data('entry-index');
+  let clubMemberships = duplicate(this.actor.system.attributes.clubs.clubMemberships || []);
+  clubMemberships.splice(entryIndex, 1);
+  await this.actor.update({ 'system.attributes.clubs.clubMemberships': clubMemberships });
+}
+
+async _onClubNameChange(event) {
+  const inputElement = $(event.currentTarget);
+  const entryIndex = inputElement.data('entry-index');
+  const newName = inputElement.val();
+
+  const updatedMemberships = this.actor.system.attributes.clubs.clubMemberships;
+  updatedMemberships[entryIndex].clubName = newName;
+
+  await this.actor.update({
+    'system.attributes.clubs.clubMemberships': updatedMemberships,
+  });
+}
+
+async _onClubSkillsChange(event) {
+  const inputElement = $(event.currentTarget);
+  const entryIndex = inputElement.data('entry-index');
+  const newSkills = inputElement.val();
+
+  const updatedMemberships = this.actor.system.attributes.clubs.clubMemberships;
+  updatedMemberships[entryIndex].clubSkills = newSkills;
+
+  await this.actor.update({
+    'system.attributes.clubs.clubMemberships': updatedMemberships,
+  });
+}
+
+async _onClubRankChange(event) {
+  const inputElement = $(event.currentTarget);
+  const entryIndex = inputElement.data('entry-index');
+  const newRank = inputElement.val();
+
+  const updatedMemberships = this.actor.system.attributes.clubs.clubMemberships;
+  updatedMemberships[entryIndex].clubRank = newRank;
+
+  await this.actor.update({
+    'system.attributes.clubs.clubMemberships': updatedMemberships,
+  });
+}
+
+async _onClubXPChange(event) {
+  const inputElement = $(event.currentTarget);
+  const entryIndex = inputElement.data('entry-index');
+  const newXP = parseInt(inputElement.val(), 10); // Assuming XP is a number
+
+  const updatedMemberships = this.actor.system.attributes.clubs.clubMemberships;
+  updatedMemberships[entryIndex].clubXP = newXP;
+
+  await this.actor.update({
+    'system.attributes.clubs.clubMemberships': updatedMemberships,
+  });
+}
+
+
+
+async _onAddJob(event) {
+  event.preventDefault();
+
+  event.preventDefault();
+
+  // Retrieve current entries and check if it's an array
+  let jobEntries = this.actor.system.attributes.partTimeJobs.employedAt;
+  if (!Array.isArray(jobEntries)) {
+    console.warn("jobEntries is not an array. Initializing as an empty array.");
+    jobEntries = [];
+  }
+
+  // Add a new entry
+  let newEntry = { workplace: '', jobTitle: '', galleonPay: 0, sicklePay: 0, knutPay: 0 };
+  jobEntries.push(newEntry);
+
+  // Update the actor
+  try {
+    await this.actor.update({ 'system.attributes.partTimeJobs.employedAt': jobEntries });
+    this.render(false);
+  } catch (e) {
+    console.error("Error updating actor:", e);
+  }
+}
+
+async _onDeleteJob(event) {
+  event.preventDefault();
+  const button = $(event.currentTarget);
+  const entryIndex = button.data('entry-index');
+  let employedAt = duplicate(this.actor.system.attributes.partTimeJobs.employedAt || []);
+  employedAt.splice(entryIndex, 1);
+  await this.actor.update({ 'system.attributes.partTimeJobs.employedAt': employedAt });
+}
+
+async _onJobWorkplaceChange(event) {
+    const inputElement = $(event.currentTarget);
+    const entryIndex = inputElement.data('entry-index');
+    const newWorkplace = inputElement.val();
+
+    const updatedJobs = this.actor.system.attributes.partTimeJobs.employedAt;
+    updatedJobs[entryIndex].workplace = newWorkplace;
+
+    await this.actor.update({
+        'system.attributes.partTimeJobs.employedAt': updatedJobs,
+    });
+}
+
+async _onJobTitleChange(event) {
+    const inputElement = $(event.currentTarget);
+    const entryIndex = inputElement.data('entry-index');
+    const newTitle = inputElement.val();
+
+    const updatedJobs = this.actor.system.attributes.partTimeJobs.employedAt;
+    updatedJobs[entryIndex].jobTitle = newTitle;
+
+    await this.actor.update({
+        'system.attributes.partTimeJobs.employedAt': updatedJobs,
+    });
+}
+
+async _onJobGalleonPayChange(event) {
+    const inputElement = $(event.currentTarget);
+    const entryIndex = inputElement.data('entry-index');
+    const newGalleonPay = parseInt(inputElement.val(), 10);
+
+    const updatedJobs = this.actor.system.attributes.partTimeJobs.employedAt;
+    updatedJobs[entryIndex].galleonPay = newGalleonPay;
+
+    await this.actor.update({
+        'system.attributes.partTimeJobs.employedAt': updatedJobs,
+    });
+}
+
+async _onJobSicklePayChange(event) {
+    const inputElement = $(event.currentTarget);
+    const entryIndex = inputElement.data('entry-index');
+    const newSicklePay = parseInt(inputElement.val(), 10);
+
+    const updatedJobs = this.actor.system.attributes.partTimeJobs.employedAt;
+    updatedJobs[entryIndex].sicklePay = newSicklePay;
+
+    await this.actor.update({
+        'system.attributes.partTimeJobs.employedAt': updatedJobs,
+    });
+}
+
+async _onJobKnutPayChange(event) {
+    const inputElement = $(event.currentTarget);
+    const entryIndex = inputElement.data('entry-index');
+    const newKnutPay = parseInt(inputElement.val(), 10);
+
+    const updatedJobs = this.actor.system.attributes.partTimeJobs.employedAt;
+    updatedJobs[entryIndex].knutPay = newKnutPay;
+
+    await this.actor.update({
+        'system.attributes.partTimeJobs.employedAt': updatedJobs,
+    });
+}
+
 
 
   /**

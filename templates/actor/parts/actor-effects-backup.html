@@ -1,6 +1,7 @@
 <table class="reputation-table">
   <thead>
     <tr>
+      <th></th>
       <th>Character Name</th>
       <th>Relationship Level</th>
     </tr>
@@ -9,11 +10,43 @@
     {{#each system.attributes.reputation.entries as |entry index|}}
     <tr class="reputation-entry">
       <td>
+        <button
+          type="button"
+          class="delete-reputation"
+          data-entry-index="{{index}}"
+        >
+          <svg
+            width="12px"
+            height="12px"
+            viewBox="0 0 12 12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="1"
+              y1="11"
+              x2="11"
+              y2="1"
+              stroke="white"
+              stroke-width="2"
+            />
+            <line
+              x1="1"
+              y1="1"
+              x2="11"
+              y2="11"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </td>
+      <td>
         <input
           type="text"
           name="system.reputation.entries.{{index}}.characterName"
           value="{{entry.characterName}}"
           class="reputation-name-input"
+          data-entry-index="{{index}}"
         />
       </td>
       <td class="flexrow">
@@ -21,9 +54,9 @@
         system.attributes.reputation.entries}}
         <div class="reputation-scale">
           <input type="radio" id="rep-{{index}}-{{key}}"
-          class="reputation-value-radio"
-          name="system.reputation.entries.{{index}}.value" value="{{key}}" {{#if
-          (eq entry.value key)}}checked{{/if}} />
+          data-entry-index="{{index}}" class="reputation-value-radio"
+          name="system.reputation.entries.{{index}}.value" value="{{value}}"
+          {{#if (eq entry.value value)}}checked{{/if}} />
           <label for="rep-{{index}}-{{key}}">{{value}}</label>
         </div>
         {{/each}}
@@ -31,7 +64,7 @@
     </tr>
     {{/each}}
     <tr>
-      <td colspan="2">
+      <td colspan="3">
         <button type="button" class="add-reputation">Add Reputation</button>
       </td>
     </tr>

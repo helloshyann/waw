@@ -1,6 +1,139 @@
+<div class="jobs-and-clubs-container">
+  <div class="job-cards-container">
+    <div class="job-title-wrap">
+      <h3>Part-Time Jobs</h3>
+      <button type="button" class="add-job">+</button>
+    </div>
+
+    {{#each system.attributes.partTimeJobs.employedAt as |job index|}}
+    <div class="job-entry">
+      <div class="flexrow">
+        <div class="flexcol">
+          <input
+            type="text"
+            class="job-workplace-input"
+            name="system.partTimeJobs.employedAt.{{index}}.workplace"
+            value="{{job.workplace}}"
+            placeholder="Workplace"
+            data-entry-index="{{index}}"
+          />
+        </div>
+        <div class="flexcol">
+          <input
+            type="text"
+            class="job-title-input"
+            name="system.partTimeJobs.employedAt.{{index}}.jobTitle"
+            value="{{job.jobTitle}}"
+            placeholder="Job Title"
+            data-entry-index="{{index}}"
+          />
+        </div>
+      </div>
+      <div class="flexrow">
+        <div class="flexcol">
+          <label class="resource-label">Galleon Pay</label>
+          <input
+            type="number"
+            class="job-galleon-pay-input"
+            name="system.partTimeJobs.employedAt.{{index}}.galleonPay"
+            value="{{job.galleonPay}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+        <div class="flexcol">
+          <label class="resource-label">Sickle Pay</label>
+          <input
+            type="number"
+            class="job-sickle-pay-input"
+            name="system.partTimeJobs.employedAt.{{index}}.sicklePay"
+            value="{{job.sicklePay}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+        <div class="flexcol">
+          <label class="resource-label">Knut Pay</label>
+          <input
+            type="number"
+            class="job-knut-pay-input"
+            name="system.partTimeJobs.employedAt.{{index}}.knutPay"
+            value="{{job.knutPay}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+      </div>
+
+      <button type="button" class="delete-job" data-entry-index="{{index}}">
+        Delete
+      </button>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="club-cards-container">
+    <div class="club-title-wrap">
+      <h3>Active Clubs</h3>
+      <button type="button" class="add-club">+</button>
+    </div>
+
+    {{#each system.attributes.clubs.clubMemberships as |membership index|}}
+    <div class="club-membership-entry">
+      <div class="flexrow">
+        <div class="flexcol">
+          <label class="resource-label">Club Name</label>
+          <input
+            type="text"
+            class="club-name-input"
+            name="system.clubs.clubMemberships.{{index}}.clubName"
+            value="{{membership.clubName}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+        <div class="flexcol">
+          <label class="resource-label">Club Ranking</label>
+          <input
+            type="text"
+            class="club-rank-input"
+            name="system.clubs.clubMemberships.{{index}}.clubRank"
+            value="{{membership.clubRank}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+      </div>
+      <div class="flexrow">
+        <div class="flexcol">
+          <label class="resource-label">Club Skills</label>
+          <input
+            type="text"
+            class="club-skills-input"
+            name="system.clubs.clubMemberships.{{index}}.clubSkills"
+            value="{{membership.clubSkills}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+        <div class="flexcol">
+          <label class="resource-label">Club XP</label>
+          <input
+            type="number"
+            class="club-xp-input"
+            name="system.clubs.clubMemberships.{{index}}.clubXP"
+            value="{{membership.clubXP}}"
+            data-entry-index="{{index}}"
+          />
+        </div>
+      </div>
+
+      <button type="button" class="delete-club" data-entry-index="{{index}}">
+        Delete
+      </button>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
 <table class="reputation-table">
   <thead>
     <tr>
+      <th></th>
       <th>Character Name</th>
       <th>Relationship Level</th>
     </tr>
@@ -9,11 +142,43 @@
     {{#each system.attributes.reputation.entries as |entry index|}}
     <tr class="reputation-entry">
       <td>
+        <button
+          type="button"
+          class="delete-reputation"
+          data-entry-index="{{index}}"
+        >
+          <svg
+            width="12px"
+            height="12px"
+            viewBox="0 0 12 12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="1"
+              y1="11"
+              x2="11"
+              y2="1"
+              stroke="white"
+              stroke-width="2"
+            />
+            <line
+              x1="1"
+              y1="1"
+              x2="11"
+              y2="11"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </td>
+      <td>
         <input
           type="text"
           name="system.reputation.entries.{{index}}.characterName"
           value="{{entry.characterName}}"
           class="reputation-name-input"
+          data-entry-index="{{index}}"
         />
       </td>
       <td class="flexrow">
@@ -21,9 +186,9 @@
         system.attributes.reputation.entries}}
         <div class="reputation-scale">
           <input type="radio" id="rep-{{index}}-{{key}}"
-          class="reputation-value-radio"
-          name="system.reputation.entries.{{index}}.value" value="{{key}}" {{#if
-          (eq entry.value key)}}checked{{/if}} />
+          data-entry-index="{{index}}" class="reputation-value-radio"
+          name="system.reputation.entries.{{index}}.value" value="{{value}}"
+          {{#if (eq entry.value value)}}checked{{/if}} />
           <label for="rep-{{index}}-{{key}}">{{value}}</label>
         </div>
         {{/each}}
@@ -31,7 +196,7 @@
     </tr>
     {{/each}}
     <tr>
-      <td colspan="2">
+      <td colspan="3">
         <button type="button" class="add-reputation">Add Reputation</button>
       </td>
     </tr>

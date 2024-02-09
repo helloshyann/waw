@@ -90,6 +90,27 @@
               "value": 0
             }
           ]
+        },
+        "clubs": {
+          "clubMemberships": [
+            {
+              "clubName": "",
+              "clubSkills": "",
+              "clubRank": "",
+              "clubXP": 0
+            }
+          ]
+        },
+        "partTimeJobs": {
+          "employedAt": [
+            {
+              "workplace": "",
+              "jobTitle": "",
+              "galleonPay": 0,
+              "sicklePay": 0,
+              "knutPay": 0
+            }
+          ]
         }
       },
       "skills": {
@@ -251,8 +272,29 @@
         "reputation": {
           "entries": [
             {
-              "characterName": "Character Name",
+              "characterName": "New Character",
               "value": 0
+            }
+          ]
+        },
+        "clubs": {
+          "clubMemberships": [
+            {
+              "clubName": "",
+              "clubSkills": "",
+              "clubRank": "",
+              "clubXP": 0
+            }
+          ]
+        },
+        "partTimeJobs": {
+          "employedAt": [
+            {
+              "workplace": "",
+              "jobTitle": "",
+              "galleonPay": 0,
+              "sicklePay": 0,
+              "knutPay": 0
             }
           ]
         }
