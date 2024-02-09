@@ -1,4 +1,64 @@
 <div class="jobs-and-clubs-container">
+  <div class="club-cards-container">
+    <div class="club-title-wrap">
+      <h3>Active Clubs</h3>
+      <button type="button" class="add-club">+</button>
+    </div>
+
+    {{#each system.attributes.clubs.clubMemberships as |membership index|}}
+    <div class="club-membership-entry">
+      <div class="flexcol">
+        <div class="flexcol">
+          <input
+            type="text"
+            class="club-name-input"
+            name="system.clubs.clubMemberships.{{index}}.clubName"
+            value="{{membership.clubName}}"
+            data-entry-index="{{index}}"
+            placeholder="Club Name"
+          />
+        </div>
+        <div class="flexrow">
+          <div class="flexcol">
+            <input
+              type="text"
+              class="club-rank-input"
+              name="system.clubs.clubMemberships.{{index}}.clubRank"
+              value="{{membership.clubRank}}"
+              data-entry-index="{{index}}"
+              placeholder="Club Rank"
+            />
+          </div>
+          <div class="flexcol">
+            <label class="resource-label">Club XP</label>
+            <input
+              type="number"
+              class="club-xp-input"
+              name="system.clubs.clubMemberships.{{index}}.clubXP"
+              value="{{membership.clubXP}}"
+              data-entry-index="{{index}}"
+            />
+          </div>
+        </div>
+        <div class="flexcol">
+          <input
+            type="text"
+            class="club-skills-input"
+            name="system.clubs.clubMemberships.{{index}}.clubSkills"
+            value="{{membership.clubSkills}}"
+            data-entry-index="{{index}}"
+            placeholder="Club Skills"
+          />
+        </div>
+      </div>
+
+      <button type="button" class="delete-club" data-entry-index="{{index}}">
+        Delete
+      </button>
+    </div>
+    {{/each}}
+  </div>
+
   <div class="job-cards-container">
     <div class="job-title-wrap">
       <h3>Part-Time Jobs</h3>
@@ -7,7 +67,7 @@
 
     {{#each system.attributes.partTimeJobs.employedAt as |job index|}}
     <div class="job-entry">
-      <div class="flexrow">
+      <div class="flexcol">
         <div class="flexcol">
           <input
             type="text"
@@ -68,72 +128,12 @@
     </div>
     {{/each}}
   </div>
-
-  <div class="club-cards-container">
-    <div class="club-title-wrap">
-      <h3>Active Clubs</h3>
-      <button type="button" class="add-club">+</button>
-    </div>
-
-    {{#each system.attributes.clubs.clubMemberships as |membership index|}}
-    <div class="club-membership-entry">
-      <div class="flexrow">
-        <div class="flexcol">
-          <label class="resource-label">Club Name</label>
-          <input
-            type="text"
-            class="club-name-input"
-            name="system.clubs.clubMemberships.{{index}}.clubName"
-            value="{{membership.clubName}}"
-            data-entry-index="{{index}}"
-          />
-        </div>
-        <div class="flexcol">
-          <label class="resource-label">Club Ranking</label>
-          <input
-            type="text"
-            class="club-rank-input"
-            name="system.clubs.clubMemberships.{{index}}.clubRank"
-            value="{{membership.clubRank}}"
-            data-entry-index="{{index}}"
-          />
-        </div>
-      </div>
-      <div class="flexrow">
-        <div class="flexcol">
-          <label class="resource-label">Club Skills</label>
-          <input
-            type="text"
-            class="club-skills-input"
-            name="system.clubs.clubMemberships.{{index}}.clubSkills"
-            value="{{membership.clubSkills}}"
-            data-entry-index="{{index}}"
-          />
-        </div>
-        <div class="flexcol">
-          <label class="resource-label">Club XP</label>
-          <input
-            type="number"
-            class="club-xp-input"
-            name="system.clubs.clubMemberships.{{index}}.clubXP"
-            value="{{membership.clubXP}}"
-            data-entry-index="{{index}}"
-          />
-        </div>
-      </div>
-
-      <button type="button" class="delete-club" data-entry-index="{{index}}">
-        Delete
-      </button>
-    </div>
-    {{/each}}
-  </div>
 </div>
 
 <table class="reputation-table">
   <thead>
     <tr>
-      <th></th>
+      <th><button type="button" class="add-reputation">+</button></th>
       <th>Character Name</th>
       <th>Relationship Level</th>
     </tr>
@@ -195,10 +195,5 @@
       </td>
     </tr>
     {{/each}}
-    <tr>
-      <td colspan="3">
-        <button type="button" class="add-reputation">Add Reputation</button>
-      </td>
-    </tr>
   </tbody>
 </table>

@@ -379,6 +379,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
+  flex: 0 !important;
   .club-title-wrap,
   .job-title-wrap {
     display: flex;
@@ -392,6 +393,9 @@
     padding: 5px;
     h3 {
       margin-bottom: 0;
+      border-bottom: none;
+      font-size: 1.5em;
+      padding-left: 0.25rem;
       flex: 1;
     }
     > button {
@@ -399,6 +403,21 @@
       flex: 0.1;
       width: 2rem;
       height: 2rem;
+    }
+  }
+  .job-entry,
+  .club-membership-entry {
+    margin-top: 5px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.33);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    input {
+      &::placeholder {
+        color: rgb(221, 221, 221);
+      }
     }
   }
 }
