@@ -11,5 +11,6 @@
     "systems/waw/templates/actor/parts/actor-items.html",
     "systems/waw/templates/actor/parts/actor-spells.html",
     "systems/waw/templates/actor/parts/actor-effects.html",
+    "systems/waw/templates/actor/parts/actor-report.html",
   ]);
 };

@@ -44,3 +44,35 @@
   justify-content: center;
   text-align: center;
 }
+
+.saving-throws {
+  label {
+    flex: 1;
+  }
+  input {
+    flex: 1.5;
+  }
+}
+
+.wand-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  font-size: 20px;
+  > strong {
+    height: 100%;
+    margin: auto auto;
+    padding: 3px 0 1px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  input {
+    width: 50px;
+  }
+}

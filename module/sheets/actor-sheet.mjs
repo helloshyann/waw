@@ -11,8 +11,8 @@ export class WaWActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["waw", "sheet", "actor"],
       template: "systems/waw/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 975,
+      width: 720,
+      height: 860,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
     });
   }
@@ -58,12 +58,13 @@ export class WaWActorSheet extends ActorSheet {
     };
 
     context.schoolOfMagicOptions = {
-      charms: "Charms",
-      divination: "Divination",
-      jhc: "Jinxes, Hexes, & Curses",
-      healing: "Healing",
-      magizoo: "Magizoology",
-      transfig: "Transfiguration"
+      lore: "Arcane Lore",
+      duel: "Dueling Arts",
+      enchant: "Enchanting Arts",
+      magibio: "Magibology",
+      mystic: "Mystic Arts",
+      potions: "Potioneering",
+      transfig: "Transmutation Sciences"
     };
 
     context.hogwartsHouse = actorData.system.attributes.hogwartsHouse.value;
@@ -224,16 +225,9 @@ export class WaWActorSheet extends ActorSheet {
     const gear = [];
     const features = [];
     const spells = {
-      0: [],
-      1: [],
-      2: [],
-      3: [],
-      4: [],
-      5: [],
-      6: [],
-      7: [],
-      8: [],
-      9: []
+      "Initiate": [],
+      "Adept": [],
+      "Collegian": []
     };
 
     // Iterate through items, allocating to containers

@@ -1,7 +1,7 @@
 // Section Header
 .items-header {
   height: 28px;
-  margin: 2px 0;
+  margin-bottom: 2px;
   padding: 0;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
@@ -31,6 +31,15 @@
   overflow-y: auto;
   scrollbar-width: thin;
   color: $c-tan;
+
+  .item {
+    &:first-child {
+      border-radius: 5px 5px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 5px 5px;
+    }
+  }
 
   // Child lists
   .item-list {
@@ -82,8 +91,14 @@
         flex: 0 0 30px;
         height: 30px;
         background-size: 30px;
-        border: none;
+        border: none !important;
         margin-right: 5px;
+        padding: 2px 0;
+        a {
+          img {
+            border: none !important;
+          }
+        }
       }
     }
   }
@@ -102,7 +117,7 @@
     padding: 0;
     align-items: center;
     background: rgba(0, 0, 0, 0.05);
-    border-bottom: 1px solid $c-faint !important;
+
     font-weight: bold;
     > * {
       font-size: 12px;

@@ -1,173 +1,147 @@
 <div class="spellbook-grid">
-  <aside class="test">
-    <div class="resource flex-group-center" id="spell-slot-level-1">
-      <label class="resource-label">Level 1 Spell Slots</label>
+  <aside>
+    <div class="spell-slot-table">
+      <div class="flexcol">
+        <strong
+          style="
+            text-align: center;
+            letter-spacing: 1px;
+            border-bottom: 1px solid white;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+          "
+          >Spellcasting</strong
+        >
+      </div>
       <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelOne.current"
-          value="{{system.spellSlots.spellLevelOne.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelOne.max"
-          value="{{system.spellSlots.spellLevelOne.max}}"
-          data-dtype="Number"
-        />
+        <strong style="align-self: center; text-align: center">Ability</strong>
+        <div>
+          <input
+            type="text"
+            name="system.attributes.spellcastingAbility.value"
+            value="{{system.attributes.spellcastingAbility.value}}"
+            data-dtype="Text"
+          />
+        </div>
+      </div>
+      <div class="resource-content flexrow flex-center flex-between">
+        <strong style="align-self: center; text-align: center"
+          >Attack Mod</strong
+        >
+        <div>
+          <input
+            type="text"
+            name="system.attributes.spellAtkMod.value"
+            value="{{system.attributes.spellAtkMod.value}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+      <div class="resource-content flexrow flex-center flex-between">
+        <strong style="align-self: center; text-align: center">Save DC</strong>
+        <div>
+          <input
+            type="text"
+            name="system.attributes.spellSaveDC.value"
+            value="{{system.attributes.spellSaveDC.value}}"
+            data-dtype="Number"
+          />
+        </div>
       </div>
     </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-2">
-      <label class="resource-label">Level 2 Spell Slots</label>
+
+    <div class="spell-slot-table">
+      <div class="flexcol">
+        <strong
+          style="
+            text-align: center;
+            letter-spacing: 1px;
+            border-bottom: 1px solid white;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+          "
+          >Mana Points</strong
+        >
+      </div>
+      <!--- 1st Level Spell Slots --->
       <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelTwo.current"
-          value="{{system.spellSlots.spellLevelTwo.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelTwo.max"
-          value="{{system.spellSlots.spellLevelTwo.max}}"
-          data-dtype="Number"
-        />
+        <label
+          class="resource-label spell-slot-label"
+          style="text-align: center"
+        >
+          Remaining
+        </label>
+
+        <label
+          class="resource-label spell-slot-label"
+          style="text-align: center"
+        >
+          Total
+        </label>
+      </div>
+      <div class="flexcol">
+        <div class="resource-content flexrow flex-center flex-between">
+          <input
+            type="text"
+            name="system.manaPoints.current"
+            value="{{system.manaPoints.current}}"
+            data-dtype="Number"
+          />
+
+          <input
+            type="text"
+            name="system.manaPoints.max"
+            value="{{system.manaPoints.max}}"
+            data-dtype="Number"
+          />
+        </div>
       </div>
     </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-3">
-      <label class="resource-label">Level 3 Spell Slots</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelThree.current"
-          value="{{system.spellSlots.spellLevelThree.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelThree.max"
-          value="{{system.spellSlots.spellLevelThree.max}}"
-          data-dtype="Number"
-        />
+
+    <div class="spell-slot-table">
+      <div class="flexcol">
+        <strong
+          style="
+            text-align: center;
+            letter-spacing: 1px;
+            border-bottom: 1px solid white;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+          "
+          >Sorcery Points</strong
+        >
       </div>
-    </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-4">
-      <label class="resource-label">Level 4 Spell Slots</label>
+      <!--- 1st Level Spell Slots --->
       <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelFour.current"
-          value="{{system.spellSlots.spellLevelFour.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelFour.max"
-          value="{{system.spellSlots.spellLevelFour.max}}"
-          data-dtype="Number"
-        />
+        <label
+          class="resource-label spell-slot-label"
+          style="text-align: center"
+        >
+          Remaining
+        </label>
+        <label
+          class="resource-label spell-slot-label"
+          style="text-align: center"
+        >
+          Total
+        </label>
       </div>
-    </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-5">
-      <label class="resource-label">Level 5 Spell Slots</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelFive.current"
-          value="{{system.spellSlots.spellLevelFive.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelFive.max"
-          value="{{system.spellSlots.spellLevelFive.max}}"
-          data-dtype="Number"
-        />
-      </div>
-    </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-6">
-      <label class="resource-label">Level 6 Spell Slots</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelSix.current"
-          value="{{system.spellSlots.spellLevelSix.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelSix.max"
-          value="{{system.spellSlots.spellLevelSix.max}}"
-          data-dtype="Number"
-        />
-      </div>
-    </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-7">
-      <label class="resource-label">Level 7 Spell Slots</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelSeven.current"
-          value="{{system.spellSlots.spellLevelSeven.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelSeven.max"
-          value="{{system.spellSlots.spellLevelSeven.max}}"
-          data-dtype="Number"
-        />
-      </div>
-    </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-8">
-      <label class="resource-label">Level 8 Spell Slots</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelEight.current"
-          value="{{system.spellSlots.spellLevelEight.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelEight.max"
-          value="{{system.spellSlots.spellLevelEight.max}}"
-          data-dtype="Number"
-        />
-      </div>
-    </div>
-    <hr />
-    <div class="resource flex-group-center" id="spell-slot-level-9">
-      <label class="resource-label">Level 9 Spell Slots</label>
-      <div class="resource-content flexrow flex-center flex-between">
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelNine.current"
-          value="{{system.spellSlots.spellLevelNine.current}}"
-          data-dtype="Number"
-        />
-        <span> / </span>
-        <input
-          type="text"
-          name="system.spellSlots.spellLevelNine.max"
-          value="{{system.spellSlots.spellLevelNine.max}}"
-          data-dtype="Number"
-        />
+      <div class="flexcol">
+        <div class="resource-content flexrow flex-center flex-between">
+          <input
+            type="text"
+            name="system.attributes.sorceryPoints.value"
+            value="{{system.attributes.sorceryPoints.value}}"
+            data-dtype="Number"
+          />
+
+          <input
+            type="text"
+            name="system.attributes.sorceryPoints.max"
+            value="{{system.attributes.sorceryPoints.max}}"
+            data-dtype="Number"
+          />
+        </div>
       </div>
     </div>
   </aside>
@@ -176,14 +150,14 @@
     <ol class="items-list">
       {{#each spells as |spells spellLevel|}}
       <li class="item flexrow items-header">
-        <div class="item-name">Level {{spellLevel}} Spells</div>
+        <div class="item-name">{{spellLevel}} Level Spells</div>
         <div class="item-controls">
           <a
             class="item-control item-create"
             title="Create item"
             data-type="spell"
             data-spell-level="{{spellLevel}}"
-            ><i class="fas fa-plus"></i> Add LVL {{spellLevel}}</a
+            ><i class="fas fa-plus"></i> Add {{spellLevel}} Spell</a
           >
         </div>
       </li>

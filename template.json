@@ -70,6 +70,9 @@
         "profBonus": {
           "value": 2
         },
+        "savingThrows": {
+          "value": ""
+        },
         "spellcastingAbility": {
           "value": ""
         },
@@ -82,6 +85,54 @@
         "sorceryPoints": {
           "value": 0,
           "max": 2
+        },
+        "money": {
+          "galleons": 0,
+          "sickles": 0,
+          "knuts": 0
+        },
+        "equipped": {
+          "one": "",
+          "two": "",
+          "three": "",
+          "four": ""
+        },
+        "wandUpgrade": {
+          "one": false,
+          "two": false,
+          "three": false
+        },
+        "inspiration": {
+          "value": 0
+        },
+        "schedule": {
+          "fallMorn": "",
+          "fallMornSp": "",
+          "fallMornGrd": "",
+          "fallAft": "",
+          "fallAftSp": "",
+          "fallAftGrd": "",
+          "fallEven": "",
+          "fallEvenSp": "",
+          "fallEvenGrd": "",
+          "winterMorn": "",
+          "winterMornSp": "",
+          "winterMornGrd": "",
+          "winterAft": "",
+          "winterAftSp": "",
+          "winterAftGrd": "",
+          "winterEven": "",
+          "winterEvenSp": "",
+          "winterEvenGrd": "",
+          "springMorn": "",
+          "springMornSp": "",
+          "springMornGrd": "",
+          "springAft": "",
+          "springAftSp": "",
+          "springAftGrd": "",
+          "springEven": "",
+          "springEvenSp": "",
+          "springEvenGrd": ""
         },
         "reputation": {
           "entries": [
@@ -217,43 +268,9 @@
           "prof": false
         }
       },
-      "spellSlots": {
-        "spellLevelOne": {
-          "current": 0,
-          "max": 2
-        },
-        "spellLevelTwo": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelThree": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevel4": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevel5": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevel6": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelSeven": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelEight": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelNine": {
-          "current": 0,
-          "max": 0
-        }
+      "manaPoints": {
+        "current": 0,
+        "max": 2
       }
     },
     "monster": {
@@ -312,15 +329,15 @@
           "current": 0,
           "max": 0
         },
-        "spellLevel4": {
+        "spellLevelFour": {
           "current": 0,
           "max": 0
         },
-        "spellLevel5": {
+        "spellLevelFive": {
           "current": 0,
           "max": 0
         },
-        "spellLevel6": {
+        "spellLevelSix": {
           "current": 0,
           "max": 0
         },
@@ -374,8 +391,7 @@
         "range": "",
         "duration": "",
         "ritual": false,
-        "concentration": false,
-        "dedication": false
+        "concentration": false
       },
       "description": "",
       "scaling": {

@@ -21,51 +21,85 @@
             placeholder="Name"
           />
         </h1>
-        <div class="resource">
-          <label for="system.attributes.year.value" class="resource-label"
-            >Year</label
+        <div class="inspo">
+          <input
+            type="text"
+            name="system.attributes.inspiration.value"
+            value="{{system.attributes.inspiration.value}}"
+            data-dtype="Number"
+          />
+          <label
+            for="system.attributes.inspiration.value"
+            class="resource-label"
+            style="text-align: center"
+            >Inspiration</label
           >
-          <div class="resource-content flexrow flex-center flex-between">
-            <input
-              type="text"
-              name="system.attributes.year.value"
-              value="{{system.attributes.year.value}}"
-              data-dtype="Number"
-            />
-          </div>
-        </div>
-        <div class="resource">
-          <label for="system.attributes.level.value" class="resource-label"
-            >Level</label
-          >
-          <div class="resource-content flexrow flex-center flex-between">
-            <input
-              type="text"
-              name="system.attributes.level.value"
-              value="{{system.attributes.level.value}}"
-              data-dtype="Number"
-            />
-          </div>
         </div>
       </div>
       <div class="charmeta">
+        <div class="flex-col level">
+          <label
+            for="system.attributes.level.value"
+            class="resource-label"
+            style="text-align: center"
+            >Level</label
+          >
+
+          <input
+            type="text"
+            name="system.attributes.level.value"
+            value="{{system.attributes.level.value}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="flex-col year">
+          <label
+            for="system.attributes.year.value"
+            class="resource-label"
+            style="text-align: center"
+            >Year</label
+          >
+
+          <input
+            type="text"
+            name="system.attributes.year.value"
+            value="{{system.attributes.year.value}}"
+            data-dtype="Number"
+          />
+        </div>
         <div class="flex-col">
-          <label for="hogwarts-house">Hogwarts House</label>
+          <label
+            for="hogwarts-house"
+            class="resource-label"
+            style="text-align: center"
+            >House</label
+          >
           <select
             id="hogwarts-house"
             name="system.attributes.hogwartsHouse.value"
           >
+            <option></option>
             {{selectOptions hogwartsHouseOptions selected=hogwartsHouse}}
           </select>
         </div>
         <div class="flex-col">
-          <label for="caster-type">Caster Type</label>
+          <label
+            for="caster-type"
+            class="resource-label"
+            style="text-align: center"
+            >Caster</label
+          >
           <select id="caster-type" name="system.attributes.casterType.value">
             {{selectOptions casterTypeOptions selected=casterType}}
           </select>
         </div>
         <div class="flex-col">
-          <label for="school-of-magic">School of Magic</label>
+          <label
+            for="school-of-magic"
+            class="resource-label"
+            style="text-align: center"
+            >School of</label
+          >
           <select
             id="school-of-magic"
             name="system.attributes.schoolOfMagic.value"
@@ -90,7 +124,7 @@
               value="{{system.health.value}}"
               data-dtype="Number"
             />
-            <span> / </span>
+            <sub>&nbsp;out of&nbsp;</sub>
             <input
               type="text"
               name="system.health.max"
@@ -142,12 +176,12 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="features">Metrics & Features</a>
+    <a class="item" data-tab="features">Metrics</a>
     <a class="item" data-tab="description">Identity</a>
     <a class="item" data-tab="effects">Reputation</a>
-    <a class="item" data-tab="items">School Trunk</a>
+    <a class="item" data-tab="items">Trunk</a>
     <a class="item" data-tab="spells">Spellbook</a>
-    <a class="item" data-tab="effects">Report Card</a>
+    <a class="item" data-tab="report">Schedule</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -195,25 +229,16 @@
             />
           </div>
         </div>
-        <div class="resource flex-group-center">
-          <label for="system.health.value" class="resource-label"
-            >Sorcery Points</label
+        <div class="resource flex-group-center saving-throws">
+          <label for="system.savingThrows.value" class="resource-label"
+            >Saving Throws</label
           >
-          <div class="resource-content flexrow flex-center flex-between">
-            <input
-              type="text"
-              name="system.attributes.sorceryPoints.value"
-              value="{{system.attributes.sorceryPoints.value}}"
-              data-dtype="Number"
-            />
-            <span> / </span>
-            <input
-              type="text"
-              name="system.attributes.sorceryPoints.max"
-              value="{{system.attributes.sorceryPoints.max}}"
-              data-dtype="Number"
-            />
-          </div>
+          <input
+            type="text"
+            name="system.attributes.savingThrows.value"
+            value="{{system.attributes.savingThrows.value}}"
+            data-dtype="Text"
+          />
         </div>
         <div class="resource flex-group-center">
           <label for="system.init.value" class="resource-label"
@@ -241,6 +266,7 @@
               <input
                 type="checkbox"
                 id="prof-{{skill.key}}"
+                style="-webkit-filter: none !important"
                 name="system.skills.{{skill.key}}.prof"
                 {{skill.checked}}
               />
@@ -249,7 +275,8 @@
                 data-roll-type="skill"
                 data-skill-key="{{skill.key}}"
                 for="system.skills.{{skill.key}}.value"
-                >{{skill.name}} <span>{{skill.ability}}</span></label
+                >{{skill.name}}
+                <span class="skill-ability">({{skill.ability}})</span></label
               >
               <input
                 type="text"
@@ -291,6 +318,11 @@
     {{!-- Owned Spells Tab --}}
     <div class="tab spells" data-group="primary" data-tab="spells">
       {{> "systems/waw/templates/actor/parts/actor-spells.html"}}
+    </div>
+
+    {{!-- Report Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="report">
+      {{> "systems/waw/templates/actor/parts/actor-report.html"}}
     </div>
   </section>
 </form>
