@@ -1,16 +1,165 @@
 <div class="report-container">
   <div class="report-header">
-    <div class="header-col">Academia Dice</div>
-    <div class="header-col">Total House Points Earned</div>
+    <div class="header-col">
+      <div>Total Academia Dice:</div>
+      <input
+        type="text"
+        name="system.attributes.academia.dice"
+        value="{{system.attributes.academia.dice}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="header-col">
+      <div>Total House Points Earned:</div>
+      <input
+        type="text"
+        name="system.attributes.academia.housepoints"
+        value="{{system.attributes.academia.housepoints}}"
+        data-dtype="Number"
+      />
+    </div>
   </div>
+
+  <!--Downtime Picker-->
+  <div class="report-downtime">
+    <div class="downtime-title">
+      <div class="flex-center">
+        <span>Downtime Activities for</span>
+        <input
+          type="text"
+          name="system.attributes.downtime.month"
+          value="{{system.attributes.downtime.month}}"
+          data-dtype="Text"
+          placeholder="Current Month"
+        />
+      </div>
+    </div>
+    <div class="downtime-tag-container">
+      <div class="downtime-row">
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiOne"
+            style="-webkit-filter: none !important"
+            id="activiOne-checkbox"
+            {{checked
+            system.attributes.downtime.activiOne}}
+          />
+          <span>Affect Relationship</span>
+        </div>
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiTwo"
+            style="-webkit-filter: none !important"
+            id="activiTwo-checkbox"
+            {{checked
+            system.attributes.downtime.activiTwo}}
+          />
+          <span>Attend Club/Team Meeting</span>
+        </div>
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiThree"
+            style="-webkit-filter: none !important"
+            id="activiThree-checkbox"
+            {{checked
+            system.attributes.downtime.activiThree}}
+          />
+          <span>Brew Potions</span>
+        </div>
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiFour"
+            style="-webkit-filter: none !important"
+            id="activiFour-checkbox"
+            {{checked
+            system.attributes.downtime.activiFour}}
+          />
+          <span>Bond With Beast</span>
+        </div>
+      </div>
+      <div class="downtime-row">
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiFive"
+            style="-webkit-filter: none !important"
+            id="activiFive-checkbox"
+            {{checked
+            system.attributes.downtime.activiFive}}
+          />
+          <span>Independent Study</span>
+        </div>
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiSix"
+            style="-webkit-filter: none !important"
+            id="activiSix-checkbox"
+            {{checked
+            system.attributes.downtime.activiSix}}
+          />
+          <span>Personal Project</span>
+        </div>
+
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiSeven"
+            style="-webkit-filter: none !important"
+            id="activiSeven-checkbox"
+            {{checked
+            system.attributes.downtime.activiSeven}}
+          />
+          <span>Plant Magic Garden</span>
+        </div>
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiEight"
+            style="-webkit-filter: none !important"
+            id="activiEight-checkbox"
+            {{checked
+            system.attributes.downtime.activiEight}}
+          />
+          <span>Work Job Shift</span>
+        </div>
+      </div>
+      <div class="downtime-row">
+        <div class="flex-center downtime-disclaimer">
+          *&nbsp;Select up to 3 Downtime Activities per month
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="report-body">
     <div class="term-column">
       <div class="term-header">&nbsp;</div>
       <div class="term-body">
-        <div class="term-row">Morning</div>
-        <div class="term-row">Afternoon</div>
-        <div class="term-row">Evening</div>
-        <div class="term-row">Final Grades</div>
+        <div class="term-row">
+          <div class="inner-col">
+            <div class="inner-row">Morning</div>
+          </div>
+        </div>
+        <div class="term-row">
+          <div class="inner-col">
+            <div class="inner-row">Afternoon</div>
+          </div>
+        </div>
+        <div class="term-row">
+          <div class="inner-col">
+            <div class="inner-row">Evening</div>
+          </div>
+        </div>
+        <div class="term-row">
+          <div class="inner-col">
+            <div class="inner-row">Final Grades</div>
+          </div>
+        </div>
       </div>
     </div>
     <!---Fall Term--->
@@ -43,21 +192,47 @@
         <!---Afternoon--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
-          </div>
-          <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.fallAft"
+                value="{{system.attributes.schedule.fallAft}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.fallAftSp"
+                value="{{system.attributes.schedule.fallAftSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
           </div>
         </div>
         <!---Evening--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
-          </div>
-          <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.fallEven"
+                value="{{system.attributes.schedule.fallEven}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.fallEvenSp"
+                value="{{system.attributes.schedule.fallEvenSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
           </div>
         </div>
         <!---Final Grades--->
@@ -74,10 +249,7 @@
               class="resource-label spell-slot-label"
               style="text-align: center"
             >
-              <i
-                class="fa-regular fa-clock-nine"
-                style="font-style: normal"
-              ></i>
+              <i class="fa-light fa-sunrise" style="font-style: normal"></i>
             </label>
           </div>
           <div class="inner-col">
@@ -92,7 +264,7 @@
               class="resource-label spell-slot-label"
               style="text-align: center"
             >
-              Afternoon
+              <i class="fa-light fa-sun" style="font-style: normal"></i>
             </label>
           </div>
           <div class="inner-col">
@@ -107,7 +279,7 @@
               class="resource-label spell-slot-label"
               style="text-align: center"
             >
-              Evening
+              <i class="fa-light fa-sunset" style="font-style: normal"></i>
             </label>
           </div>
         </div>
@@ -117,31 +289,121 @@
     <div class="term-column">
       <div class="term-header">Winter Term</div>
       <div class="term-body">
+        <!---Morn--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
-          </div>
-          <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.winterMorn"
+                value="{{system.attributes.schedule.winterMorn}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.winterMornSp"
+                value="{{system.attributes.schedule.winterMornSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
           </div>
         </div>
+        <!---Afternoon--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
-          </div>
-          <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.winterAft"
+                value="{{system.attributes.schedule.winterAft}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.winterAftSp"
+                value="{{system.attributes.schedule.winterAftSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
           </div>
         </div>
+        <!---Evening--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.winterEven"
+                value="{{system.attributes.schedule.winterEven}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.winterEvenSp"
+                value="{{system.attributes.schedule.winterEvenSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
+          </div>
+        </div>
+        <!---Final Grades--->
+        <div class="term-row grade-grid">
+          <div class="inner-col">
+            <input
+              type="text"
+              name="system.attributes.schedule.winterMornGrd"
+              value="{{system.attributes.schedule.winterMornGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i class="fa-light fa-sunrise" style="font-style: normal"></i>
+            </label>
           </div>
           <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <input
+              type="text"
+              name="system.attributes.schedule.winterAftGrd"
+              value="{{system.attributes.schedule.winterAftGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i class="fa-light fa-sun" style="font-style: normal"></i>
+            </label>
+          </div>
+          <div class="inner-col">
+            <input
+              type="text"
+              name="system.attributes.schedule.winterEvenGrd"
+              value="{{system.attributes.schedule.winterEvenGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i class="fa-light fa-sunset" style="font-style: normal"></i>
+            </label>
           </div>
         </div>
       </div>
@@ -150,69 +412,256 @@
     <div class="term-column">
       <div class="term-header">Spring Term</div>
       <div class="term-body">
+        <!---Morn--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
-          </div>
-          <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.springMorn"
+                value="{{system.attributes.schedule.springMorn}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.springMornSp"
+                value="{{system.attributes.schedule.springMornSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
           </div>
         </div>
+        <!---Afternoon--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
-          </div>
-          <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.springAft"
+                value="{{system.attributes.schedule.springAft}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.springAftSp"
+                value="{{system.attributes.schedule.springAftSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
           </div>
         </div>
+        <!---Evening--->
         <div class="term-row">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.springEven"
+                value="{{system.attributes.schedule.springEven}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.springEvenSp"
+                value="{{system.attributes.schedule.springEvenSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
+          </div>
+        </div>
+        <!---Final Grades--->
+        <div class="term-row grade-grid">
+          <div class="inner-col">
+            <input
+              type="text"
+              name="system.attributes.schedule.springMornGrd"
+              value="{{system.attributes.schedule.springMornGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i class="fa-light fa-sunrise" style="font-style: normal"></i>
+            </label>
           </div>
           <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <input
+              type="text"
+              name="system.attributes.schedule.springAftGrd"
+              value="{{system.attributes.schedule.springAftGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i class="fa-light fa-sun" style="font-style: normal"></i>
+            </label>
+          </div>
+          <div class="inner-col">
+            <input
+              type="text"
+              name="system.attributes.schedule.springEvenGrd"
+              value="{{system.attributes.schedule.springEvenGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i class="fa-light fa-sunset" style="font-style: normal"></i>
+            </label>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!--Downtime Picker-->
-  <div class="report-footer">
-    <p>Monthly Downtime</p>
-    <div class="downtime-tag-container">
-      <div class="downtime-row">
-        <div class="tag">Attend Club/Team Meeting</div>
-        <div class="tag">Brew Potions</div>
-        <div class="tag">Bond With Beast</div>
-        <div class="tag">Independent Study</div>
-      </div>
-      <div class="downtime-row">
-        <div class="tag">Intentional Interactions</div>
-        <div class="tag">Personal Time</div>
-        <div class="tag">Pick Up Job Shift</div>
-        <div class="tag">Plant Magic Garden</div>
-      </div>
-    </div>
-  </div>
+
   <!--Project Timers-->
   <div class="report-footer">
-    <p>Time Trackers</p>
+    <div class="tracker-title">Time Trackers</div>
     <div class="countdown-container">
-      <div class="countdown-col">
-        <div class="countdown-title">Project 1</div>
-        <div class="countdown-tracker">Remaining out of Total</div>
+      <!--Tracker 1-->
+      <div class="inner-col">
+        <div class="inner-row">
+          <input
+            type="text"
+            name="system.attributes.trackerOne.project"
+            value="{{system.attributes.trackerOne.project}}"
+            data-dtype="Text"
+            placeholder="Project Name"
+          />
+        </div>
+        <div class="inner-row">
+          <input
+            type="text"
+            name="system.attributes.trackerOne.goal"
+            value="{{system.attributes.trackerOne.goal}}"
+            data-dtype="Text"
+            placeholder="Project Objective"
+          />
+        </div>
+        <hr />
+        <div class="inner-row last-row">
+          <div class="inner-col">
+            <strong>Elapsed</strong>
+            <input
+              type="text"
+              name="system.attributes.trackerOne.current"
+              value="{{system.attributes.trackerOne.current}}"
+              data-dtype="Text"
+            />
+          </div>
+          <div class="inner-col">
+            <strong>Remaining</strong>
+            <input
+              type="text"
+              name="system.attributes.trackerOne.max"
+              value="{{system.attributes.trackerOne.max}}"
+              data-dtype="Text"
+            />
+          </div>
+        </div>
       </div>
-      <div class="countdown-col">
-        <div class="countdown-title">Project 2</div>
-        <div class="countdown-tracker">Remaining out of Total</div>
+      <!--Tracker 2-->
+      <div class="inner-col border-maker">
+        <div class="inner-row">
+          <input
+            type="text"
+            name="system.attributes.trackerTwo.project"
+            value="{{system.attributes.trackerTwo.project}}"
+            data-dtype="Text"
+            placeholder="Project Name"
+          />
+        </div>
+        <div class="inner-row">
+          <input
+            type="text"
+            name="system.attributes.trackerTwo.goal"
+            value="{{system.attributes.trackerTwo.goal}}"
+            data-dtype="Text"
+            placeholder="Project Objective"
+          />
+        </div>
+        <hr />
+        <div class="inner-row last-row">
+          <div class="inner-col">
+            <strong>Elapsed</strong>
+            <input
+              type="text"
+              name="system.attributes.trackerTwo.current"
+              value="{{system.attributes.trackerTwo.current}}"
+              data-dtype="Text"
+            />
+          </div>
+          <div class="inner-col">
+            <strong>Remaining</strong>
+            <input
+              type="text"
+              name="system.attributes.trackerTwo.max"
+              value="{{system.attributes.trackerTwo.max}}"
+              data-dtype="Text"
+            />
+          </div>
+        </div>
       </div>
-      <div class="countdown-col">
-        <div class="countdown-title">Project 3</div>
-        <div class="countdown-tracker">Remaining out of Total</div>
+      <!--Tracker 3-->
+      <div class="inner-col">
+        <div class="inner-row">
+          <input
+            type="text"
+            name="system.attributes.trackerThree.project"
+            value="{{system.attributes.trackerThree.project}}"
+            data-dtype="Text"
+            placeholder="Project Name"
+          />
+        </div>
+        <div class="inner-row">
+          <input
+            type="text"
+            name="system.attributes.trackerThree.goal"
+            value="{{system.attributes.trackerThree.goal}}"
+            data-dtype="Text"
+            placeholder="Project Objective"
+          />
+        </div>
+        <hr />
+        <div class="inner-row last-row">
+          <div class="inner-col">
+            <strong>Elapsed</strong>
+            <input
+              type="text"
+              name="system.attributes.trackerThree.current"
+              value="{{system.attributes.trackerThree.current}}"
+              data-dtype="Text"
+            />
+          </div>
+          <div class="inner-col">
+            <strong>Remaining</strong>
+            <input
+              type="text"
+              name="system.attributes.trackerThree.max"
+              value="{{system.attributes.trackerThree.max}}"
+              data-dtype="Text"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

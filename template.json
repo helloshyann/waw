@@ -105,6 +105,39 @@
         "inspiration": {
           "value": 0
         },
+        "academia": {
+          "dice": 0,
+          "housepoints": 0
+        },
+        "trackerOne": {
+          "project": "",
+          "goal": "",
+          "current": "",
+          "max": ""
+        },
+        "trackerTwo": {
+          "project": "",
+          "goal": "",
+          "current": "",
+          "max": ""
+        },
+        "trackerThree": {
+          "project": "",
+          "goal": "",
+          "current": "",
+          "max": ""
+        },
+        "downtime": {
+          "month": "",
+          "activiOne": false,
+          "activiTwo": false,
+          "activiThree": false,
+          "activiFour": false,
+          "activiFive": false,
+          "activiSix": false,
+          "activiSeven": false,
+          "activiEight": false
+        },
         "schedule": {
           "fallMorn": "",
           "fallMornSp": "",
