@@ -147,13 +147,6 @@ input[type=checkbox]:checked {
           flex: none !important;
   -ms-grid-column-align: center;
       justify-self: center;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3.1px);
-  -webkit-backdrop-filter: blur(3.1px);
-  padding: 2px 4px;
-  border-radius: 50%;
 }
 .character .sheet-header .char-img-wrap img,
 .npc .sheet-header .char-img-wrap img,
@@ -174,13 +167,11 @@ input[type=checkbox]:checked {
 .monster .sheet-header .char-img-wrap:after {
   content: "";
   position: absolute;
-  bottom: -0.25rem;
-  left: -0.25rem;
-  width: 3.5rem;
-  height: 3.5rem;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 4rem;
   background-size: 100%;
-  -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
 }
 .character .sheet-header .header-fields,
 .npc .sheet-header .header-fields,
@@ -870,8 +861,14 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+.gryffindor .sheet-header .char-img-wrap img {
+  -webkit-filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
+          filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
+}
 .gryffindor .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelGryffindor.png");
+  -webkit-filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
+          filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
 }
 .gryffindor .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#952333), to(#38130d)) !important;
@@ -896,7 +893,7 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
 }
 .gryffindor .sheet-body .rollable:hover {
-  color: red;
+  color: #ff3954;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -988,8 +985,14 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+.hufflepuff .sheet-header .char-img-wrap img {
+  -webkit-filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
+          filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
+}
 .hufflepuff .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelHufflepuff.png");
+  -webkit-filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
+          filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
 }
 .hufflepuff .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#e1ac1e), to(#af8417)) !important;
@@ -1022,7 +1025,7 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
 }
 .hufflepuff .sheet-body .rollable:hover {
-  color: #e1ac1e;
+  color: #ffcc40;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   text-shadow: none !important;
@@ -1130,8 +1133,14 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+.ravenclaw .sheet-header .char-img-wrap img {
+  -webkit-filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
+          filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
+}
 .ravenclaw .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelRavenclaw.png");
+  -webkit-filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
+          filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
 }
 .ravenclaw .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
@@ -1156,7 +1165,7 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
 }
 .ravenclaw .sheet-body .rollable:hover {
-  color: #50a5eb;
+  color: #3aa6ff;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -1248,8 +1257,14 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+.slytherin .sheet-header .char-img-wrap img {
+  -webkit-filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
+          filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
+}
 .slytherin .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelSlytherin.png");
+  -webkit-filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
+          filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
 }
 .slytherin .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#205e45), to(#103124)) !important;
@@ -1274,7 +1289,7 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
 }
 .slytherin .sheet-body .rollable:hover {
-  color: #44b386;
+  color: #38d697;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }

@@ -115,13 +115,13 @@ input[type="checkbox"]:checked {
       position: relative;
       flex: none !important;
       justify-self: center;
-      background: rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(3.1px);
-      -webkit-backdrop-filter: blur(3.1px);
-      padding: 2px 4px;
-      border-radius: 50%;
+      // background: rgba(0, 0, 0, 0.5);
+      // -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      // backdrop-filter: blur(3.1px);
+      // -webkit-backdrop-filter: blur(3.1px);
+      // padding: 2px 4px;
+      // border-radius: 5px;
       img {
         border: none !important;
         margin-right: 0 !important;
@@ -135,12 +135,11 @@ input[type="checkbox"]:checked {
       &:after {
         content: "";
         position: absolute;
-        bottom: -0.25rem;
-        left: -0.25rem;
-        width: 3.5rem;
-        height: 3.5rem;
+        bottom: 0;
+        left: 0;
+        width: 4rem;
+        height: 4rem;
         background-size: 100%;
-        filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
       }
     }
     .header-fields {
@@ -668,8 +667,12 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     background-size: 100%;
     .char-img-wrap {
+      img {
+        filter: drop-shadow(0 0 12px rgba(#ff3954, 0.75));
+      }
       &:after {
         background-image: url("../assets/img/pixels/PixelGryffindor.png");
+        filter: drop-shadow(0 0 12px rgba(#ff3954, 0.75));
       }
     }
     .inspo {
@@ -697,7 +700,7 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     .rollable {
       &:hover {
-        color: red;
+        color: #ff3954;
         transition: all 0.25s;
       }
     }
@@ -815,8 +818,12 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     background-size: 100%;
     .char-img-wrap {
+      img {
+        filter: drop-shadow(0 0 12px rgba(#ffcc40, 0.75));
+      }
       &:after {
         background-image: url("../assets/img/pixels/PixelHufflepuff.png");
+        filter: drop-shadow(0 0 12px rgba(#ffcc40, 0.75));
       }
     }
     .inspo {
@@ -852,7 +859,7 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     .rollable {
       &:hover {
-        color: #e1ac1e;
+        color: #ffcc40;
         transition: all 0.25s;
         text-shadow: none !important;
       }
@@ -986,8 +993,12 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     background-size: 100%;
     .char-img-wrap {
+      img {
+        filter: drop-shadow(0 0 12px rgba(#3aa6ff, 0.75));
+      }
       &:after {
         background-image: url("../assets/img/pixels/PixelRavenclaw.png");
+        filter: drop-shadow(0 0 12px rgba(#3aa6ff, 0.75));
       }
     }
     .inspo {
@@ -1015,7 +1026,7 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     .rollable {
       &:hover {
-        color: #50a5eb;
+        color: #3aa6ff;
         transition: all 0.25s;
       }
     }
@@ -1132,8 +1143,12 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     background-size: 100%;
     .char-img-wrap {
+      img {
+        filter: drop-shadow(0 0 12px rgba(#38d697, 0.75));
+      }
       &:after {
         background-image: url("../assets/img/pixels/PixelSlytherin.png");
+        filter: drop-shadow(0 0 12px rgba(#38d697, 0.75));
       }
     }
     .inspo {
@@ -1161,7 +1176,7 @@ input[type="checkbox"]:checked {
     background-repeat: no-repeat;
     .rollable {
       &:hover {
-        color: #44b386;
+        color: #38d697;
         transition: all 0.25s;
       }
     }
