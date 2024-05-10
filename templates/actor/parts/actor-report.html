@@ -10,11 +10,37 @@
         <div class="term-row">Morning</div>
         <div class="term-row">Afternoon</div>
         <div class="term-row">Evening</div>
+        <div class="term-row">Final Grades</div>
       </div>
     </div>
+    <!---Fall Term--->
     <div class="term-column">
       <div class="term-header">Fall Term</div>
       <div class="term-body">
+        <!---Morn--->
+        <div class="term-row">
+          <div class="inner-col">
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.fallMorn"
+                value="{{system.attributes.schedule.fallMorn}}"
+                data-dtype="Text"
+                placeholder="Class Name"
+              />
+            </div>
+            <div class="inner-row">
+              <input
+                type="text"
+                name="system.attributes.schedule.fallMornSp"
+                value="{{system.attributes.schedule.fallMornSp}}"
+                data-dtype="Text"
+                placeholder="Spell Choice"
+              />
+            </div>
+          </div>
+        </div>
+        <!---Afternoon--->
         <div class="term-row">
           <div class="inner-col">
             <div class="inner-row">Class Name</div>
@@ -24,6 +50,7 @@
             <div class="inner-row">Final Grade</div>
           </div>
         </div>
+        <!---Evening--->
         <div class="term-row">
           <div class="inner-col">
             <div class="inner-row">Class Name</div>
@@ -33,17 +60,60 @@
             <div class="inner-row">Final Grade</div>
           </div>
         </div>
-        <div class="term-row">
+        <!---Final Grades--->
+        <div class="term-row grade-grid">
           <div class="inner-col">
-            <div class="inner-row">Class Name</div>
-            <div class="inner-row">Spell Choice</div>
+            <input
+              type="text"
+              name="system.attributes.schedule.fallMornGrd"
+              value="{{system.attributes.schedule.fallMornGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              <i
+                class="fa-regular fa-clock-nine"
+                style="font-style: normal"
+              ></i>
+            </label>
           </div>
           <div class="inner-col">
-            <div class="inner-row">Final Grade</div>
+            <input
+              type="text"
+              name="system.attributes.schedule.fallAftGrd"
+              value="{{system.attributes.schedule.fallAftGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              Afternoon
+            </label>
+          </div>
+          <div class="inner-col">
+            <input
+              type="text"
+              name="system.attributes.schedule.fallEvenGrd"
+              value="{{system.attributes.schedule.fallEvenGrd}}"
+              data-dtype="Text"
+              placeholder="Grade"
+            />
+            <label
+              class="resource-label spell-slot-label"
+              style="text-align: center"
+            >
+              Evening
+            </label>
           </div>
         </div>
       </div>
     </div>
+    <!---Winter Term--->
     <div class="term-column">
       <div class="term-header">Winter Term</div>
       <div class="term-body">
@@ -76,6 +146,7 @@
         </div>
       </div>
     </div>
+    <!---Spring Term--->
     <div class="term-column">
       <div class="term-header">Spring Term</div>
       <div class="term-body">
@@ -109,6 +180,7 @@
       </div>
     </div>
   </div>
+  <!--Downtime Picker-->
   <div class="report-footer">
     <p>Monthly Downtime</p>
     <div class="downtime-tag-container">
@@ -126,6 +198,7 @@
       </div>
     </div>
   </div>
+  <!--Project Timers-->
   <div class="report-footer">
     <p>Time Trackers</p>
     <div class="countdown-container">

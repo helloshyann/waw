@@ -1499,12 +1499,27 @@ nav.sheet-tabs.tabs {
       .term-body {
         .term-row {
           padding: 10px;
-          display: grid;
-          grid-template-columns: 1fr 0.25fr;
+          &.grade-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
           .inner-col {
             display: flex;
             flex-direction: column;
-            .inner-row {
+            &:last-child {
+              height: 100%;
+              .inner-row {
+                height: 100%;
+                input {
+                  height: 100%;
+                  line-height: 100%;
+                  &::placeholder {
+                    width: 100%;
+                    color: lime;
+                    height: 100%;
+                  }
+                }
+              }
             }
           }
         }
