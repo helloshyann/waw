@@ -92,16 +92,17 @@ export class WaWActorSheet extends ActorSheet {
         const abilityMod = actorData.system.abilities[skill.ability]?.mod ?? 0;
 
         // Calculate the skill value
-        let skillValue = abilityMod;
-        if (skill.prof) {
-            skillValue += proficiencyBonus; // Add proficiency bonus if proficient
-        }
+        // let skillValue = abilityMod;
+        // if (skill.prof) {
+        //     skillValue += proficiencyBonus; // Add proficiency bonus if proficient
+        // }
 
         return {
             key: key,
             name: skill.name,
             ability: skill.ability,
-            value: skillValue,
+            value: skill.value,
+            // value: skillValue,
             prof: skill.prof,
             checked: skill.prof ? 'checked' : ''
         };
@@ -711,17 +712,17 @@ _onD20Roll(event) {
       const skill = this.actor.system.skills[skillKey];
       const abilityMod = this.actor.system.abilities[skill.ability].mod;
 
-      let total = abilityMod; // Start with the ability modifier
+      // let total = abilityMod; // Start with the ability modifier
 
-      // Add proficiency bonus if the skill is proficient
-      if (skill.prof) {
-        total += this.actor.system.attributes.profBonus.value;
-      }
+      // // Add proficiency bonus if the skill is proficient
+      // if (skill.prof) {
+      //   total += this.actor.system.attributes.profBonus.value;
+      // }
 
       // Log the total for debugging
-      console.log(`Total modifier for rolling ${skill.name}:`, total);
+      console.log(`Total modifier for rolling ${skill.name}:`, skill.value);
 
-      const rollFormula = `1d20 + ${total}`;
+      const rollFormula = `1d20 + ${skill.value}`;
       let roll = new Roll(rollFormula, this.actor.getRollData());
       roll.toMessage({
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
