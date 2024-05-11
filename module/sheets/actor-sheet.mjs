@@ -664,6 +664,8 @@ async _onJobKnutPayChange(event) {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
+
+
     // Handle item rolls.
     if (dataset.rollType) {
       if (dataset.rollType == 'item') {
