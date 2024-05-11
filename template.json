@@ -201,28 +201,22 @@
         }
       },
       "skills": {
-        "ath": {
-          "name": "Athletics",
-          "value": 0,
-          "ability": "str",
-          "prof": false
-        },
         "acr": {
           "name": "Acrobatics",
           "value": 0,
           "ability": "dex",
           "prof": false
         },
-        "soh": {
-          "name": "Sleight of Hand",
+        "ath": {
+          "name": "Athletics",
           "value": 0,
-          "ability": "dex",
+          "ability": "str",
           "prof": false
         },
-        "stl": {
-          "name": "Stealth",
+        "dec": {
+          "name": "Deception",
           "value": 0,
-          "ability": "dex",
+          "ability": "cha",
           "prof": false
         },
         "hrb": {
@@ -243,6 +237,18 @@
           "ability": "wis",
           "prof": false
         },
+        "intim": {
+          "name": "Intimidation",
+          "value": 0,
+          "ability": "cha",
+          "prof": false
+        },
+        "investi": {
+          "name": "Investigation",
+          "value": 0,
+          "ability": "int",
+          "prof": false
+        },
         "mac": {
           "name": "Magical Creatures",
           "value": 0,
@@ -261,34 +267,10 @@
           "ability": "wis",
           "prof": false
         },
-        "per": {
-          "name": "Perception",
-          "value": 0,
-          "ability": "wis",
-          "prof": false
-        },
-        "pot": {
-          "name": "Potion Making",
+        "mug": {
+          "name": "Muggle Studies",
           "value": 0,
           "ability": "int",
-          "prof": false
-        },
-        "sur": {
-          "name": "Survival",
-          "value": 0,
-          "ability": "wis",
-          "prof": false
-        },
-        "dec": {
-          "name": "Deception",
-          "value": 0,
-          "ability": "cha",
-          "prof": false
-        },
-        "intim": {
-          "name": "Intimidation",
-          "value": 0,
-          "ability": "cha",
           "prof": false
         },
         "prf": {
@@ -297,10 +279,40 @@
           "ability": "cha",
           "prof": false
         },
+        "per": {
+          "name": "Perception",
+          "value": 0,
+          "ability": "wis",
+          "prof": false
+        },
         "pur": {
           "name": "Persuassion",
           "value": 0,
           "ability": "cha",
+          "prof": false
+        },
+        "pot": {
+          "name": "Potion Making",
+          "value": 0,
+          "ability": "int",
+          "prof": false
+        },
+        "soh": {
+          "name": "Sleight of Hand",
+          "value": 0,
+          "ability": "dex",
+          "prof": false
+        },
+        "stl": {
+          "name": "Stealth",
+          "value": 0,
+          "ability": "dex",
+          "prof": false
+        },
+        "sur": {
+          "name": "Survival",
+          "value": 0,
+          "ability": "wis",
           "prof": false
         }
       },

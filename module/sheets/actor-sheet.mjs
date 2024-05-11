@@ -12,7 +12,7 @@ export class WaWActorSheet extends ActorSheet {
       classes: ["waw", "sheet", "actor"],
       template: "systems/waw/templates/actor/actor-sheet.html",
       width: 720,
-      height: 860,
+      height: 910,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
     });
   }
