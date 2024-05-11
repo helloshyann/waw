@@ -979,7 +979,7 @@ input[type=checkbox]:checked {
 .gryffindor .sheet-body {
   background: url("../assets/img/GryffindorBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .gryffindor .sheet-body .rollable:hover {
   color: #ff3954;
@@ -1013,10 +1013,12 @@ input[type=checkbox]:checked {
 }
 .gryffindor .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #952333;
+  background-size: 65% 65%;
   border: 2px solid #38130d;
 }
 .gryffindor .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #bd152b;
+  background-size: 70% 70%;
   border: 2px solid #952333;
 }
 .gryffindor .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1100,6 +1102,10 @@ input[type=checkbox]:checked {
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
+.gryffindor .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+          filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+}
 
 .hufflepuff .sheet-header {
   background: url("../assets/img/HuffHeader1.png");
@@ -1138,7 +1144,7 @@ input[type=checkbox]:checked {
 .hufflepuff .sheet-body {
   background: url("../assets/img/HufflepuffBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .hufflepuff .sheet-body .rollable:hover {
   color: #ffcc40;
@@ -1200,10 +1206,12 @@ input[type=checkbox]:checked {
 }
 .hufflepuff .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #e1ac1e;
+  background-size: 65% 65%;
   border: 2px solid #af8417;
 }
 .hufflepuff .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #ffc831;
+  background-size: 70% 70%;
   border: 2px solid #e1ac1e;
 }
 .hufflepuff .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1283,6 +1291,10 @@ input[type=checkbox]:checked {
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
+.hufflepuff .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(0deg);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(0deg);
+}
 
 .ravenclaw .sheet-header {
   background: url("../assets/img/RavHeader1.png");
@@ -1313,7 +1325,7 @@ input[type=checkbox]:checked {
 .ravenclaw .sheet-body {
   background: url("../assets/img/RavenclawBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .ravenclaw .sheet-body .rollable:hover {
   color: #3aa6ff;
@@ -1366,10 +1378,12 @@ input[type=checkbox]:checked {
 }
 .ravenclaw .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #2669a0;
+  background-size: 65% 65%;
   border: 2px solid #143b5a;
 }
 .ravenclaw .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #338bd3;
+  background-size: 70% 70%;
   border: 2px solid #2669a0;
 }
 .ravenclaw .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1434,6 +1448,10 @@ input[type=checkbox]:checked {
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
+.ravenclaw .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
+}
 
 .slytherin .sheet-header {
   background: url("../assets/img/SlythHeader1.png");
@@ -1464,7 +1482,7 @@ input[type=checkbox]:checked {
 .slytherin .sheet-body {
   background: url("../assets/img/SlytherinBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .slytherin .sheet-body .rollable:hover {
   color: #38d697;
@@ -1536,10 +1554,12 @@ input[type=checkbox]:checked {
 }
 .slytherin .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #205e45;
+  background-size: 65% 65%;
   border: 2px solid #103124;
 }
 .slytherin .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #2d9269;
+  background-size: 70% 70%;
   border: 2px solid #205e45;
 }
 .slytherin .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1583,6 +1603,10 @@ input[type=checkbox]:checked {
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
+}
+.slytherin .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(45deg);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(45deg);
 }
 
 .npc .sheet-header {
@@ -2157,4 +2181,232 @@ nav.sheet-tabs.tabs > a.active:hover {
 
 .fa-sunset {
   color: #fd6ba8;
+}
+
+.feature-sheet *,
+.item-sheet *,
+.spell-sheet * {
+  color: #fff;
+}
+.feature-sheet * input,
+.feature-sheet * select,
+.item-sheet * input,
+.item-sheet * select,
+.spell-sheet * input,
+.spell-sheet * select {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px dashed #fff;
+}
+.feature-sheet * input:focus,
+.feature-sheet * select:focus,
+.item-sheet * input:focus,
+.item-sheet * select:focus,
+.spell-sheet * input:focus,
+.spell-sheet * select:focus {
+  -webkit-box-shadow: 0 0 5px #fff;
+          box-shadow: 0 0 5px #fff;
+}
+.feature-sheet * input::-webkit-input-placeholder, .feature-sheet * select::-webkit-input-placeholder, .item-sheet * input::-webkit-input-placeholder, .item-sheet * select::-webkit-input-placeholder, .spell-sheet * input::-webkit-input-placeholder, .spell-sheet * select::-webkit-input-placeholder {
+  color: #fff;
+}
+.feature-sheet * input::-moz-placeholder, .feature-sheet * select::-moz-placeholder, .item-sheet * input::-moz-placeholder, .item-sheet * select::-moz-placeholder, .spell-sheet * input::-moz-placeholder, .spell-sheet * select::-moz-placeholder {
+  color: #fff;
+}
+.feature-sheet * input:-ms-input-placeholder, .feature-sheet * select:-ms-input-placeholder, .item-sheet * input:-ms-input-placeholder, .item-sheet * select:-ms-input-placeholder, .spell-sheet * input:-ms-input-placeholder, .spell-sheet * select:-ms-input-placeholder {
+  color: #fff;
+}
+.feature-sheet * input::-ms-input-placeholder, .feature-sheet * select::-ms-input-placeholder, .item-sheet * input::-ms-input-placeholder, .item-sheet * select::-ms-input-placeholder, .spell-sheet * input::-ms-input-placeholder, .spell-sheet * select::-ms-input-placeholder {
+  color: #fff;
+}
+.feature-sheet * input::placeholder,
+.feature-sheet * select::placeholder,
+.item-sheet * input::placeholder,
+.item-sheet * select::placeholder,
+.spell-sheet * input::placeholder,
+.spell-sheet * select::placeholder {
+  color: #fff;
+}
+.feature-sheet .sheet-header,
+.item-sheet .sheet-header,
+.spell-sheet .sheet-header {
+  background: url("../assets/img/hog-header.jpg");
+  padding: 8px;
+  border-radius: 5px;
+}
+.feature-sheet .sheet-header .header-fields,
+.item-sheet .sheet-header .header-fields,
+.spell-sheet .sheet-header .header-fields {
+  background: rgba(57, 20, 28, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.feature-sheet .sheet-header .header-fields h1,
+.item-sheet .sheet-header .header-fields h1,
+.spell-sheet .sheet-header .header-fields h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-family: "Louis";
+}
+.feature-sheet .sheet-header .header-fields .flexrow,
+.item-sheet .sheet-header .header-fields .flexrow,
+.spell-sheet .sheet-header .header-fields .flexrow {
+  gap: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.feature-sheet .sheet-header .header-fields .flexrow *,
+.item-sheet .sheet-header .header-fields .flexrow *,
+.spell-sheet .sheet-header .header-fields .flexrow * {
+  font-family: "Louis";
+}
+.feature-sheet .sheet-header .header-fields .resource,
+.item-sheet .sheet-header .header-fields .resource,
+.spell-sheet .sheet-header .header-fields .resource {
+  padding: 5px 0;
+}
+.feature-sheet .sheet-header .header-fields .resource *,
+.item-sheet .sheet-header .header-fields .resource *,
+.spell-sheet .sheet-header .header-fields .resource * {
+  font-family: "Louis";
+}
+.feature-sheet .sheet-header .header-fields .resource label,
+.item-sheet .sheet-header .header-fields .resource label,
+.spell-sheet .sheet-header .header-fields .resource label {
+  font-weight: 700;
+  color: #e4e1d0;
+}
+.feature-sheet .sheet-header .header-fields .spell-meta,
+.item-sheet .sheet-header .header-fields .spell-meta,
+.spell-sheet .sheet-header .header-fields .spell-meta {
+  padding: 5px 0;
+}
+.feature-sheet .sheet-header .header-fields .spell-meta *,
+.item-sheet .sheet-header .header-fields .spell-meta *,
+.spell-sheet .sheet-header .header-fields .spell-meta * {
+  font-family: "Louis";
+}
+.feature-sheet .sheet-header .header-fields .spell-meta .flexrow,
+.item-sheet .sheet-header .header-fields .spell-meta .flexrow,
+.spell-sheet .sheet-header .header-fields .spell-meta .flexrow {
+  margin-bottom: 5px;
+}
+.feature-sheet .sheet-header .header-fields .spell-meta .flexrow .resource label,
+.item-sheet .sheet-header .header-fields .spell-meta .flexrow .resource label,
+.spell-sheet .sheet-header .header-fields .spell-meta .flexrow .resource label {
+  font-weight: 700;
+  color: #e4e1d0;
+}
+.feature-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child,
+.item-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child,
+.spell-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child {
+  margin-bottom: 0;
+}
+.feature-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child .resource,
+.item-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child .resource,
+.spell-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child .resource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+.feature-sheet .sheet-tabs,
+.feature-sheet .sheet-body,
+.item-sheet .sheet-tabs,
+.item-sheet .sheet-body,
+.spell-sheet .sheet-tabs,
+.spell-sheet .sheet-body {
+  padding: 8px 9px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#623643), to(#3e1a1e));
+  background: linear-gradient(to bottom, #623643, #3e1a1e);
+}
+.feature-sheet .sheet-tabs *,
+.feature-sheet .sheet-body *,
+.item-sheet .sheet-tabs *,
+.item-sheet .sheet-body *,
+.spell-sheet .sheet-tabs *,
+.spell-sheet .sheet-body * {
+  font-family: "Louis";
+}
+.feature-sheet .sheet-body,
+.item-sheet .sheet-body,
+.spell-sheet .sheet-body {
+  height: 62%;
+}
+.feature-sheet .sheet-body .editor > a:hover,
+.item-sheet .sheet-body .editor > a:hover,
+.spell-sheet .sheet-body .editor > a:hover {
+  text-shadow: 0 0 5px #3e1a1e;
+}
+.feature-sheet .sheet-body .editor > a i,
+.item-sheet .sheet-body .editor > a i,
+.spell-sheet .sheet-body .editor > a i {
+  font-family: "Font Awesome 6 Pro";
+}
+.feature-sheet .sheet-body .resource,
+.item-sheet .sheet-body .resource,
+.spell-sheet .sheet-body .resource {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.feature-sheet .sheet-body .editor,
+.item-sheet .sheet-body .editor,
+.spell-sheet .sheet-body .editor {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.feature-sheet .sheet-body .editor h1,
+.feature-sheet .sheet-body .editor h2,
+.feature-sheet .sheet-body .editor h3,
+.item-sheet .sheet-body .editor h1,
+.item-sheet .sheet-body .editor h2,
+.item-sheet .sheet-body .editor h3,
+.spell-sheet .sheet-body .editor h1,
+.spell-sheet .sheet-body .editor h2,
+.spell-sheet .sheet-body .editor h3 {
+  border-bottom: 1px solid #fff !important;
+}
+.feature-sheet .sheet-body .editor blockquote,
+.item-sheet .sheet-body .editor blockquote,
+.spell-sheet .sheet-body .editor blockquote {
+  border-left: 3px solid #fff !important;
+}
+.feature-sheet .sheet-body .editor .tox-tbtn__select-label,
+.item-sheet .sheet-body .editor .tox-tbtn__select-label,
+.spell-sheet .sheet-body .editor .tox-tbtn__select-label {
+  color: #000 !important;
+}
+.feature-sheet .sheet-tabs a,
+.item-sheet .sheet-tabs a,
+.spell-sheet .sheet-tabs a {
+  color: #e4e1d0;
+}
+.feature-sheet .sheet-tabs a:hover,
+.item-sheet .sheet-tabs a:hover,
+.spell-sheet .sheet-tabs a:hover {
+  text-shadow: 0 0 5px #fff;
 }

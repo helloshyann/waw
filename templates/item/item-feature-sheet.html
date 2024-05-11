@@ -1,13 +1,8 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} feature-sheet" autocomplete="off">
   <header class="sheet-header">
-    <img
-      class="profile-img"
-      src="{{item.img}}"
-      data-edit="img"
-      title="{{item.name}}"
-    />
     <div class="header-fields">
       <h1 class="charname">
+        <i class="fa-solid fa-hand-holding-magic"></i>
         <input
           name="name"
           type="text"
@@ -15,7 +10,15 @@
           placeholder="Name"
         />
       </h1>
-
+      <div class="resource">
+            <label for="system.source" class="resource-label">Feature Source</label>
+            <input
+              type="text"
+              name="system.source"
+              value="{{system.source}}"
+              data-dtype="Text" placeholder="(House, Caster Type, School of Magic, Background, Feat, Metamagic, etc.)"
+            />
+          </div>
     </div>
     
     </div>

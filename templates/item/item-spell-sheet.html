@@ -1,13 +1,8 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} spell-sheet" autocomplete="off">
   <header class="sheet-header">
-    <img
-      class="profile-img"
-      src="{{item.img}}"
-      data-edit="img"
-      title="{{item.name}}"
-    />
     <div class="header-fields">
       <h1 class="charname">
+        <i class="fa-solid fa-wand-sparkles"></i>
         <input
           name="name"
           type="text"
@@ -21,10 +16,10 @@
           <div class="resource">
             <label for="system.level" class="resource-label">Spell Level</label>
             <input
-              type="number"
+              type="text"
               name="system.level"
               value="{{system.level}}"
-              data-dtype="Number"
+              data-dtype="Text"
             />
           </div>
           <!-- School -->
@@ -75,6 +70,16 @@
               data-dtype="Text"
             />
           </div>
+          <!-- MP Cost -->
+          <div class="resource">
+            <label for="system.mpCost" class="resource-label">MP Cost</label>
+            <input
+              type="number"
+              name="system.mpCost"
+              value="{{system.mpCost}}"
+              data-dtype="number"
+            />
+          </div>
         </div>
         <div class="flexrow">
           <!-- Checkboxes for Ritual, Concentration, Dedication -->
@@ -121,7 +126,6 @@
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
       <div class="resource">
-        <label class="resource-label">Roll Formula</label>
         <input
           type="text"
           name="system.formula"

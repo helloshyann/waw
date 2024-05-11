@@ -413,15 +413,13 @@
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },
     "feature": {
-      "templates": ["base"],
-      "parent": {
-        "value": ""
-      },
-      "level": 1
+      "source": "",
+      "templates": ["base"]
     },
     "spell": {
       "level": "",
       "school": "",
+      "mpCost": 0,
       "components": {
         "castingTime": "",
         "range": "",

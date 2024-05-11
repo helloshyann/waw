@@ -358,10 +358,12 @@
           flex: 1;
 }
 .waw .sheet-header h1.charname {
-  font-family: "Dumbledore";
   text-transform: uppercase;
   padding: 0px;
   border-bottom: 0;
+}
+.waw .sheet-header h1.charname > i {
+  color: #c9c28b;
 }
 .waw .sheet-header h1.charname input {
   width: 100%;
@@ -1493,7 +1495,7 @@
 .waw .gryffindor .sheet-body {
   background: url("../assets/img/GryffindorBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .waw .gryffindor .sheet-body .rollable:hover {
   color: #ff3954;
@@ -1527,10 +1529,12 @@
 }
 .waw .gryffindor .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #952333;
+  background-size: 65% 65%;
   border: 2px solid #38130d;
 }
 .waw .gryffindor .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #bd152b;
+  background-size: 70% 70%;
   border: 2px solid #952333;
 }
 .waw .gryffindor .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1614,6 +1618,10 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
+.waw .gryffindor .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+          filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+}
 .waw .hufflepuff .sheet-header {
   background: url("../assets/img/HuffHeader1.png");
   background-position: center;
@@ -1651,7 +1659,7 @@
 .waw .hufflepuff .sheet-body {
   background: url("../assets/img/HufflepuffBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .waw .hufflepuff .sheet-body .rollable:hover {
   color: #ffcc40;
@@ -1713,10 +1721,12 @@
 }
 .waw .hufflepuff .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #e1ac1e;
+  background-size: 65% 65%;
   border: 2px solid #af8417;
 }
 .waw .hufflepuff .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #ffc831;
+  background-size: 70% 70%;
   border: 2px solid #e1ac1e;
 }
 .waw .hufflepuff .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1796,6 +1806,10 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
+.waw .hufflepuff .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(0deg);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(0deg);
+}
 .waw .ravenclaw .sheet-header {
   background: url("../assets/img/RavHeader1.png");
   background-position: center;
@@ -1825,7 +1839,7 @@
 .waw .ravenclaw .sheet-body {
   background: url("../assets/img/RavenclawBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .waw .ravenclaw .sheet-body .rollable:hover {
   color: #3aa6ff;
@@ -1878,10 +1892,12 @@
 }
 .waw .ravenclaw .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #2669a0;
+  background-size: 65% 65%;
   border: 2px solid #143b5a;
 }
 .waw .ravenclaw .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #338bd3;
+  background-size: 70% 70%;
   border: 2px solid #2669a0;
 }
 .waw .ravenclaw .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -1946,6 +1962,10 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
+.waw .ravenclaw .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
+}
 .waw .slytherin .sheet-header {
   background: url("../assets/img/SlythHeader1.png");
   background-position: center;
@@ -1975,7 +1995,7 @@
 .waw .slytherin .sheet-body {
   background: url("../assets/img/SlytherinBG.png");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 }
 .waw .slytherin .sheet-body .rollable:hover {
   color: #38d697;
@@ -2047,10 +2067,12 @@
 }
 .waw .slytherin .sheet-body .spells aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png"), #205e45;
+  background-size: 65% 65%;
   border: 2px solid #103124;
 }
 .waw .slytherin .sheet-body .spells aside .wand-attack-container:hover {
   background: url("../assets/img/pixels/PixelWand.png"), #2d9269;
+  background-size: 70% 70%;
   border: 2px solid #205e45;
 }
 .waw .slytherin .sheet-body .spells .spell-slot-table .flexcol > strong {
@@ -2094,6 +2116,10 @@
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
+}
+.waw .slytherin .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(45deg);
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(45deg);
 }
 .waw .npc .sheet-header {
   background-image: url("../assets/img/hog-header.jpg");
@@ -2655,4 +2681,231 @@
 }
 .waw .fa-sunset {
   color: #fd6ba8;
+}
+.waw .feature-sheet *,
+.waw .item-sheet *,
+.waw .spell-sheet * {
+  color: #fff;
+}
+.waw .feature-sheet * input,
+.waw .feature-sheet * select,
+.waw .item-sheet * input,
+.waw .item-sheet * select,
+.waw .spell-sheet * input,
+.waw .spell-sheet * select {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px dashed #fff;
+}
+.waw .feature-sheet * input:focus,
+.waw .feature-sheet * select:focus,
+.waw .item-sheet * input:focus,
+.waw .item-sheet * select:focus,
+.waw .spell-sheet * input:focus,
+.waw .spell-sheet * select:focus {
+  -webkit-box-shadow: 0 0 5px #fff;
+          box-shadow: 0 0 5px #fff;
+}
+.waw .feature-sheet * input::-webkit-input-placeholder, .waw .feature-sheet * select::-webkit-input-placeholder, .waw .item-sheet * input::-webkit-input-placeholder, .waw .item-sheet * select::-webkit-input-placeholder, .waw .spell-sheet * input::-webkit-input-placeholder, .waw .spell-sheet * select::-webkit-input-placeholder {
+  color: #fff;
+}
+.waw .feature-sheet * input::-moz-placeholder, .waw .feature-sheet * select::-moz-placeholder, .waw .item-sheet * input::-moz-placeholder, .waw .item-sheet * select::-moz-placeholder, .waw .spell-sheet * input::-moz-placeholder, .waw .spell-sheet * select::-moz-placeholder {
+  color: #fff;
+}
+.waw .feature-sheet * input:-ms-input-placeholder, .waw .feature-sheet * select:-ms-input-placeholder, .waw .item-sheet * input:-ms-input-placeholder, .waw .item-sheet * select:-ms-input-placeholder, .waw .spell-sheet * input:-ms-input-placeholder, .waw .spell-sheet * select:-ms-input-placeholder {
+  color: #fff;
+}
+.waw .feature-sheet * input::-ms-input-placeholder, .waw .feature-sheet * select::-ms-input-placeholder, .waw .item-sheet * input::-ms-input-placeholder, .waw .item-sheet * select::-ms-input-placeholder, .waw .spell-sheet * input::-ms-input-placeholder, .waw .spell-sheet * select::-ms-input-placeholder {
+  color: #fff;
+}
+.waw .feature-sheet * input::placeholder,
+.waw .feature-sheet * select::placeholder,
+.waw .item-sheet * input::placeholder,
+.waw .item-sheet * select::placeholder,
+.waw .spell-sheet * input::placeholder,
+.waw .spell-sheet * select::placeholder {
+  color: #fff;
+}
+.waw .feature-sheet .sheet-header,
+.waw .item-sheet .sheet-header,
+.waw .spell-sheet .sheet-header {
+  background: url("../assets/img/hog-header.jpg");
+  padding: 8px;
+  border-radius: 5px;
+}
+.waw .feature-sheet .sheet-header .header-fields,
+.waw .item-sheet .sheet-header .header-fields,
+.waw .spell-sheet .sheet-header .header-fields {
+  background: rgba(57, 20, 28, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.waw .feature-sheet .sheet-header .header-fields h1,
+.waw .item-sheet .sheet-header .header-fields h1,
+.waw .spell-sheet .sheet-header .header-fields h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-family: "Louis";
+}
+.waw .feature-sheet .sheet-header .header-fields .flexrow,
+.waw .item-sheet .sheet-header .header-fields .flexrow,
+.waw .spell-sheet .sheet-header .header-fields .flexrow {
+  gap: 5px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.waw .feature-sheet .sheet-header .header-fields .flexrow *,
+.waw .item-sheet .sheet-header .header-fields .flexrow *,
+.waw .spell-sheet .sheet-header .header-fields .flexrow * {
+  font-family: "Louis";
+}
+.waw .feature-sheet .sheet-header .header-fields .resource,
+.waw .item-sheet .sheet-header .header-fields .resource,
+.waw .spell-sheet .sheet-header .header-fields .resource {
+  padding: 5px 0;
+}
+.waw .feature-sheet .sheet-header .header-fields .resource *,
+.waw .item-sheet .sheet-header .header-fields .resource *,
+.waw .spell-sheet .sheet-header .header-fields .resource * {
+  font-family: "Louis";
+}
+.waw .feature-sheet .sheet-header .header-fields .resource label,
+.waw .item-sheet .sheet-header .header-fields .resource label,
+.waw .spell-sheet .sheet-header .header-fields .resource label {
+  font-weight: 700;
+  color: #e4e1d0;
+}
+.waw .feature-sheet .sheet-header .header-fields .spell-meta,
+.waw .item-sheet .sheet-header .header-fields .spell-meta,
+.waw .spell-sheet .sheet-header .header-fields .spell-meta {
+  padding: 5px 0;
+}
+.waw .feature-sheet .sheet-header .header-fields .spell-meta *,
+.waw .item-sheet .sheet-header .header-fields .spell-meta *,
+.waw .spell-sheet .sheet-header .header-fields .spell-meta * {
+  font-family: "Louis";
+}
+.waw .feature-sheet .sheet-header .header-fields .spell-meta .flexrow,
+.waw .item-sheet .sheet-header .header-fields .spell-meta .flexrow,
+.waw .spell-sheet .sheet-header .header-fields .spell-meta .flexrow {
+  margin-bottom: 5px;
+}
+.waw .feature-sheet .sheet-header .header-fields .spell-meta .flexrow .resource label,
+.waw .item-sheet .sheet-header .header-fields .spell-meta .flexrow .resource label,
+.waw .spell-sheet .sheet-header .header-fields .spell-meta .flexrow .resource label {
+  font-weight: 700;
+  color: #e4e1d0;
+}
+.waw .feature-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child,
+.waw .item-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child,
+.waw .spell-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child {
+  margin-bottom: 0;
+}
+.waw .feature-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child .resource,
+.waw .item-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child .resource,
+.waw .spell-sheet .sheet-header .header-fields .spell-meta .flexrow:last-child .resource {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+.waw .feature-sheet .sheet-tabs,
+.waw .feature-sheet .sheet-body,
+.waw .item-sheet .sheet-tabs,
+.waw .item-sheet .sheet-body,
+.waw .spell-sheet .sheet-tabs,
+.waw .spell-sheet .sheet-body {
+  padding: 8px 9px;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#623643), to(#3e1a1e));
+  background: linear-gradient(to bottom, #623643, #3e1a1e);
+}
+.waw .feature-sheet .sheet-tabs *,
+.waw .feature-sheet .sheet-body *,
+.waw .item-sheet .sheet-tabs *,
+.waw .item-sheet .sheet-body *,
+.waw .spell-sheet .sheet-tabs *,
+.waw .spell-sheet .sheet-body * {
+  font-family: "Louis";
+}
+.waw .feature-sheet .sheet-body,
+.waw .item-sheet .sheet-body,
+.waw .spell-sheet .sheet-body {
+  height: 62%;
+}
+.waw .feature-sheet .sheet-body .editor > a:hover,
+.waw .item-sheet .sheet-body .editor > a:hover,
+.waw .spell-sheet .sheet-body .editor > a:hover {
+  text-shadow: 0 0 5px #3e1a1e;
+}
+.waw .feature-sheet .sheet-body .editor > a i,
+.waw .item-sheet .sheet-body .editor > a i,
+.waw .spell-sheet .sheet-body .editor > a i {
+  font-family: "Font Awesome 6 Pro";
+}
+.waw .feature-sheet .sheet-body .resource,
+.waw .item-sheet .sheet-body .resource,
+.waw .spell-sheet .sheet-body .resource {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.waw .feature-sheet .sheet-body .editor,
+.waw .item-sheet .sheet-body .editor,
+.waw .spell-sheet .sheet-body .editor {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+}
+.waw .feature-sheet .sheet-body .editor h1,
+.waw .feature-sheet .sheet-body .editor h2,
+.waw .feature-sheet .sheet-body .editor h3,
+.waw .item-sheet .sheet-body .editor h1,
+.waw .item-sheet .sheet-body .editor h2,
+.waw .item-sheet .sheet-body .editor h3,
+.waw .spell-sheet .sheet-body .editor h1,
+.waw .spell-sheet .sheet-body .editor h2,
+.waw .spell-sheet .sheet-body .editor h3 {
+  border-bottom: 1px solid #fff !important;
+}
+.waw .feature-sheet .sheet-body .editor blockquote,
+.waw .item-sheet .sheet-body .editor blockquote,
+.waw .spell-sheet .sheet-body .editor blockquote {
+  border-left: 3px solid #fff !important;
+}
+.waw .feature-sheet .sheet-body .editor .tox-tbtn__select-label,
+.waw .item-sheet .sheet-body .editor .tox-tbtn__select-label,
+.waw .spell-sheet .sheet-body .editor .tox-tbtn__select-label {
+  color: #000 !important;
+}
+.waw .feature-sheet .sheet-tabs a,
+.waw .item-sheet .sheet-tabs a,
+.waw .spell-sheet .sheet-tabs a {
+  color: #e4e1d0;
+}
+.waw .feature-sheet .sheet-tabs a:hover,
+.waw .item-sheet .sheet-tabs a:hover,
+.waw .spell-sheet .sheet-tabs a:hover {
+  text-shadow: 0 0 5px #fff;
 }

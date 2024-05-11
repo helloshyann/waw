@@ -746,7 +746,7 @@ input[type="checkbox"]:checked {
   .sheet-body {
     background: url("../assets/img/GryffindorBG.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     .rollable {
       &:hover {
         color: #ff3954;
@@ -795,10 +795,12 @@ input[type="checkbox"]:checked {
       aside {
         .wand-attack-container {
           background: url("../assets/img/pixels/PixelWand.png"), #952333;
+          background-size: 65% 65%;
           border: 2px solid #38130d;
 
           &:hover {
             background: url("../assets/img/pixels/PixelWand.png"), #bd152b;
+            background-size: 70% 70%;
             border: 2px solid #952333;
           }
         }
@@ -902,6 +904,16 @@ input[type="checkbox"]:checked {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(3.1px);
         -webkit-backdrop-filter: blur(3.1px);
+        .item-image {
+          a {
+            &:hover {
+              img {
+                filter: brightness(50%) sepia(100) saturate(100)
+                  hue-rotate(25deg);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -949,7 +961,7 @@ input[type="checkbox"]:checked {
   .sheet-body {
     background: url("../assets/img/HufflepuffBG.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     .rollable {
       &:hover {
         color: #ffcc40;
@@ -1035,10 +1047,12 @@ input[type="checkbox"]:checked {
       aside {
         .wand-attack-container {
           background: url("../assets/img/pixels/PixelWand.png"), #e1ac1e;
+          background-size: 65% 65%;
           border: 2px solid #af8417;
 
           &:hover {
             background: url("../assets/img/pixels/PixelWand.png"), #ffc831;
+            background-size: 70% 70%;
             border: 2px solid #e1ac1e;
           }
         }
@@ -1130,6 +1144,16 @@ input[type="checkbox"]:checked {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(3.1px);
         -webkit-backdrop-filter: blur(3.1px);
+        .item-image {
+          a {
+            &:hover {
+              img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                  saturate(5000%) hue-rotate(0deg);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -1169,7 +1193,7 @@ input[type="checkbox"]:checked {
   .sheet-body {
     background: url("../assets/img/RavenclawBG.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     .rollable {
       &:hover {
         color: #3aa6ff;
@@ -1248,10 +1272,12 @@ input[type="checkbox"]:checked {
       aside {
         .wand-attack-container {
           background: url("../assets/img/pixels/PixelWand.png"), #2669a0;
+          background-size: 65% 65%;
           border: 2px solid #143b5a;
 
           &:hover {
             background: url("../assets/img/pixels/PixelWand.png"), #338bd3;
+            background-size: 70% 70%;
             border: 2px solid #2669a0;
           }
         }
@@ -1329,6 +1355,16 @@ input[type="checkbox"]:checked {
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(3.1px);
       -webkit-backdrop-filter: blur(3.1px);
+      .item-image {
+        a {
+          &:hover {
+            img {
+              filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                saturate(5000%) hue-rotate(90deg);
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1367,7 +1403,7 @@ input[type="checkbox"]:checked {
   .sheet-body {
     background: url("../assets/img/SlytherinBG.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     .rollable {
       &:hover {
         color: #38d697;
@@ -1466,10 +1502,12 @@ input[type="checkbox"]:checked {
       aside {
         .wand-attack-container {
           background: url("../assets/img/pixels/PixelWand.png"), #205e45;
+          background-size: 65% 65%;
           border: 2px solid #103124;
 
           &:hover {
             background: url("../assets/img/pixels/PixelWand.png"), #2d9269;
+            background-size: 70% 70%;
             border: 2px solid #205e45;
           }
         }
@@ -1522,6 +1560,16 @@ input[type="checkbox"]:checked {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(3.1px);
         -webkit-backdrop-filter: blur(3.1px);
+        .item-image {
+          a {
+            &:hover {
+              img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+                  saturate(5000%) hue-rotate(45deg);
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -1976,4 +2024,147 @@ nav.sheet-tabs.tabs {
 
 .fa-sunset {
   color: #fd6ba8;
+}
+
+///
+///
+
+.feature-sheet,
+.item-sheet,
+.spell-sheet {
+  * {
+    color: #fff;
+
+    input,
+    select {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px dashed #fff;
+      &:focus {
+        box-shadow: 0 0 5px #fff;
+      }
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+
+  .sheet-header {
+    background: url("../assets/img/hog-header.jpg");
+    padding: 8px;
+    border-radius: 5px;
+    .header-fields {
+      background: rgba(#39141c, 0.5);
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.1px);
+      -webkit-backdrop-filter: blur(3.1px);
+      padding: 5px;
+
+      h1 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Louis";
+      }
+      .flexrow {
+        gap: 5px;
+        align-items: flex-start;
+        * {
+          font-family: "Louis";
+        }
+      }
+      .resource {
+        padding: 5px 0;
+        * {
+          font-family: "Louis";
+        }
+        label {
+          font-weight: 700;
+          color: #e4e1d0;
+        }
+      }
+      .spell-meta {
+        padding: 5px 0;
+        * {
+          font-family: "Louis";
+        }
+        .flexrow {
+          margin-bottom: 5px;
+          .resource {
+            label {
+              font-weight: 700;
+              color: #e4e1d0;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0;
+            .resource {
+              display: flex;
+              align-items: center;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sheet-tabs,
+  .sheet-body {
+    * {
+      font-family: "Louis";
+    }
+    padding: 8px 9px;
+    border-radius: 5px;
+
+    background: linear-gradient(to bottom, #623643, #3e1a1e);
+  }
+  .sheet-body {
+    height: 62%;
+    .editor > a {
+      &:hover {
+        text-shadow: 0 0 5px #3e1a1e;
+      }
+      i {
+        font-family: "Font Awesome 6 Pro";
+      }
+    }
+    .resource {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.1px);
+      -webkit-backdrop-filter: blur(3.1px);
+      padding: 5px;
+    }
+    .editor {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.1px);
+      -webkit-backdrop-filter: blur(3.1px);
+      padding: 5px;
+
+      h1,
+      h2,
+      h3 {
+        border-bottom: 1px solid #fff !important;
+      }
+      blockquote {
+        border-left: 3px solid #fff !important;
+      }
+
+      .tox-tbtn__select-label {
+        color: #000 !important;
+      }
+    }
+  }
+  .sheet-tabs {
+    a {
+      color: #e4e1d0;
+      &:hover {
+        text-shadow: 0 0 5px #fff;
+      }
+    }
+  }
 }

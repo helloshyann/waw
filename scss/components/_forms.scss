@@ -25,7 +25,9 @@
   }
 
   h1.charname {
-    font-family: "Dumbledore";
+    > i {
+      color: #c9c28b;
+    }
     text-transform: uppercase;
     padding: 0px;
     //margin: 5px 0;
