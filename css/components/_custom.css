@@ -488,6 +488,34 @@ input[type=checkbox]:checked {
 .spellbook-grid .spell-slot-table:first-child {
   margin-top: 0;
 }
+.spellbook-grid .spell-slot-table * label {
+  font-weight: 700;
+}
+.spellbook-grid .spell-slot-table .flexcol .resource-content input[type=text]::-webkit-input-placeholder {
+  color: #fff;
+  font-style: italic;
+  font-size: 10px;
+}
+.spellbook-grid .spell-slot-table .flexcol .resource-content input[type=text]::-moz-placeholder {
+  color: #fff;
+  font-style: italic;
+  font-size: 10px;
+}
+.spellbook-grid .spell-slot-table .flexcol .resource-content input[type=text]:-ms-input-placeholder {
+  color: #fff;
+  font-style: italic;
+  font-size: 10px;
+}
+.spellbook-grid .spell-slot-table .flexcol .resource-content input[type=text]::-ms-input-placeholder {
+  color: #fff;
+  font-style: italic;
+  font-size: 10px;
+}
+.spellbook-grid .spell-slot-table .flexcol .resource-content input[type=text]::placeholder {
+  color: #fff;
+  font-style: italic;
+  font-size: 10px;
+}
 .spellbook-grid aside .wand-attack-container {
   background: url("../assets/img/pixels/PixelWand.png");
   background-size: 100% 100%;
@@ -1693,6 +1721,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 5px;
   padding: 0 5px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -1705,6 +1734,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  font-weight: 700;
 }
 .additional-abil-wrap .resource {
   display: -webkit-box;
@@ -1717,13 +1747,6 @@ nav.sheet-tabs.tabs > a.active:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.additional-abil-wrap .resource .resource-content {
-  margin-top: 0.25rem;
-}
-.additional-abil-wrap .resource .resource-content input {
-  width: 2.5rem;
-}
-
 .skills {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;

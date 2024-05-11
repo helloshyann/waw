@@ -150,6 +150,55 @@
         </div>
       </div>
     </div>
+
+    <!--Corrpution-->
+    <div class="spell-slot-table">
+      <div class="flexcol">
+        <strong
+          style="
+            text-align: center;
+            letter-spacing: 1px;
+            border-bottom: 1px solid white;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+          "
+          >Dark Magic Corruption</strong
+        >
+      </div>
+      <!--- 1st Level Spell Slots --->
+      <div class="resource-content flexrow flex-center flex-between">
+        <label
+          class="resource-label spell-slot-label"
+          style="text-align: center"
+        >
+          Corruption Level
+        </label>
+        <label
+          class="resource-label spell-slot-label"
+          style="text-align: center"
+        >
+          Points
+        </label>
+      </div>
+      <div class="flexcol">
+        <div class="resource-content flexrow flex-center flex-between">
+          <input
+            type="text"
+            name="system.attributes.corruption.name"
+            value="{{system.attributes.corruption.name}}"
+            data-dtype="Text"
+            placeholder="Corruption Tier Name"
+          />
+
+          <input
+            type="text"
+            name="system.attributes.corruption.value"
+            value="{{system.attributes.corruption.value}}"
+            data-dtype="Number"
+          />
+        </div>
+      </div>
+    </div>
   </aside>
 
   <main>

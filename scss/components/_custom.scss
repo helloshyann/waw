@@ -344,6 +344,22 @@ input[type="checkbox"]:checked {
     &:first-child {
       margin-top: 0;
     }
+    * {
+      label {
+        font-weight: 700;
+      }
+    }
+    .flexcol {
+      .resource-content {
+        input[type="text"] {
+          &::placeholder {
+            color: #fff;
+            font-style: italic;
+            font-size: 10px;
+          }
+        }
+      }
+    }
   }
 
   aside {
@@ -1694,6 +1710,7 @@ nav.sheet-tabs.tabs {
 .additional-abil-wrap {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
   padding: 0 5px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -1703,15 +1720,15 @@ nav.sheet-tabs.tabs {
 
   label {
     flex: 1;
+    font-weight: 700;
   }
   .resource {
     display: flex;
     align-items: center;
     justify-content: center;
     .resource-content {
-      margin-top: 0.25rem;
       input {
-        width: 2.5rem;
+        //width: 2.5rem;
       }
     }
   }

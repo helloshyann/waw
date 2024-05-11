@@ -225,7 +225,7 @@
       <section class="additional-abil-wrap">
         <div class="resource flex-group-center">
           <label for="system.profBonus.value" class="resource-label"
-            >Prof Bonus</label
+            >Prof.&nbsp;Bonus&nbsp;:</label
           >
           <div class="resource-content flexrow flex-center flex-between">
             <input
@@ -238,12 +238,23 @@
         </div>
         <div class="resource flex-group-center saving-throws">
           <label for="system.savingThrows.value" class="resource-label"
-            >Saving Throws</label
+            >Saving&nbsp;Throws&nbsp;:</label
           >
           <input
             type="text"
             name="system.attributes.savingThrows.value"
             value="{{system.attributes.savingThrows.value}}"
+            data-dtype="Text"
+          />
+        </div>
+        <div class="resource flex-group-center saving-throws">
+          <label for="system.align.value" class="resource-label"
+            >Alignment&nbsp;:</label
+          >
+          <input
+            type="text"
+            name="system.attributes.align.value"
+            value="{{system.attributes.align.value}}"
             data-dtype="Text"
           />
         </div>
@@ -253,7 +264,7 @@
             class="resource-label rollable"
             data-roll="1d20+@init.value"
             data-label="Initiative"
-            >Initiative</label
+            >Initiative&nbsp;:</label
           >
           <div class="resource-content flexrow flex-center flex-between">
             <input
