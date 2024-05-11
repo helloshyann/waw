@@ -13,6 +13,12 @@
     </div>
     <div class="header-fields">
       <h1 class="charname">
+        <div
+          class="d20"
+          name="system.roll.value"
+          data-roll="1d20"
+          data-label="rolls the d20!"
+        ></div>
         <input
           name="name"
           type="text"
@@ -95,7 +101,6 @@
     {{!-- Default tab is specified in actor-sheet.mjs --}}
     <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="items">Items</a>
-    <a class="item" data-tab="effects">Reputation</a>
     <a class="item" data-tab="spells">Spellbook</a>
   </nav>
 
@@ -142,11 +147,6 @@
     {{!-- Owned Items Tab --}}
     <div class="tab items" data-group="primary" data-tab="items">
       {{> "systems/waw/templates/actor/parts/actor-items.html"}}
-    </div>
-
-    {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-      {{> "systems/waw/templates/actor/parts/actor-effects.html"}}
     </div>
 
     {{!-- Owned Spells Tab --}}

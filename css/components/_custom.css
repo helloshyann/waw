@@ -510,6 +510,13 @@ input[type=checkbox]:checked {
   transition: all 0.5s;
 }
 
+.npc .sheet-header h1,
+.monster .sheet-header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px !important;
+}
 .npc .sheet-tabs,
 .monster .sheet-tabs {
   border-top: 2px solid #2e1116;

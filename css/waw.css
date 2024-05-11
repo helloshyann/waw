@@ -1040,6 +1040,13 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.waw .npc .sheet-header h1,
+.waw .monster .sheet-header h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px !important;
+}
 .waw .npc .sheet-tabs,
 .waw .monster .sheet-tabs {
   border-top: 2px solid #2e1116;
