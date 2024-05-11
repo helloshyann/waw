@@ -2253,6 +2253,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.waw .additional-abil-wrap .resource .resource-content input {
+  text-align: center !important;
+}
 .waw .skills {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -2306,7 +2309,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 3px;
+  gap: 5px;
 }
 .waw .report-container .report-header {
   display: -ms-grid;
@@ -2551,14 +2554,24 @@
   padding: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.5fr 3fr;
-  grid-template-columns: 0.5fr 3fr;
+  -ms-grid-columns: 1.5fr 3fr;
+  grid-template-columns: 1.5fr 3fr;
+}
+.waw .report-container .report-downtime .downtime-title {
+  padding-right: 5px;
 }
 .waw .report-container .report-downtime .downtime-title .flex-center {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
 }
 .waw .report-container .report-downtime .downtime-title .flex-center input {
   width: 100%;
@@ -2612,15 +2625,10 @@
   gap: 4px;
 }
 .waw .report-container .report-downtime .downtime-tag-container .downtime-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .waw .report-container .report-downtime .downtime-tag-container .downtime-row .tag {
   display: -webkit-box;
@@ -2629,16 +2637,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .waw .report-container .report-downtime .downtime-tag-container .downtime-row .tag input {
   margin: 0 3px 3px 0 !important;
-}
-.waw .report-container .report-downtime .downtime-tag-container .downtime-row .downtime-disclaimer {
-  font-size: 10px;
-  font-style: italic;
 }
 .waw .report-container .report-footer {
   background: rgba(0, 0, 0, 0.5);

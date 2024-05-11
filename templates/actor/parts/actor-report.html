@@ -24,7 +24,17 @@
   <div class="report-downtime">
     <div class="downtime-title">
       <div class="flex-center">
-        <span>Downtime Activities for</span>
+        <div>
+          <span style="font-style: italic; font-size: 12px; margin-bottom: 5px"
+            >select up to 3</span
+          ><br /><strong style="letter-spacing: 1px"
+            >DOWNTIME ACTIVITIES</strong
+          >
+          <br /><span
+            style="font-style: italic; font-size: 12px; margin-top: 5px"
+            >for the month of</span
+          >
+        </div>
         <input
           type="text"
           name="system.attributes.downtime.month"
@@ -56,7 +66,7 @@
             {{checked
             system.attributes.downtime.activiTwo}}
           />
-          <span>Attend Club/Team Meeting</span>
+          <span>Attend Meeting</span>
         </div>
         <div class="tag">
           <input
@@ -69,6 +79,8 @@
           />
           <span>Brew Potions</span>
         </div>
+      </div>
+      <div class="downtime-row">
         <div class="tag">
           <input
             type="checkbox"
@@ -80,8 +92,6 @@
           />
           <span>Bond With Beast</span>
         </div>
-      </div>
-      <div class="downtime-row">
         <div class="tag">
           <input
             type="checkbox"
@@ -104,7 +114,8 @@
           />
           <span>Personal Project</span>
         </div>
-
+      </div>
+      <div class="downtime-row">
         <div class="tag">
           <input
             type="checkbox"
@@ -127,10 +138,16 @@
           />
           <span>Work Job Shift</span>
         </div>
-      </div>
-      <div class="downtime-row">
-        <div class="flex-center downtime-disclaimer">
-          *&nbsp;Select up to 3 Downtime Activities per month
+        <div class="tag">
+          <input
+            type="checkbox"
+            name="system.attributes.downtime.activiNine"
+            style="-webkit-filter: none !important"
+            id="activiNine-checkbox"
+            {{checked
+            system.attributes.downtime.activiNine}}
+          />
+          <span>Other</span>
         </div>
       </div>
     </div>

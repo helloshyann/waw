@@ -1729,6 +1729,7 @@ nav.sheet-tabs.tabs {
     .resource-content {
       input {
         //width: 2.5rem;
+        text-align: center !important;
       }
     }
   }
@@ -1777,7 +1778,7 @@ nav.sheet-tabs.tabs {
 .report-container {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 5px;
   .report-header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1941,10 +1942,14 @@ nav.sheet-tabs.tabs {
     padding: 5px;
 
     display: grid;
-    grid-template-columns: 0.5fr 3fr;
+    grid-template-columns: 1.5fr 3fr;
     .downtime-title {
+      padding-right: 5px;
       .flex-center {
         flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
         input {
           width: 100%;
           border-bottom: 1px dashed rgba(#fff, 0.5);
@@ -1966,20 +1971,15 @@ nav.sheet-tabs.tabs {
       flex-direction: column;
       gap: 4px;
       .downtime-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         .tag {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           input {
             margin: 0 3px 3px 0 !important;
           }
-        }
-        .downtime-disclaimer {
-          font-size: 10px;
-          font-style: italic;
         }
       }
     }

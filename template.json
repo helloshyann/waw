@@ -90,7 +90,7 @@
         },
         "sorceryPoints": {
           "value": 0,
-          "max": 2
+          "max": 0
         },
         "corruption": {
           "name": "",
@@ -146,7 +146,8 @@
           "activiFive": false,
           "activiSix": false,
           "activiSeven": false,
-          "activiEight": false
+          "activiEight": false,
+          "activiNine": false
         },
         "schedule": {
           "fallMorn": "",
