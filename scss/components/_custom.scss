@@ -27,6 +27,137 @@ input[type="checkbox"]:checked {
 // Shared Actor Sheet Styles
 // ==============================
 
+.npc,
+.character {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.npc {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        filter: drop-shadow(0 0 10px, #000);
+      }
+    }
+  }
+}
+
+.grystud {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelGryffindor.png");
+      }
+    }
+  }
+}
+
+.huffstud {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelHufflepuff.png");
+      }
+    }
+  }
+}
+
+.ravstud {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelRavenclaw.png");
+      }
+    }
+  }
+}
+
+.slystud {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelSlytherin.png");
+      }
+    }
+  }
+}
+
+.professor {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelSchoolCrest.png");
+      }
+    }
+  }
+}
+
+.shopkeeper {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelShopkeep.png");
+      }
+    }
+  }
+}
+
+.magcitizen {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelMagicCitizen.png");
+      }
+    }
+  }
+}
+
+.darkartist {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelDarkArts.png");
+      }
+    }
+  }
+}
+
+.camelot {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelCamelot.png");
+      }
+    }
+  }
+}
+
+.npc,
+.monster {
+  .sheet-header {
+    .header-fields {
+      .flex-col {
+        background: rgba(0, 0, 0, 0.5);
+
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.1px);
+        -webkit-backdrop-filter: blur(3.1px);
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
 .character,
 .npc,
 .monster {
@@ -242,8 +373,6 @@ input[type="checkbox"]:checked {
           margin: 0 5px;
         }
       }
-      .resources {
-      }
     }
   }
 
@@ -314,6 +443,130 @@ input[type="checkbox"]:checked {
     backdrop-filter: blur(3.1px);
     -webkit-backdrop-filter: blur(3.1px);
     padding: 5px;
+  }
+
+  .sheet-body {
+    background: url("../assets/img/GryffindorBG.png");
+    background-position: center;
+    background-repeat: repeat;
+    .rollable {
+      &:hover {
+        color: #ff3954;
+        transition: all 0.25s;
+      }
+    }
+    .skill {
+      input[type="checkbox"] {
+        &:checked {
+          accent-color: #5d314a !important;
+        }
+      }
+    }
+    .tag {
+      input[type="checkbox"] {
+        &:checked {
+          accent-color: #5d314a !important;
+          & + span {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .items {
+      input[type="checkbox"] {
+        &:checked {
+          accent-color: #5d314a !important;
+        }
+      }
+      .money-list,
+      .wandup,
+      .equipment-list {
+        > strong {
+          background: linear-gradient(to bottom, #5d314a, #38130d);
+          padding: 3px;
+          letter-spacing: 1px;
+          border-radius: 5px 5px 0 0;
+          font-weight: 500;
+          font-size: 10px;
+          text-transform: uppercase;
+          margin-top: 0;
+        }
+      }
+    }
+    .spells {
+      aside {
+        .wand-attack-container {
+          background: url("../assets/img/pixels/PixelWand.png"), #5d314a;
+          background-size: 65% 65%;
+          border: 2px solid #38130d;
+
+          &:hover {
+            background: url("../assets/img/pixels/PixelWand.png"), #79385d;
+            background-size: 70% 70%;
+            border: 2px solid #5d314a;
+          }
+        }
+      }
+      .spell-slot-table {
+        .flexcol {
+          > strong {
+            background: linear-gradient(to bottom, #5d314a, #38130d);
+            padding: 3px;
+            border-radius: 5px 5px 0 0;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .features {
+      .item {
+        background: none !important;
+
+        box-shadow: 0 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        border-bottom: 1px solid #5d314a;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    .items-list {
+      .items-header {
+        background: linear-gradient(to bottom, #5d314a, #38130d) !important;
+        div {
+          color: #fff !important;
+          font-weight: normal !important;
+          a {
+            color: #fff !important;
+            font-weight: normal !important;
+            i {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+
+      .item {
+        background: rgba(0, 0, 0, 0.5);
+
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3.1px);
+        -webkit-backdrop-filter: blur(3.1px);
+        .item-image {
+          a {
+            &:hover {
+              img {
+                filter: brightness(50%) sepia(100) !important;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .report {

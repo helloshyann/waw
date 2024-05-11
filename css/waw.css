@@ -538,6 +538,60 @@
 .waw input[type=checkbox]:checked {
   -webkit-filter: greyscale(0%) !important;
 }
+.waw .npc .sheet-header .char-img-wrap:after,
+.waw .character .sheet-header .char-img-wrap:after {
+  background-repeat: no-repeat;
+}
+.waw .npc .sheet-header .char-img-wrap:after {
+  -webkit-filter: drop-shadow(0 0 10px, #000);
+          filter: drop-shadow(0 0 10px, #000);
+}
+.waw .grystud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelGryffindor.png");
+}
+.waw .huffstud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelHufflepuff.png");
+}
+.waw .ravstud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelRavenclaw.png");
+}
+.waw .slystud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelSlytherin.png");
+}
+.waw .professor .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelSchoolCrest.png");
+}
+.waw .shopkeeper .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelShopkeep.png");
+}
+.waw .magcitizen .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelMagicCitizen.png");
+}
+.waw .darkartist .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelDarkArts.png");
+}
+.waw .camelot .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelCamelot.png");
+}
+.waw .npc .sheet-header .header-fields .flex-col,
+.waw .monster .sheet-header .header-fields .flex-col {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .waw .character *,
 .waw .npc *,
 .waw .monster * {
@@ -985,6 +1039,137 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
   padding: 5px;
+}
+.waw .character .sheet-body,
+.waw .npc .sheet-body,
+.waw .monster .sheet-body {
+  background: url("../assets/img/GryffindorBG.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+.waw .character .sheet-body .rollable:hover,
+.waw .npc .sheet-body .rollable:hover,
+.waw .monster .sheet-body .rollable:hover {
+  color: #ff3954;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.waw .character .sheet-body .skill input[type=checkbox]:checked,
+.waw .npc .sheet-body .skill input[type=checkbox]:checked,
+.waw .monster .sheet-body .skill input[type=checkbox]:checked {
+  accent-color: #5d314a !important;
+}
+.waw .character .sheet-body .tag input[type=checkbox]:checked,
+.waw .npc .sheet-body .tag input[type=checkbox]:checked,
+.waw .monster .sheet-body .tag input[type=checkbox]:checked {
+  accent-color: #5d314a !important;
+}
+.waw .character .sheet-body .tag input[type=checkbox]:checked + span,
+.waw .npc .sheet-body .tag input[type=checkbox]:checked + span,
+.waw .monster .sheet-body .tag input[type=checkbox]:checked + span {
+  text-decoration: underline;
+}
+.waw .character .sheet-body .items input[type=checkbox]:checked,
+.waw .npc .sheet-body .items input[type=checkbox]:checked,
+.waw .monster .sheet-body .items input[type=checkbox]:checked {
+  accent-color: #5d314a !important;
+}
+.waw .character .sheet-body .items .money-list > strong,
+.waw .character .sheet-body .items .wandup > strong,
+.waw .character .sheet-body .items .equipment-list > strong,
+.waw .npc .sheet-body .items .money-list > strong,
+.waw .npc .sheet-body .items .wandup > strong,
+.waw .npc .sheet-body .items .equipment-list > strong,
+.waw .monster .sheet-body .items .money-list > strong,
+.waw .monster .sheet-body .items .wandup > strong,
+.waw .monster .sheet-body .items .equipment-list > strong {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d));
+  background: linear-gradient(to bottom, #5d314a, #38130d);
+  padding: 3px;
+  letter-spacing: 1px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.waw .character .sheet-body .spells aside .wand-attack-container,
+.waw .npc .sheet-body .spells aside .wand-attack-container,
+.waw .monster .sheet-body .spells aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png"), #5d314a;
+  background-size: 65% 65%;
+  border: 2px solid #38130d;
+}
+.waw .character .sheet-body .spells aside .wand-attack-container:hover,
+.waw .npc .sheet-body .spells aside .wand-attack-container:hover,
+.waw .monster .sheet-body .spells aside .wand-attack-container:hover {
+  background: url("../assets/img/pixels/PixelWand.png"), #79385d;
+  background-size: 70% 70%;
+  border: 2px solid #5d314a;
+}
+.waw .character .sheet-body .spells .spell-slot-table .flexcol > strong,
+.waw .npc .sheet-body .spells .spell-slot-table .flexcol > strong,
+.waw .monster .sheet-body .spells .spell-slot-table .flexcol > strong {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d));
+  background: linear-gradient(to bottom, #5d314a, #38130d);
+  padding: 3px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.waw .character .sheet-body .features .item,
+.waw .npc .sheet-body .features .item,
+.waw .monster .sheet-body .features .item {
+  background: none !important;
+  -webkit-box-shadow: 0 !important;
+          box-shadow: 0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid #5d314a;
+}
+.waw .character .sheet-body .features .item:last-child,
+.waw .npc .sheet-body .features .item:last-child,
+.waw .monster .sheet-body .features .item:last-child {
+  border-bottom: none;
+}
+.waw .character .sheet-body .items-list .items-header,
+.waw .npc .sheet-body .items-list .items-header,
+.waw .monster .sheet-body .items-list .items-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d)) !important;
+  background: linear-gradient(to bottom, #5d314a, #38130d) !important;
+}
+.waw .character .sheet-body .items-list .items-header div,
+.waw .npc .sheet-body .items-list .items-header div,
+.waw .monster .sheet-body .items-list .items-header div {
+  color: #fff !important;
+  font-weight: normal !important;
+}
+.waw .character .sheet-body .items-list .items-header div a,
+.waw .npc .sheet-body .items-list .items-header div a,
+.waw .monster .sheet-body .items-list .items-header div a {
+  color: #fff !important;
+  font-weight: normal !important;
+}
+.waw .character .sheet-body .items-list .items-header div a i,
+.waw .npc .sheet-body .items-list .items-header div a i,
+.waw .monster .sheet-body .items-list .items-header div a i {
+  color: #fff !important;
+}
+.waw .character .sheet-body .items-list .item,
+.waw .npc .sheet-body .items-list .item,
+.waw .monster .sheet-body .items-list .item {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+}
+.waw .character .sheet-body .items-list .item .item-image a:hover img,
+.waw .npc .sheet-body .items-list .item .item-image a:hover img,
+.waw .monster .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(50%) sepia(100) !important;
+          filter: brightness(50%) sepia(100) !important;
 }
 .waw .character .report,
 .waw .npc .report,

@@ -6,6 +6,72 @@ input[type=checkbox]:checked {
   -webkit-filter: greyscale(0%) !important;
 }
 
+.npc .sheet-header .char-img-wrap:after,
+.character .sheet-header .char-img-wrap:after {
+  background-repeat: no-repeat;
+}
+
+.npc .sheet-header .char-img-wrap:after {
+  -webkit-filter: drop-shadow(0 0 10px, #000);
+          filter: drop-shadow(0 0 10px, #000);
+}
+
+.grystud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelGryffindor.png");
+}
+
+.huffstud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelHufflepuff.png");
+}
+
+.ravstud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelRavenclaw.png");
+}
+
+.slystud .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelSlytherin.png");
+}
+
+.professor .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelSchoolCrest.png");
+}
+
+.shopkeeper .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelShopkeep.png");
+}
+
+.magcitizen .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelMagicCitizen.png");
+}
+
+.darkartist .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelDarkArts.png");
+}
+
+.camelot .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelCamelot.png");
+}
+
+.npc .sheet-header .header-fields .flex-col,
+.monster .sheet-header .header-fields .flex-col {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .character *,
 .npc *,
 .monster * {
@@ -453,6 +519,137 @@ input[type=checkbox]:checked {
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
   padding: 5px;
+}
+.character .sheet-body,
+.npc .sheet-body,
+.monster .sheet-body {
+  background: url("../assets/img/GryffindorBG.png");
+  background-position: center;
+  background-repeat: repeat;
+}
+.character .sheet-body .rollable:hover,
+.npc .sheet-body .rollable:hover,
+.monster .sheet-body .rollable:hover {
+  color: #ff3954;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.character .sheet-body .skill input[type=checkbox]:checked,
+.npc .sheet-body .skill input[type=checkbox]:checked,
+.monster .sheet-body .skill input[type=checkbox]:checked {
+  accent-color: #5d314a !important;
+}
+.character .sheet-body .tag input[type=checkbox]:checked,
+.npc .sheet-body .tag input[type=checkbox]:checked,
+.monster .sheet-body .tag input[type=checkbox]:checked {
+  accent-color: #5d314a !important;
+}
+.character .sheet-body .tag input[type=checkbox]:checked + span,
+.npc .sheet-body .tag input[type=checkbox]:checked + span,
+.monster .sheet-body .tag input[type=checkbox]:checked + span {
+  text-decoration: underline;
+}
+.character .sheet-body .items input[type=checkbox]:checked,
+.npc .sheet-body .items input[type=checkbox]:checked,
+.monster .sheet-body .items input[type=checkbox]:checked {
+  accent-color: #5d314a !important;
+}
+.character .sheet-body .items .money-list > strong,
+.character .sheet-body .items .wandup > strong,
+.character .sheet-body .items .equipment-list > strong,
+.npc .sheet-body .items .money-list > strong,
+.npc .sheet-body .items .wandup > strong,
+.npc .sheet-body .items .equipment-list > strong,
+.monster .sheet-body .items .money-list > strong,
+.monster .sheet-body .items .wandup > strong,
+.monster .sheet-body .items .equipment-list > strong {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d));
+  background: linear-gradient(to bottom, #5d314a, #38130d);
+  padding: 3px;
+  letter-spacing: 1px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.character .sheet-body .spells aside .wand-attack-container,
+.npc .sheet-body .spells aside .wand-attack-container,
+.monster .sheet-body .spells aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png"), #5d314a;
+  background-size: 65% 65%;
+  border: 2px solid #38130d;
+}
+.character .sheet-body .spells aside .wand-attack-container:hover,
+.npc .sheet-body .spells aside .wand-attack-container:hover,
+.monster .sheet-body .spells aside .wand-attack-container:hover {
+  background: url("../assets/img/pixels/PixelWand.png"), #79385d;
+  background-size: 70% 70%;
+  border: 2px solid #5d314a;
+}
+.character .sheet-body .spells .spell-slot-table .flexcol > strong,
+.npc .sheet-body .spells .spell-slot-table .flexcol > strong,
+.monster .sheet-body .spells .spell-slot-table .flexcol > strong {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d));
+  background: linear-gradient(to bottom, #5d314a, #38130d);
+  padding: 3px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.character .sheet-body .features .item,
+.npc .sheet-body .features .item,
+.monster .sheet-body .features .item {
+  background: none !important;
+  -webkit-box-shadow: 0 !important;
+          box-shadow: 0 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid #5d314a;
+}
+.character .sheet-body .features .item:last-child,
+.npc .sheet-body .features .item:last-child,
+.monster .sheet-body .features .item:last-child {
+  border-bottom: none;
+}
+.character .sheet-body .items-list .items-header,
+.npc .sheet-body .items-list .items-header,
+.monster .sheet-body .items-list .items-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d)) !important;
+  background: linear-gradient(to bottom, #5d314a, #38130d) !important;
+}
+.character .sheet-body .items-list .items-header div,
+.npc .sheet-body .items-list .items-header div,
+.monster .sheet-body .items-list .items-header div {
+  color: #fff !important;
+  font-weight: normal !important;
+}
+.character .sheet-body .items-list .items-header div a,
+.npc .sheet-body .items-list .items-header div a,
+.monster .sheet-body .items-list .items-header div a {
+  color: #fff !important;
+  font-weight: normal !important;
+}
+.character .sheet-body .items-list .items-header div a i,
+.npc .sheet-body .items-list .items-header div a i,
+.monster .sheet-body .items-list .items-header div a i {
+  color: #fff !important;
+}
+.character .sheet-body .items-list .item,
+.npc .sheet-body .items-list .item,
+.monster .sheet-body .items-list .item {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+}
+.character .sheet-body .items-list .item .item-image a:hover img,
+.npc .sheet-body .items-list .item .item-image a:hover img,
+.monster .sheet-body .items-list .item .item-image a:hover img {
+  -webkit-filter: brightness(50%) sepia(100) !important;
+          filter: brightness(50%) sepia(100) !important;
 }
 .character .report,
 .npc .report,
