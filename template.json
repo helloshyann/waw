@@ -18,6 +18,9 @@
           "ability": "",
           "bonus": ""
         },
+        "roll": {
+          "value": 0
+        },
         "movement": {
           "burrow": 0,
           "climb": 0,
@@ -402,7 +405,7 @@
         "value": ""
       },
       "rarity": {
-        "value": "Rarity Level"
+        "value": ""
       },
       "quantity": 1,
       "cost": 0,
@@ -417,7 +420,7 @@
       "level": 1
     },
     "spell": {
-      "level": 1,
+      "level": "",
       "school": "",
       "components": {
         "castingTime": "",
@@ -429,7 +432,7 @@
       "description": "",
       "scaling": {
         "mode": "none",
-        "formula": null
+        "formula": ""
       }
     }
   }

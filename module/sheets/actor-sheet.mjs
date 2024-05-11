@@ -290,6 +290,11 @@ export class WaWActorSheet extends ActorSheet {
       html.find('.job-sickle-pay-input').change(this._onJobSicklePayChange.bind(this));
       html.find('.job-knut-pay-input').change(this._onJobKnutPayChange.bind(this));
 
+    // Add listener for the d20 roll
+    html.find('.d20').click(event => this._onD20Roll(event));
+
+    // Add listener for the d20 roll
+    html.find('.wand-attack-container').click(event => this._onD20Roll(event));
 
     // Render the item sheet for viewing/editing prior to the editable check.
     html.find('.item-edit').click(ev => {
@@ -651,6 +656,31 @@ async _onJobKnutPayChange(event) {
         'system.attributes.partTimeJobs.employedAt': updatedJobs,
     });
 }
+
+
+  /**
+ * Specifically handle d20 rolls from the sheet.
+ * @param {Event} event The originating click event.
+ */
+_onD20Roll(event) {
+    event.preventDefault();
+    const element = $(event.currentTarget);
+    const rollFormula = element.data('roll');  // Expected to be "1d20"
+    const rollLabel = element.data('label');   // Custom label from data attribute
+
+    // Create the roll
+    let roll = new Roll(rollFormula, this.actor.getRollData());
+
+    // Evaluate the roll
+    roll.evaluate({async: false});  // Set to true if you want the roll to be asynchronous
+
+    // Send the roll to the chat
+    roll.toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: rollLabel
+    });
+}
+
 
 
 

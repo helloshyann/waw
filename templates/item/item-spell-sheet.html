@@ -98,16 +98,6 @@
             />
             <label for="concentration-checkbox">Concentration</label>
           </div>
-          <div class="resource">
-            <input
-              type="checkbox"
-              name="system.components.dedication"
-              id="dedication-checkbox"
-              {{checked
-              system.components.dedication}}
-            />
-            <label for="dedication-checkbox">Dedication</label>
-          </div>
         </div>
       </div>
     </div>
@@ -116,7 +106,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="attributes">Attributes</a>
+    <a class="item" data-tab="attributes">Formula</a>
   </nav>
 
   {{!-- Sheet Body --}}
@@ -131,23 +121,13 @@
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
       <div class="resource">
-        <label class="resource-label">Spell Level</label>
+        <label class="resource-label">Roll Formula</label>
         <input
           type="text"
-          name="system.spellLevel"
-          value="{{system.spellLevel}}"
-          data-dtype="Number"
+          name="system.formula"
+          value="{{system.formula}}"
+          data-dtype="String"
         />
-      </div>
-      <div class="resource">
-        <label class="resource-label">Casting Time</label>
-        <input
-          type="text"
-          name="system.castingTime"
-          value="{{system.castingTime}}"
-          data-dtype="text"
-        />
-        <h2>{{system.castingTime}}</h2>
       </div>
     </div>
   </section>

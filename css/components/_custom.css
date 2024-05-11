@@ -117,6 +117,42 @@ input[type=checkbox]:checked {
   -webkit-backdrop-filter: blur(3.1px);
   padding: 5px;
 }
+.character .sheet-header .editor h1,
+.character .sheet-header .editor h2,
+.character .sheet-header .editor h3,
+.character .sheet-body .editor h1,
+.character .sheet-body .editor h2,
+.character .sheet-body .editor h3,
+.npc .sheet-header .editor h1,
+.npc .sheet-header .editor h2,
+.npc .sheet-header .editor h3,
+.npc .sheet-body .editor h1,
+.npc .sheet-body .editor h2,
+.npc .sheet-body .editor h3,
+.monster .sheet-header .editor h1,
+.monster .sheet-header .editor h2,
+.monster .sheet-header .editor h3,
+.monster .sheet-body .editor h1,
+.monster .sheet-body .editor h2,
+.monster .sheet-body .editor h3 {
+  border-bottom: 1px solid #fff !important;
+}
+.character .sheet-header .editor blockquote,
+.character .sheet-body .editor blockquote,
+.npc .sheet-header .editor blockquote,
+.npc .sheet-body .editor blockquote,
+.monster .sheet-header .editor blockquote,
+.monster .sheet-body .editor blockquote {
+  border-left: 3px solid #fff !important;
+}
+.character .sheet-header .editor .tox-tbtn__select-label,
+.character .sheet-body .editor .tox-tbtn__select-label,
+.npc .sheet-header .editor .tox-tbtn__select-label,
+.npc .sheet-body .editor .tox-tbtn__select-label,
+.monster .sheet-header .editor .tox-tbtn__select-label,
+.monster .sheet-body .editor .tox-tbtn__select-label {
+  color: #000 !important;
+}
 .character .sheet-header,
 .npc .sheet-header,
 .monster .sheet-header {
@@ -147,6 +183,18 @@ input[type=checkbox]:checked {
           flex: none !important;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+.character .sheet-header .char-img-wrap img,
+.npc .sheet-header .char-img-wrap img,
+.monster .sheet-header .char-img-wrap img {
+  -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+}
+.character .sheet-header .char-img-wrap:after,
+.npc .sheet-header .char-img-wrap:after,
+.monster .sheet-header .char-img-wrap:after {
+  -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.5));
 }
 .character .sheet-header .char-img-wrap img,
 .npc .sheet-header .char-img-wrap img,
@@ -184,6 +232,32 @@ input[type=checkbox]:checked {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5px;
+}
+.character .sheet-header .header-fields .d20,
+.npc .sheet-header .header-fields .d20,
+.monster .sheet-header .header-fields .d20 {
+  background: url("../assets/img/pixels/PixelD20.png");
+  background-size: 100% 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  -webkit-filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.75));
+          filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.75));
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+.character .sheet-header .header-fields .d20:hover,
+.npc .sheet-header .header-fields .d20:hover,
+.monster .sheet-header .header-fields .d20:hover {
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.75));
+          filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.75));
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
 }
 .character .sheet-header .header-fields .charname,
 .character .sheet-header .header-fields .inspo,
@@ -413,6 +487,27 @@ input[type=checkbox]:checked {
 }
 .spellbook-grid .spell-slot-table:first-child {
   margin-top: 0;
+}
+.spellbook-grid aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 2rem;
+  display: block;
+  -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.9));
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 5px;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+.spellbook-grid aside .wand-attack-container:hover {
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .npc .sheet-tabs,
@@ -861,14 +956,8 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.gryffindor .sheet-header .char-img-wrap img {
-  -webkit-filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
-          filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
-}
 .gryffindor .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelGryffindor.png");
-  -webkit-filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
-          filter: drop-shadow(0 0 12px rgba(255, 57, 84, 0.75));
 }
 .gryffindor .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#952333), to(#38130d)) !important;
@@ -922,6 +1011,14 @@ input[type=checkbox]:checked {
   text-transform: uppercase;
   margin-top: 0;
 }
+.gryffindor .sheet-body .spells aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png"), #952333;
+  border: 2px solid #38130d;
+}
+.gryffindor .sheet-body .spells aside .wand-attack-container:hover {
+  background: url("../assets/img/pixels/PixelWand.png"), #bd152b;
+  border: 2px solid #952333;
+}
 .gryffindor .sheet-body .spells .spell-slot-table .flexcol > strong {
   background: -webkit-gradient(linear, left top, left bottom, from(#952333), to(#38130d));
   background: linear-gradient(to bottom, #952333, #38130d);
@@ -930,6 +1027,25 @@ input[type=checkbox]:checked {
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
+}
+.gryffindor .sheet-body .report-container .report-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#952333), to(#38130d));
+  background: linear-gradient(to bottom, #952333, #38130d);
+}
+.gryffindor .sheet-body .report-container .report-body .term-column .term-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#952333), to(#38130d));
+  background: linear-gradient(to bottom, #952333, #38130d);
+}
+.gryffindor .sheet-body .report-container .report-body .term-column:first-child .term-header {
+  border-radius: 5px 0 0 0;
+}
+.gryffindor .sheet-body .report-container .report-body .term-column:last-child .term-header {
+  border-radius: 0 5px 0 0;
+}
+.gryffindor .sheet-body .report-container .report-footer .tracker-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#952333), to(#38130d));
+  background: linear-gradient(to bottom, #952333, #38130d);
+  border-radius: 5px 5px 0 0;
 }
 .gryffindor .sheet-body .effects .club-title-wrap,
 .gryffindor .sheet-body .effects .job-title-wrap,
@@ -991,14 +1107,8 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.hufflepuff .sheet-header .char-img-wrap img {
-  -webkit-filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
-          filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
-}
 .hufflepuff .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelHufflepuff.png");
-  -webkit-filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
-          filter: drop-shadow(0 0 12px rgba(255, 204, 64, 0.75));
 }
 .hufflepuff .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#e1ac1e), to(#af8417)) !important;
@@ -1060,6 +1170,41 @@ input[type=checkbox]:checked {
   font-size: 10px;
   text-transform: uppercase;
   color: #292521;
+}
+.hufflepuff .sheet-body .report-container .report-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e1ac1e), to(#af8417));
+  background: linear-gradient(to bottom, #e1ac1e, #af8417);
+}
+.hufflepuff .sheet-body .report-container .report-header * {
+  color: #292521 !important;
+  font-weight: 700;
+}
+.hufflepuff .sheet-body .report-container .report-body .term-column .term-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e1ac1e), to(#af8417));
+  background: linear-gradient(to bottom, #e1ac1e, #af8417);
+  color: #292521;
+  font-weight: 700;
+}
+.hufflepuff .sheet-body .report-container .report-body .term-column:first-child .term-header {
+  border-radius: 5px 0 0 0;
+}
+.hufflepuff .sheet-body .report-container .report-body .term-column:last-child .term-header {
+  border-radius: 0 5px 0 0;
+}
+.hufflepuff .sheet-body .report-container .report-footer .tracker-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e1ac1e), to(#af8417));
+  background: linear-gradient(to bottom, #e1ac1e, #af8417);
+  color: #292521;
+  font-weight: 700;
+  border-radius: 5px 5px 0 0;
+}
+.hufflepuff .sheet-body .spells aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png"), #e1ac1e;
+  border: 2px solid #af8417;
+}
+.hufflepuff .sheet-body .spells aside .wand-attack-container:hover {
+  background: url("../assets/img/pixels/PixelWand.png"), #ffc831;
+  border: 2px solid #e1ac1e;
 }
 .hufflepuff .sheet-body .spells .spell-slot-table .flexcol > strong {
   background: -webkit-gradient(linear, left top, left bottom, from(#e1ac1e), to(#af8417));
@@ -1145,14 +1290,8 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.ravenclaw .sheet-header .char-img-wrap img {
-  -webkit-filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
-          filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
-}
 .ravenclaw .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelRavenclaw.png");
-  -webkit-filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
-          filter: drop-shadow(0 0 12px rgba(58, 166, 255, 0.75));
 }
 .ravenclaw .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
@@ -1184,6 +1323,25 @@ input[type=checkbox]:checked {
 .ravenclaw .sheet-body .skill input[type=checkbox]:checked {
   accent-color: #2669a0 !important;
 }
+.ravenclaw .sheet-body .report-container .report-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
+  background: linear-gradient(to bottom, #2669a0, #143b5a);
+}
+.ravenclaw .sheet-body .report-container .report-body .term-column .term-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
+  background: linear-gradient(to bottom, #2669a0, #143b5a);
+}
+.ravenclaw .sheet-body .report-container .report-body .term-column:first-child .term-header {
+  border-radius: 5px 0 0 0;
+}
+.ravenclaw .sheet-body .report-container .report-body .term-column:last-child .term-header {
+  border-radius: 0 5px 0 0;
+}
+.ravenclaw .sheet-body .report-container .report-footer .tracker-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
+  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  border-radius: 5px 5px 0 0;
+}
 .ravenclaw .sheet-body .tag input[type=checkbox]:checked {
   accent-color: #2669a0 !important;
 }
@@ -1205,6 +1363,14 @@ input[type=checkbox]:checked {
   font-size: 10px;
   text-transform: uppercase;
   margin-top: 0;
+}
+.ravenclaw .sheet-body .spells aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png"), #2669a0;
+  border: 2px solid #143b5a;
+}
+.ravenclaw .sheet-body .spells aside .wand-attack-container:hover {
+  background: url("../assets/img/pixels/PixelWand.png"), #338bd3;
+  border: 2px solid #2669a0;
 }
 .ravenclaw .sheet-body .spells .spell-slot-table .flexcol > strong {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
@@ -1275,14 +1441,8 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.slytherin .sheet-header .char-img-wrap img {
-  -webkit-filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
-          filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
-}
 .slytherin .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelSlytherin.png");
-  -webkit-filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
-          filter: drop-shadow(0 0 12px rgba(56, 214, 151, 0.75));
 }
 .slytherin .sheet-header .inspo {
   background: -webkit-gradient(linear, left top, left bottom, from(#205e45), to(#103124)) !important;
@@ -1316,6 +1476,25 @@ input[type=checkbox]:checked {
 }
 .slytherin .sheet-body .tag input[type=checkbox]:checked + span {
   text-decoration: underline;
+}
+.slytherin .sheet-body .report-container .report-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#205e45), to(#103124));
+  background: linear-gradient(to bottom, #205e45, #103124);
+}
+.slytherin .sheet-body .report-container .report-body .term-column .term-header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#205e45), to(#103124));
+  background: linear-gradient(to bottom, #205e45, #103124);
+}
+.slytherin .sheet-body .report-container .report-body .term-column:first-child .term-header {
+  border-radius: 5px 0 0 0;
+}
+.slytherin .sheet-body .report-container .report-body .term-column:last-child .term-header {
+  border-radius: 0 5px 0 0;
+}
+.slytherin .sheet-body .report-container .report-footer .tracker-title {
+  background: -webkit-gradient(linear, left top, left bottom, from(#205e45), to(#103124));
+  background: linear-gradient(to bottom, #205e45, #103124);
+  border-radius: 5px 5px 0 0;
 }
 .slytherin .sheet-body .skill input[type=checkbox]:checked {
   accent-color: #205e45 !important;
@@ -1354,6 +1533,14 @@ input[type=checkbox]:checked {
   font-weight: 500;
   font-size: 10px;
   text-transform: uppercase;
+}
+.slytherin .sheet-body .spells aside .wand-attack-container {
+  background: url("../assets/img/pixels/PixelWand.png"), #205e45;
+  border: 2px solid #103124;
+}
+.slytherin .sheet-body .spells aside .wand-attack-container:hover {
+  background: url("../assets/img/pixels/PixelWand.png"), #2d9269;
+  border: 2px solid #205e45;
 }
 .slytherin .sheet-body .spells .spell-slot-table .flexcol > strong {
   background: -webkit-gradient(linear, left top, left bottom, from(#205e45), to(#103124));
@@ -1609,7 +1796,6 @@ nav.sheet-tabs.tabs > a.active:hover {
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
-  border: 1px solid #fff;
   padding: 5px;
 }
 .report-container .report-body .term-column {
@@ -1633,6 +1819,9 @@ nav.sheet-tabs.tabs > a.active:hover {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+}
+.report-container .report-body .term-column:first-child .term-body .term-row .fa-light {
+  font-size: 24px;
 }
 .report-container .report-body .term-column:nth-child(n+2) .term-body .inner-col {
   height: 100%;
@@ -1687,6 +1876,11 @@ nav.sheet-tabs.tabs > a.active:hover {
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+}
+.report-container .report-body .term-column .term-body .term-row.grade-grid .fa-light {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 6px;
 }
 .report-container .report-body .term-column .term-body .term-row.grade-grid input {
   font-weight: 600;
@@ -1791,6 +1985,7 @@ nav.sheet-tabs.tabs > a.active:hover {
 }
 .report-container .report-downtime {
   background: rgba(0, 0, 0, 0.5);
+  border: 1px dashed rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1961,11 +2156,5 @@ nav.sheet-tabs.tabs > a.active:hover {
 }
 
 .fa-sunset {
-  color: #fd6b6b;
-}
-
-.fa-light {
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  padding: 6px;
+  color: #fd6ba8;
 }
