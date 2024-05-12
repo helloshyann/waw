@@ -87,6 +87,7 @@
     }
     .item-name {
       //color: $c-dark;
+
       .item-image {
         flex: 0 0 30px;
         height: 30px;
@@ -105,8 +106,7 @@
 
   .item-prop {
     text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
+
     font-size: 12px;
   }
 
@@ -129,10 +129,4 @@
       // font-size: 16px;
     }
   }
-}
-
-/* Example style for WaW (can be removed if not needed) */
-.item-formula {
-  flex: 0 0 200px;
-  padding: 0 8px;
 }

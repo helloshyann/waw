@@ -88,7 +88,8 @@ input[type="checkbox"]:checked {
   }
 }
 
-.professor {
+.professor,
+.archmage {
   .sheet-header {
     .char-img-wrap {
       &:after {
@@ -133,6 +134,60 @@ input[type="checkbox"]:checked {
     .char-img-wrap {
       &:after {
         background-image: url("../assets/img/pixels/PixelCamelot.png");
+      }
+    }
+  }
+}
+
+.spirit {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelGhost.png");
+      }
+    }
+  }
+}
+
+.portrait {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelPortrait.png");
+        width: 3.5rem !important;
+      }
+    }
+  }
+}
+
+.crusader {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelCrusader.png");
+        width: 3.5rem !important;
+      }
+    }
+  }
+}
+
+.muggle {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelMuggle.png");
+      }
+    }
+  }
+}
+
+.squib {
+  .sheet-header {
+    .char-img-wrap {
+      &:after {
+        background-image: url("../assets/img/pixels/PixelSquib.png");
+        width: 2.5rem !important;
+        left: 0.5rem;
       }
     }
   }
@@ -451,7 +506,7 @@ input[type="checkbox"]:checked {
     background-repeat: repeat;
     .rollable {
       &:hover {
-        color: #ff3954;
+        color: #9c5e81;
         transition: all 0.25s;
       }
     }
@@ -669,6 +724,30 @@ input[type="checkbox"]:checked {
         display: grid;
         grid-template-columns: 8rem 2fr;
         gap: 5px;
+        .abilities-column {
+          .ability-grid {
+            background: rgba(0, 0, 0, 0.6);
+
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(3.1px);
+            -webkit-backdrop-filter: blur(3.1px);
+            padding: 3px 6px;
+            border-radius: 4px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            place-items: center;
+            text-align: center;
+
+            margin: 0 7px 7px;
+          }
+        }
+        .biography-column {
+          .bio-top {
+            min-height: 400px;
+            height: 400px;
+          }
+        }
       }
     }
     .tab > .editor {
@@ -2316,6 +2395,11 @@ nav.sheet-tabs.tabs {
       border: none;
       border-radius: 0;
       border-bottom: 1px dashed #fff;
+
+      option {
+        background-color: #2e1116;
+      }
+
       &:focus {
         box-shadow: 0 0 5px #fff;
       }
@@ -2351,6 +2435,7 @@ nav.sheet-tabs.tabs {
         }
       }
       .resource {
+        text-align: center;
         padding: 5px 0;
         * {
           font-family: "Louis";

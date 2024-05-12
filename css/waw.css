@@ -5,8 +5,6 @@
 }
 
 .rollable:hover, .rollable:focus {
-  color: #000;
-  text-shadow: 0 0 10px red;
   cursor: pointer;
 }
 
@@ -319,7 +317,6 @@
   /* ----------------------------------------- */
   /*  Items Lists                              */
   /* ----------------------------------------- */
-  /* Example style for WaW (can be removed if not needed) */
 }
 .waw .item-form {
   font-family: "Roboto", sans-serif;
@@ -492,8 +489,6 @@
 }
 .waw .items-list .item-prop {
   text-align: center;
-  border-left: 1px solid #c9c7b8;
-  border-right: 1px solid #c9c7b8;
   font-size: 12px;
 }
 .waw .items-list .items-header {
@@ -513,12 +508,6 @@
 .waw .items-list .items-header .item-name {
   padding-left: 5px;
   text-align: left;
-}
-.waw .item-formula {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 200px;
-          flex: 0 0 200px;
-  padding: 0 8px;
 }
 .waw .effects .item .effect-source,
 .waw .effects .item .effect-duration,
@@ -558,7 +547,8 @@
 .waw .slystud .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelSlytherin.png");
 }
-.waw .professor .sheet-header .char-img-wrap:after {
+.waw .professor .sheet-header .char-img-wrap:after,
+.waw .archmage .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelSchoolCrest.png");
 }
 .waw .shopkeeper .sheet-header .char-img-wrap:after {
@@ -572,6 +562,25 @@
 }
 .waw .camelot .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelCamelot.png");
+}
+.waw .spirit .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelGhost.png");
+}
+.waw .portrait .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelPortrait.png");
+  width: 3.5rem !important;
+}
+.waw .crusader .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelCrusader.png");
+  width: 3.5rem !important;
+}
+.waw .muggle .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelMuggle.png");
+}
+.waw .squib .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelSquib.png");
+  width: 2.5rem !important;
+  left: 0.5rem;
 }
 .waw .npc .sheet-header .header-fields .flex-col,
 .waw .monster .sheet-header .header-fields .flex-col {
@@ -1050,7 +1059,7 @@
 .waw .character .sheet-body .rollable:hover,
 .waw .npc .sheet-body .rollable:hover,
 .waw .monster .sheet-body .rollable:hover {
-  color: #ff3954;
+  color: #9c5e81;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -1291,6 +1300,31 @@
   -ms-grid-columns: 8rem 5px 2fr;
   grid-template-columns: 8rem 2fr;
   gap: 5px;
+}
+.waw .npc .sheet-body .description .npc-sheet-grid .abilities-column .ability-grid,
+.waw .monster .sheet-body .description .npc-sheet-grid .abilities-column .ability-grid {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-items: center;
+  text-align: center;
+  margin: 0 7px 7px;
+}
+.waw .npc .sheet-body .description .npc-sheet-grid .biography-column .bio-top,
+.waw .monster .sheet-body .description .npc-sheet-grid .biography-column .bio-top {
+  min-height: 400px;
+  height: 400px;
 }
 .waw .npc .sheet-body .tab > .editor,
 .waw .monster .sheet-body .tab > .editor {
@@ -2917,6 +2951,14 @@
   border-radius: 0;
   border-bottom: 1px dashed #fff;
 }
+.waw .feature-sheet * input option,
+.waw .feature-sheet * select option,
+.waw .item-sheet * input option,
+.waw .item-sheet * select option,
+.waw .spell-sheet * input option,
+.waw .spell-sheet * select option {
+  background-color: #2e1116;
+}
 .waw .feature-sheet * input:focus,
 .waw .feature-sheet * select:focus,
 .waw .item-sheet * input:focus,
@@ -2992,6 +3034,7 @@
 .waw .feature-sheet .sheet-header .header-fields .resource,
 .waw .item-sheet .sheet-header .header-fields .resource,
 .waw .spell-sheet .sheet-header .header-fields .resource {
+  text-align: center;
   padding: 5px 0;
 }
 .waw .feature-sheet .sheet-header .header-fields .resource *,

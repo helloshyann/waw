@@ -135,8 +135,11 @@
 <ol class="items-list">
   <li class="item flexrow items-header">
     <div class="item-name">Inventory</div>
-    <div class="item-formula">Weight</div>
-    <div class="item-formula">Roll Formula</div>
+    <div class="item-prop">Type</div>
+    <div class="item-prop">Quantity</div>
+    <div class="item-prop">Weight</div>
+    <div class="item-prop">Cost</div>
+
     <div class="item-controls">
       <a class="item-control item-create" title="Create item" data-type="item"
         ><i class="fas fa-plus"></i> Add Item</a
@@ -153,8 +156,11 @@
       </div>
       <h4>{{item.name}}</h4>
     </div>
-    <div class="item-formula item-prop">{{item.system.weight}}</div>
-    <div class="item-formula item-prop">{{item.system.formula}}</div>
+    <div class="item-prop">{{item.system.itemType.value}}</div>
+    <div class="item-prop">{{item.system.quantity}}</div>
+    <div class="item-prop">{{item.system.weight}}</div>
+    <div class="item-prop">{{item.system.cost}}</div>
+
     <div class="item-controls">
       <a class="item-control item-edit" title="Edit Item"
         ><i class="fas fa-edit"></i

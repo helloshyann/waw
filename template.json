@@ -428,7 +428,7 @@
         "value": ""
       },
       "quantity": 1,
-      "cost": 0,
+      "cost": "",
       "weight": 0,
       "formula": "d20 + @str.mod + ceil(@lvl / 2)"
     },

@@ -110,6 +110,22 @@
     <div class="tab description" data-group="primary" data-tab="description">
       <div class="npc-sheet-grid">
         <div class="abilities-column">
+          <div class="ability-grid">
+            <label
+              for="system.init.value"
+              class="resource-label rollable"
+              data-roll="1d20+@init.value"
+              data-label="Initiative"
+              >Initiative&nbsp;:</label
+            >
+
+            <input
+              type="text"
+              name="system.init.value"
+              value="{{system.init.value}}"
+              data-dtype="Number"
+            />
+          </div>
           <div class="abilities flexcol">
             {{#each system.abilities as |ability key|}}
             <div class="ability flexcol flex-group-center">
@@ -138,8 +154,16 @@
         </div>
 
         <div class="biography-column">
-          {{editor system.biography target="system.biography" rollData=rollData
-          button=true owner=owner editable=editable}}
+          <div class="bio-top">
+            {{editor system.biography target="system.biography"
+            rollData=rollData button=true owner=owner editable=editable}}
+          </div>
+          <div class="bio-bottom">
+            {{!-- This is a Handlebars partial. They're stored in the `/parts`
+            folder next to this sheet, and defined in
+            module/helpers/templates.mjs --}} {{>
+            "systems/waw/templates/actor/parts/actor-features.html"}}
+          </div>
         </div>
       </div>
     </div>

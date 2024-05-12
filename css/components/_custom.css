@@ -32,7 +32,8 @@ input[type=checkbox]:checked {
   background-image: url("../assets/img/pixels/PixelSlytherin.png");
 }
 
-.professor .sheet-header .char-img-wrap:after {
+.professor .sheet-header .char-img-wrap:after,
+.archmage .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelSchoolCrest.png");
 }
 
@@ -50,6 +51,30 @@ input[type=checkbox]:checked {
 
 .camelot .sheet-header .char-img-wrap:after {
   background-image: url("../assets/img/pixels/PixelCamelot.png");
+}
+
+.spirit .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelGhost.png");
+}
+
+.portrait .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelPortrait.png");
+  width: 3.5rem !important;
+}
+
+.crusader .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelCrusader.png");
+  width: 3.5rem !important;
+}
+
+.muggle .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelMuggle.png");
+}
+
+.squib .sheet-header .char-img-wrap:after {
+  background-image: url("../assets/img/pixels/PixelSquib.png");
+  width: 2.5rem !important;
+  left: 0.5rem;
 }
 
 .npc .sheet-header .header-fields .flex-col,
@@ -530,7 +555,7 @@ input[type=checkbox]:checked {
 .character .sheet-body .rollable:hover,
 .npc .sheet-body .rollable:hover,
 .monster .sheet-body .rollable:hover {
-  color: #ff3954;
+  color: #9c5e81;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
@@ -773,6 +798,31 @@ input[type=checkbox]:checked {
   -ms-grid-columns: 8rem 5px 2fr;
   grid-template-columns: 8rem 2fr;
   gap: 5px;
+}
+.npc .sheet-body .description .npc-sheet-grid .abilities-column .ability-grid,
+.monster .sheet-body .description .npc-sheet-grid .abilities-column .ability-grid {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  padding: 3px 6px;
+  border-radius: 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-items: center;
+  text-align: center;
+  margin: 0 7px 7px;
+}
+.npc .sheet-body .description .npc-sheet-grid .biography-column .bio-top,
+.monster .sheet-body .description .npc-sheet-grid .biography-column .bio-top {
+  min-height: 400px;
+  height: 400px;
 }
 .npc .sheet-body .tab > .editor,
 .monster .sheet-body .tab > .editor {
@@ -2430,6 +2480,14 @@ nav.sheet-tabs.tabs > a.active:hover {
   border-radius: 0;
   border-bottom: 1px dashed #fff;
 }
+.feature-sheet * input option,
+.feature-sheet * select option,
+.item-sheet * input option,
+.item-sheet * select option,
+.spell-sheet * input option,
+.spell-sheet * select option {
+  background-color: #2e1116;
+}
 .feature-sheet * input:focus,
 .feature-sheet * select:focus,
 .item-sheet * input:focus,
@@ -2505,6 +2563,7 @@ nav.sheet-tabs.tabs > a.active:hover {
 .feature-sheet .sheet-header .header-fields .resource,
 .item-sheet .sheet-header .header-fields .resource,
 .spell-sheet .sheet-header .header-fields .resource {
+  text-align: center;
   padding: 5px 0;
 }
 .feature-sheet .sheet-header .header-fields .resource *,
