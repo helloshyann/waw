@@ -396,7 +396,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.6);
   border: none !important;
   font-weight: bold;
 }
@@ -503,7 +503,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.6);
   font-weight: bold;
 }
 .waw .items-list .items-header > * {
@@ -575,7 +575,7 @@
 }
 .waw .npc .sheet-header .header-fields .flex-col,
 .waw .monster .sheet-header .header-fields .flex-col {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -695,7 +695,7 @@
 .waw .npc .sheet-body .editor,
 .waw .monster .sheet-header .editor,
 .waw .monster .sheet-body .editor {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -758,7 +758,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 .waw .character .sheet-header .char-img-wrap,
 .waw .npc .sheet-header .char-img-wrap,
@@ -857,7 +857,7 @@
 .waw .monster .sheet-header .header-fields .inspo,
 .waw .monster .sheet-header .header-fields .charmeta,
 .waw .monster .sheet-header .header-fields .resources {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1032,7 +1032,7 @@
 .waw .character aside,
 .waw .npc aside,
 .waw .monster aside {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1136,8 +1136,8 @@
 .waw .character .sheet-body .items-list .items-header,
 .waw .npc .sheet-body .items-list .items-header,
 .waw .monster .sheet-body .items-list .items-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d)) !important;
-  background: linear-gradient(to bottom, #5d314a, #38130d) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d));
+  background: linear-gradient(to bottom, #5d314a, #38130d);
 }
 .waw .character .sheet-body .items-list .items-header div,
 .waw .npc .sheet-body .items-list .items-header div,
@@ -1159,7 +1159,7 @@
 .waw .character .sheet-body .items-list .item,
 .waw .npc .sheet-body .items-list .item,
 .waw .monster .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -1347,7 +1347,7 @@
   width: 60%; /* Equivalent to 3fr */
 }
 .waw .reputation-table tr {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1441,7 +1441,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1477,7 +1477,7 @@
 .waw .jobs-and-clubs-container .club-membership-entry {
   margin-top: 5px;
   padding: 10px 5px 5px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1610,7 +1610,7 @@
 .waw .money-list,
 .waw .wandup,
 .waw .equipment-list {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -1832,7 +1832,7 @@
   color: #fff !important;
 }
 .waw .gryffindor .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -2020,7 +2020,7 @@
   color: #292521 !important;
 }
 .waw .hufflepuff .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -2070,12 +2070,12 @@
   accent-color: #2669a0 !important;
 }
 .waw .ravenclaw .sheet-body .report-container .report-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
 .waw .ravenclaw .sheet-body .report-container .report-body .term-column .term-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
 .waw .ravenclaw .sheet-body .report-container .report-body .term-column:first-child .term-header {
   border-radius: 5px 0 0 0;
@@ -2084,8 +2084,8 @@
   border-radius: 0 5px 0 0;
 }
 .waw .ravenclaw .sheet-body .report-container .report-footer .tracker-title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   border-radius: 5px 5px 0 0;
 }
 .waw .ravenclaw .sheet-body .tag input[type=checkbox]:checked {
@@ -2100,8 +2100,8 @@
 .waw .ravenclaw .sheet-body .items .money-list > strong,
 .waw .ravenclaw .sheet-body .items .wandup > strong,
 .waw .ravenclaw .sheet-body .items .equipment-list > strong {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   padding: 3px;
   letter-spacing: 1px;
   border-radius: 5px 5px 0 0;
@@ -2121,35 +2121,35 @@
   border: 2px solid #2669a0;
 }
 .waw .ravenclaw .sheet-body .spells .spell-slot-table .flexcol > strong {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   padding: 3px;
   border-radius: 5px 5px 0 0;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
 }
-.waw .ravenclaw .effects .club-title-wrap,
-.waw .ravenclaw .effects .job-title-wrap,
-.waw .ravenclaw .effects .reputation-table thead tr {
+.waw .ravenclaw .sheet-body .effects .club-title-wrap,
+.waw .ravenclaw .sheet-body .effects .job-title-wrap,
+.waw .ravenclaw .sheet-body .effects .reputation-table thead tr {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
   background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
-.waw .ravenclaw .effects button {
+.waw .ravenclaw .sheet-body .effects button {
   border: none !important;
 }
-.waw .ravenclaw .effects .reputation-name-input {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+.waw .ravenclaw .sheet-body .effects .reputation-name-input {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   border: none !important;
 }
-.waw .ravenclaw .effects .reputation-scale.checked-class {
+.waw .ravenclaw .sheet-body .effects .reputation-scale.checked-class {
   background-color: #2669a0;
 }
-.waw .ravenclaw .effects .reputation-scale.checked-class label {
+.waw .ravenclaw .sheet-body .effects .reputation-scale.checked-class label {
   color: #fff;
 }
-.waw .ravenclaw .features .item {
+.waw .ravenclaw .sheet-body .features .item {
   background: none !important;
   -webkit-box-shadow: 0 !important;
           box-shadow: 0 !important;
@@ -2157,32 +2157,32 @@
   -webkit-backdrop-filter: none !important;
   border-bottom: 1px solid #2669a0;
 }
-.waw .ravenclaw .features .item:last-child {
+.waw .ravenclaw .sheet-body .features .item:last-child {
   border-bottom: none;
 }
-.waw .ravenclaw .items-list .items-header {
+.waw .ravenclaw .sheet-body .items-list .items-header {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
   background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
-.waw .ravenclaw .items-list .items-header div {
+.waw .ravenclaw .sheet-body .items-list .items-header div {
   color: #fff !important;
   font-weight: normal !important;
 }
-.waw .ravenclaw .items-list .items-header div a {
+.waw .ravenclaw .sheet-body .items-list .items-header div a {
   color: #fff !important;
   font-weight: normal !important;
 }
-.waw .ravenclaw .items-list .items-header div a i {
+.waw .ravenclaw .sheet-body .items-list .items-header div a i {
   color: #fff !important;
 }
-.waw .ravenclaw .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+.waw .ravenclaw .sheet-body .items-list .item {
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
-.waw .ravenclaw .items-list .item .item-image a:hover img {
+.waw .ravenclaw .sheet-body .items-list .item .item-image a:hover img {
   -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
           filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
 }
@@ -2331,7 +2331,7 @@
   color: #fff !important;
 }
 .waw .slytherin .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -2385,7 +2385,7 @@
   padding-bottom: 5px;
 }
 .waw .ability {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2414,7 +2414,7 @@
           justify-content: space-between;
   gap: 5px;
   padding: 0 5px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2442,7 +2442,7 @@
   text-align: center !important;
 }
 .waw .skills {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2478,7 +2478,7 @@
   padding-top: 5px;
 }
 .waw .features .grid .main {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2501,7 +2501,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2535,7 +2535,7 @@
   display: grid;
   -ms-grid-columns: 0.5fr 1fr 1fr 1fr;
   grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2623,7 +2623,7 @@
   text-align: center;
 }
 .waw .report-container .report-body .term-column .term-body .term-row.grade-grid .fa-light {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 6px;
 }
@@ -2729,7 +2729,7 @@
   font-weight: 400;
 }
 .waw .report-container .report-downtime {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border: 1px dashed rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2739,8 +2739,8 @@
   padding: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.5fr 3fr;
-  grid-template-columns: 1.5fr 3fr;
+  -ms-grid-columns: 1.125fr 3fr;
+  grid-template-columns: 1.125fr 3fr;
 }
 .waw .report-container .report-downtime .downtime-title {
   padding-right: 5px;
@@ -2830,7 +2830,7 @@
   margin: 0 3px 3px 0 !important;
 }
 .waw .report-container .report-footer {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -3079,7 +3079,7 @@
 .waw .feature-sheet .sheet-body .resource,
 .waw .item-sheet .sheet-body .resource,
 .waw .spell-sheet .sheet-body .resource {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -3090,7 +3090,7 @@
 .waw .feature-sheet .sheet-body .editor,
 .waw .item-sheet .sheet-body .editor,
 .waw .spell-sheet .sheet-body .editor {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

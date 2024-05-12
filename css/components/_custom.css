@@ -54,7 +54,7 @@ input[type=checkbox]:checked {
 
 .npc .sheet-header .header-fields .flex-col,
 .monster .sheet-header .header-fields .flex-col {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -175,7 +175,7 @@ input[type=checkbox]:checked {
 .npc .sheet-body .editor,
 .monster .sheet-header .editor,
 .monster .sheet-body .editor {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -238,7 +238,7 @@ input[type=checkbox]:checked {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 .character .sheet-header .char-img-wrap,
 .npc .sheet-header .char-img-wrap,
@@ -337,7 +337,7 @@ input[type=checkbox]:checked {
 .monster .sheet-header .header-fields .inspo,
 .monster .sheet-header .header-fields .charmeta,
 .monster .sheet-header .header-fields .resources {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -512,7 +512,7 @@ input[type=checkbox]:checked {
 .character aside,
 .npc aside,
 .monster aside {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -616,8 +616,8 @@ input[type=checkbox]:checked {
 .character .sheet-body .items-list .items-header,
 .npc .sheet-body .items-list .items-header,
 .monster .sheet-body .items-list .items-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d)) !important;
-  background: linear-gradient(to bottom, #5d314a, #38130d) !important;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5d314a), to(#38130d));
+  background: linear-gradient(to bottom, #5d314a, #38130d);
 }
 .character .sheet-body .items-list .items-header div,
 .npc .sheet-body .items-list .items-header div,
@@ -639,7 +639,7 @@ input[type=checkbox]:checked {
 .character .sheet-body .items-list .item,
 .npc .sheet-body .items-list .item,
 .monster .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -830,7 +830,7 @@ input[type=checkbox]:checked {
   width: 60%; /* Equivalent to 3fr */
 }
 .reputation-table tr {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -926,7 +926,7 @@ input[type=checkbox]:checked {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -962,7 +962,7 @@ input[type=checkbox]:checked {
 .jobs-and-clubs-container .club-membership-entry {
   margin-top: 5px;
   padding: 10px 5px 5px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1103,7 +1103,7 @@ input[type=checkbox]:checked {
 .money-list,
 .wandup,
 .equipment-list {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -1328,7 +1328,7 @@ input[type=checkbox]:checked {
   color: #fff !important;
 }
 .gryffindor .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -1517,7 +1517,7 @@ input[type=checkbox]:checked {
   color: #292521 !important;
 }
 .hufflepuff .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -1568,12 +1568,12 @@ input[type=checkbox]:checked {
   accent-color: #2669a0 !important;
 }
 .ravenclaw .sheet-body .report-container .report-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
 .ravenclaw .sheet-body .report-container .report-body .term-column .term-header {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
 .ravenclaw .sheet-body .report-container .report-body .term-column:first-child .term-header {
   border-radius: 5px 0 0 0;
@@ -1582,8 +1582,8 @@ input[type=checkbox]:checked {
   border-radius: 0 5px 0 0;
 }
 .ravenclaw .sheet-body .report-container .report-footer .tracker-title {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   border-radius: 5px 5px 0 0;
 }
 .ravenclaw .sheet-body .tag input[type=checkbox]:checked {
@@ -1598,8 +1598,8 @@ input[type=checkbox]:checked {
 .ravenclaw .sheet-body .items .money-list > strong,
 .ravenclaw .sheet-body .items .wandup > strong,
 .ravenclaw .sheet-body .items .equipment-list > strong {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   padding: 3px;
   letter-spacing: 1px;
   border-radius: 5px 5px 0 0;
@@ -1619,35 +1619,35 @@ input[type=checkbox]:checked {
   border: 2px solid #2669a0;
 }
 .ravenclaw .sheet-body .spells .spell-slot-table .flexcol > strong {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   padding: 3px;
   border-radius: 5px 5px 0 0;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
 }
-.ravenclaw .effects .club-title-wrap,
-.ravenclaw .effects .job-title-wrap,
-.ravenclaw .effects .reputation-table thead tr {
+.ravenclaw .sheet-body .effects .club-title-wrap,
+.ravenclaw .sheet-body .effects .job-title-wrap,
+.ravenclaw .sheet-body .effects .reputation-table thead tr {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
   background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
-.ravenclaw .effects button {
+.ravenclaw .sheet-body .effects button {
   border: none !important;
 }
-.ravenclaw .effects .reputation-name-input {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a));
-  background: linear-gradient(to bottom, #2669a0, #143b5a);
+.ravenclaw .sheet-body .effects .reputation-name-input {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
+  background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
   border: none !important;
 }
-.ravenclaw .effects .reputation-scale.checked-class {
+.ravenclaw .sheet-body .effects .reputation-scale.checked-class {
   background-color: #2669a0;
 }
-.ravenclaw .effects .reputation-scale.checked-class label {
+.ravenclaw .sheet-body .effects .reputation-scale.checked-class label {
   color: #fff;
 }
-.ravenclaw .features .item {
+.ravenclaw .sheet-body .features .item {
   background: none !important;
   -webkit-box-shadow: 0 !important;
           box-shadow: 0 !important;
@@ -1655,32 +1655,32 @@ input[type=checkbox]:checked {
   -webkit-backdrop-filter: none !important;
   border-bottom: 1px solid #2669a0;
 }
-.ravenclaw .features .item:last-child {
+.ravenclaw .sheet-body .features .item:last-child {
   border-bottom: none;
 }
-.ravenclaw .items-list .items-header {
+.ravenclaw .sheet-body .items-list .items-header {
   background: -webkit-gradient(linear, left top, left bottom, from(#2669a0), to(#143b5a)) !important;
   background: linear-gradient(to bottom, #2669a0, #143b5a) !important;
 }
-.ravenclaw .items-list .items-header div {
+.ravenclaw .sheet-body .items-list .items-header div {
   color: #fff !important;
   font-weight: normal !important;
 }
-.ravenclaw .items-list .items-header div a {
+.ravenclaw .sheet-body .items-list .items-header div a {
   color: #fff !important;
   font-weight: normal !important;
 }
-.ravenclaw .items-list .items-header div a i {
+.ravenclaw .sheet-body .items-list .items-header div a i {
   color: #fff !important;
 }
-.ravenclaw .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+.ravenclaw .sheet-body .items-list .item {
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
-.ravenclaw .items-list .item .item-image a:hover img {
+.ravenclaw .sheet-body .items-list .item .item-image a:hover img {
   -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
           filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(5000%) hue-rotate(90deg);
 }
@@ -1830,7 +1830,7 @@ input[type=checkbox]:checked {
   color: #fff !important;
 }
 .slytherin .sheet-body .items-list .item {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.1px);
@@ -1889,7 +1889,7 @@ nav.sheet-tabs.tabs > a.active:hover {
 }
 
 .ability {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1920,7 +1920,7 @@ nav.sheet-tabs.tabs > a.active:hover {
           justify-content: space-between;
   gap: 5px;
   padding: 0 5px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1949,7 +1949,7 @@ nav.sheet-tabs.tabs > a.active:hover {
 }
 
 .skills {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -1987,7 +1987,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   padding-top: 5px;
 }
 .features .grid .main {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2011,7 +2011,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2045,7 +2045,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   display: grid;
   -ms-grid-columns: 0.5fr 1fr 1fr 1fr;
   grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2133,7 +2133,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   text-align: center;
 }
 .report-container .report-body .term-column .term-body .term-row.grade-grid .fa-light {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 6px;
 }
@@ -2239,7 +2239,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   font-weight: 400;
 }
 .report-container .report-downtime {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border: 1px dashed rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2249,8 +2249,8 @@ nav.sheet-tabs.tabs > a.active:hover {
   padding: 5px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.5fr 3fr;
-  grid-template-columns: 1.5fr 3fr;
+  -ms-grid-columns: 1.125fr 3fr;
+  grid-template-columns: 1.125fr 3fr;
 }
 .report-container .report-downtime .downtime-title {
   padding-right: 5px;
@@ -2340,7 +2340,7 @@ nav.sheet-tabs.tabs > a.active:hover {
   margin: 0 3px 3px 0 !important;
 }
 .report-container .report-footer {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2592,7 +2592,7 @@ nav.sheet-tabs.tabs > a.active:hover {
 .feature-sheet .sheet-body .resource,
 .item-sheet .sheet-body .resource,
 .spell-sheet .sheet-body .resource {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -2603,7 +2603,7 @@ nav.sheet-tabs.tabs > a.active:hover {
 .feature-sheet .sheet-body .editor,
 .item-sheet .sheet-body .editor,
 .spell-sheet .sheet-body .editor {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
