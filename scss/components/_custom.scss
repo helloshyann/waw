@@ -698,6 +698,10 @@ input[type="checkbox"]:checked {
       display: flex;
       padding: 5px 10px !important;
     }
+    img {
+      border: none;
+      margin: 0 auto;
+    }
   }
   .sheet-tabs {
     border-top: 2px solid #2e1116;
@@ -715,6 +719,7 @@ input[type="checkbox"]:checked {
     }
   }
   .sheet-body {
+    border-top: 10px solid #2e1116;
     .ability {
       max-width: 7rem;
       margin: auto;

@@ -767,6 +767,11 @@ input[type=checkbox]:checked {
   display: flex;
   padding: 5px 10px !important;
 }
+.npc .sheet-header img,
+.monster .sheet-header img {
+  border: none;
+  margin: 0 auto;
+}
 .npc .sheet-tabs,
 .monster .sheet-tabs {
   border-top: 2px solid #2e1116;
@@ -785,6 +790,10 @@ input[type=checkbox]:checked {
 .monster .sheet-tabs a:active,
 .monster .sheet-tabs a:focus {
   color: #dcb36b;
+}
+.npc .sheet-body,
+.monster .sheet-body {
+  border-top: 10px solid #2e1116;
 }
 .npc .sheet-body .ability,
 .monster .sheet-body .ability {

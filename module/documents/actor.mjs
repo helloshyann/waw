@@ -37,6 +37,7 @@ export class WaWActor extends Actor {
     // things organized.
     this._prepareCharacterData(actorData);
     this._prepareNpcData(actorData);
+    this._prepareMonsterData(actorData);
   }
 
   /**
@@ -73,6 +74,23 @@ export class WaWActor extends Actor {
   }
 
   /**
+   * Prepare NPC type specific data.
+   */
+  _prepareMonsterData(actorData) {
+    if (actorData.type !== 'monster') return;
+
+    // Make modifications to data here. For example:
+    const systemData = actorData.system;
+    systemData.xp = (systemData.cr * systemData.cr) * 100;
+
+    // Loop through ability scores, and add their modifiers to our sheet output.
+    for (let [key, ability] of Object.entries(systemData.abilities)) {
+      // Calculate the modifier using d20 rules.
+      ability.mod = Math.floor((ability.value - 10) / 2);
+    }
+  }
+
+  /**
    * Override getRollData() that's supplied to rolls.
    */
   getRollData() {
@@ -81,6 +99,8 @@ export class WaWActor extends Actor {
     // Prepare character roll data.
     this._getCharacterRollData(data);
     this._getNpcRollData(data);
+    this._getMonsterRollData(data);
+
 
     return data;
   }
@@ -114,4 +134,14 @@ export class WaWActor extends Actor {
     // Process additional NPC data here.
   }
 
-}
+    /**
+   * Prepare NPC roll data.
+   */
+  _getMonsterRollData(data) {
+    if (this.type !== 'monster') return;
+
+    // Process additional NPC data here.
+
+    }
+  }
+

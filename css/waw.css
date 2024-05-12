@@ -1269,6 +1269,11 @@
   display: flex;
   padding: 5px 10px !important;
 }
+.waw .npc .sheet-header img,
+.waw .monster .sheet-header img {
+  border: none;
+  margin: 0 auto;
+}
 .waw .npc .sheet-tabs,
 .waw .monster .sheet-tabs {
   border-top: 2px solid #2e1116;
@@ -1287,6 +1292,10 @@
 .waw .monster .sheet-tabs a:active,
 .waw .monster .sheet-tabs a:focus {
   color: #dcb36b;
+}
+.waw .npc .sheet-body,
+.waw .monster .sheet-body {
+  border-top: 10px solid #2e1116;
 }
 .waw .npc .sheet-body .ability,
 .waw .monster .sheet-body .ability {

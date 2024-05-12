@@ -371,44 +371,6 @@
             }
           ]
         }
-      },
-      "spellSlots": {
-        "spellLevelOne": {
-          "current": 0,
-          "max": 2
-        },
-        "spellLevelTwo": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelThree": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelFour": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelFive": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelSix": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelSeven": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelEight": {
-          "current": 0,
-          "max": 0
-        },
-        "spellLevelNine": {
-          "current": 0,
-          "max": 0
-        }
       }
     }
   },

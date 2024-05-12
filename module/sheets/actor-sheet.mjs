@@ -189,6 +189,12 @@ export class WaWActorSheet extends ActorSheet {
 
     }
 
+    // Prepare Monster data and items.
+    if (actorData.type == 'monster') {
+      this._prepareItems(context);
+      this._prepareCharacterData(context);
+    }
+
     // Add roll data for TinyMCE editors.
     context.rollData = context.actor.getRollData();
 
