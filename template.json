@@ -230,7 +230,7 @@
         "hrb": {
           "name": "Herbology",
           "value": 0,
-          "ability": "wis",
+          "ability": "int",
           "prof": false
         },
         "his": {
@@ -302,7 +302,7 @@
         "pot": {
           "name": "Potion Making",
           "value": 0,
-          "ability": "int",
+          "ability": "wis",
           "prof": false
         },
         "soh": {
