@@ -614,8 +614,12 @@ input[type="checkbox"]:checked {
         .item-image {
           a {
             &:hover {
-              img {
-                filter: brightness(50%) sepia(100) !important;
+              svg {
+                g {
+                  path {
+                    fill: #c7c2a4 !important;
+                  }
+                }
               }
             }
           }
@@ -1266,9 +1270,12 @@ input[type="checkbox"]:checked {
         .item-image {
           a {
             &:hover {
-              img {
-                filter: brightness(50%) sepia(100) saturate(100)
-                  hue-rotate(25deg);
+              svg {
+                g {
+                  path {
+                    fill: #c7c2a4 !important;
+                  }
+                }
               }
             }
           }

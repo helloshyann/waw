@@ -484,7 +484,8 @@
   margin-right: 5px;
   padding: 2px 0;
 }
-.waw .items-list .item .item-name .item-image a img {
+.waw .items-list .item .item-name .item-image a img,
+.waw .items-list .item .item-name .item-image a svg {
   border: none !important;
 }
 .waw .items-list .item-prop {
@@ -1174,11 +1175,10 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
-.waw .character .sheet-body .items-list .item .item-image a:hover img,
-.waw .npc .sheet-body .items-list .item .item-image a:hover img,
-.waw .monster .sheet-body .items-list .item .item-image a:hover img {
-  -webkit-filter: brightness(50%) sepia(100) !important;
-          filter: brightness(50%) sepia(100) !important;
+.waw .character .sheet-body .items-list .item .item-image a:hover svg g path,
+.waw .npc .sheet-body .items-list .item .item-image a:hover svg g path,
+.waw .monster .sheet-body .items-list .item .item-image a:hover svg g path {
+  fill: #c7c2a4 !important;
 }
 .waw .character .report,
 .waw .npc .report,
@@ -1881,9 +1881,8 @@
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
-.waw .gryffindor .sheet-body .items-list .item .item-image a:hover img {
-  -webkit-filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
-          filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+.waw .gryffindor .sheet-body .items-list .item .item-image a:hover svg g path {
+  fill: #c7c2a4 !important;
 }
 .waw .hufflepuff .sheet-header {
   background: url("../assets/img/HuffHeader1.png");

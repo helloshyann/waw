@@ -670,11 +670,10 @@ input[type=checkbox]:checked {
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
-.character .sheet-body .items-list .item .item-image a:hover img,
-.npc .sheet-body .items-list .item .item-image a:hover img,
-.monster .sheet-body .items-list .item .item-image a:hover img {
-  -webkit-filter: brightness(50%) sepia(100) !important;
-          filter: brightness(50%) sepia(100) !important;
+.character .sheet-body .items-list .item .item-image a:hover svg g path,
+.npc .sheet-body .items-list .item .item-image a:hover svg g path,
+.monster .sheet-body .items-list .item .item-image a:hover svg g path {
+  fill: #c7c2a4 !important;
 }
 .character .report,
 .npc .report,
@@ -1393,9 +1392,8 @@ input[type=checkbox]:checked {
   backdrop-filter: blur(3.1px);
   -webkit-backdrop-filter: blur(3.1px);
 }
-.gryffindor .sheet-body .items-list .item .item-image a:hover img {
-  -webkit-filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
-          filter: brightness(50%) sepia(100) saturate(100) hue-rotate(25deg);
+.gryffindor .sheet-body .items-list .item .item-image a:hover svg g path {
+  fill: #c7c2a4 !important;
 }
 
 .hufflepuff .sheet-header {
