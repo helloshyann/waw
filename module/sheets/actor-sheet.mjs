@@ -665,11 +665,11 @@ async _onJobKnutPayChange(event) {
 }
 
 
-  /**
+/**
  * Specifically handle d20 rolls from the sheet.
  * @param {Event} event The originating click event.
  */
-_onD20Roll(event) {
+async _onD20Roll(event) {
     event.preventDefault();
     const element = $(event.currentTarget);
     const rollFormula = element.data('roll');  // Expected to be "1d20"
@@ -678,8 +678,8 @@ _onD20Roll(event) {
     // Create the roll
     let roll = new Roll(rollFormula, this.actor.getRollData());
 
-    // Evaluate the roll
-    roll.evaluate({async: false});  // Set to true if you want the roll to be asynchronous
+    // Evaluate the roll asynchronously
+    await roll.evaluate({async: true});
 
     // Send the roll to the chat
     roll.toMessage({
@@ -757,5 +757,3 @@ _onD20Roll(event) {
   }  
 
 }
-
-
