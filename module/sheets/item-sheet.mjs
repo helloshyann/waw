@@ -50,7 +50,7 @@ export class WaWItemSheet extends ItemSheet {
       context.itemTypeOptions = {
       GEAR: "Equipment",
       CONSUMABLE: "Consumable",
-      INGREDIENT: "Crafting Material"
+      MATERIAL: "Crafting Material"
       };
 
       context.itemType = itemData.system.itemType.value;
