@@ -1206,9 +1206,9 @@ input[type=checkbox]:checked {
 }
 .equipment-list .flexrow strong {
   margin-right: 5px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  -webkit-box-flex: 0.133;
+      -ms-flex: 0.133;
+          flex: 0.133;
 }
 .equipment-list .flexrow input {
   -webkit-box-flex: 1;
