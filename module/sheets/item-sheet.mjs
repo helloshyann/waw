@@ -48,9 +48,9 @@ export class WaWItemSheet extends ItemSheet {
 
     if (itemData.type == 'item'){
       context.itemTypeOptions = {
-      equipment: "Equipment",
-      consumable: "Consumable",
-      craftm: "Crafting Material"
+      GEAR: "Equipment",
+      CONSUMABLE: "Consumable",
+      INGREDIENT: "Crafting Material"
       };
 
       context.itemType = itemData.system.itemType.value;
